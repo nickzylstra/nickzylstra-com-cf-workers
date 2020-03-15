@@ -1,6 +1,10 @@
 {
   "name": "nickzylstra-com",
   "version": "1.0.0",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/nickzylstra/nickzylstra-com.git"
+  },
   "description": "personal website",
   "main": "src/server/server.js",
   "scripts": {
