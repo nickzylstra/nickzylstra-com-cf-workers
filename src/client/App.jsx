@@ -7,7 +7,7 @@ const App = ({ host }) => {
 
   return (
     <div className="App" aria-label="app">
-      {`this app is running on ${host}`}
+      {`the React app expects to be running on ${host}`}
     </div>
   );
 };
