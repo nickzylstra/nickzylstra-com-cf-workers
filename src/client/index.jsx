@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import App from './App.jsx';
 
 const localhost = 'http://localhost:3000';
-const hostedURL = 'https://boilerplate.nickzylstra.com/';
+const hostedURL = 'https://www.nickzylstra.com/';
 const { origin } = window.location;
 const host = (origin && !origin.includes('localhost')) ? hostedURL : localhost;
 if (host === localhost) {
