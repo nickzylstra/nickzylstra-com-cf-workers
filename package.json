@@ -15,8 +15,8 @@
     "start": "node src/server/server.js",
     "start:dev": "nodemon src/server/server.js",
     "start:debug": "nodemon --inspect src/server/server.js",
-    "start:docker": "npm run seed & npm run build & npm run start",
-    "start:docker:dev": "npm run seed & npm run build:dev & npm run start:dev",
+    "start:docker:production": "npm run seed & npm run build & npm run start",
+    "start:docker:development": "npm run seed & npm run build:dev & npm run start:dev",
     "test": "jest",
     "test:watch": "jest --watchAll",
     "test:debug": "node --inspect-brk node_modules/.bin/jest --runInBand"

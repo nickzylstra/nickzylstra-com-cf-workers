@@ -21,4 +21,4 @@ services:
       POSTGRES_PASSWORD: pass
       POSTGRES_DB: app
       POSTGRES_HOST: postgres_db
-    command: npm run start:docker:dev
+    command: npm run start:docker:${NODE_ENV:-production}
