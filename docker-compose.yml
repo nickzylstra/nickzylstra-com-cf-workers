@@ -16,6 +16,7 @@ services:
     ports:
       - '3000:3000'
     environment:
+      NODE_ENV: "${NODE_ENV:-production}"
       POSTGRES_USER: user
       POSTGRES_PASSWORD: pass
       POSTGRES_DB: app

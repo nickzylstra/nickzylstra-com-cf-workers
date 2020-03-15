@@ -10,6 +10,13 @@
 ### To start server at 'localhost:3000': 
 - ensure docker is running
 - clone repo to local machine
+#### development mode:
+- run the following command from repo directory:
+
+```
+NODE_ENV=development docker-compose up -d
+```
+#### production mode:
 - run the following command from repo directory:
 
 ```
