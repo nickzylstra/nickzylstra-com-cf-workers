@@ -1,8 +1,8 @@
 {
-  "name": "nz-boilerplate",
+  "name": "nickzylstra-com",
   "version": "1.0.0",
-  "description": "PERN boilerplate",
-  "main": "index.js",
+  "description": "personal website",
+  "main": "src/server/server.js",
   "scripts": {
     "lint": "eslint --ext .js,.jsx .",
     "seed": "node src/database/seed.js",
