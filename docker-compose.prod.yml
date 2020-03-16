@@ -2,7 +2,7 @@ version: '3.7'
 
 services:
   app_server:
-    images: nickzylstra/nickzylstra-com:latest
+    image: nickzylstra/nickzylstra-com:latest
     ports:
       - '3000:3000'
     environment:
