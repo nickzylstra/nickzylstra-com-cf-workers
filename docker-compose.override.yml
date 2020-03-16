@@ -2,6 +2,7 @@ version: '3.7'
 
 services:
   app_server:
+    build: .
     volumes:
       - .:/app
     ports:

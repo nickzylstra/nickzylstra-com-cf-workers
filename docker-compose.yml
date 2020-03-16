@@ -8,7 +8,6 @@ services:
       POSTGRES_PASSWORD: pass
       POSTGRES_DB: app
   app_server:
-    build: .
     depends_on:
       - 'postgres_db'
     environment:
