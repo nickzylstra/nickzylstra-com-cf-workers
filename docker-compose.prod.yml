@@ -9,7 +9,6 @@ services:
       NODE_ENV: production
     command: npm run start:docker
   nginx:
-    image: nginx:1.15-alpine
     restart: unless-stopped
     volumes:
       - ./deployData/nginx:/etc/nginx/conf.d
@@ -20,7 +19,6 @@ services:
       - "443:443"
     command: "/bin/sh -c 'while :; do sleep 6h & wait $${!}; nginx -s reload; done & nginx -g \"daemon off;\"'"
   certbot:
-    image: certbot/certbot
     restart: unless-stopped
     volumes:
       - ./deployData/certbot/conf:/etc/letsencrypt
