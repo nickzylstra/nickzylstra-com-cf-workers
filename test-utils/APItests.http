@@ -3,6 +3,11 @@ GET http://localhost:3000
 # sample response body: API server running
 
 ###
+GET https://www.nickzylstra.com
+
+# sample response body: API server running
+
+###
 POST http://localhost:3000/customers
 content-type: application/json
 
