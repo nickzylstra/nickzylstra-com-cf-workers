@@ -3,3 +3,4 @@ coverage
 .DS_Store
 public/bundle.js
 *.pem
+deployData/certbot
