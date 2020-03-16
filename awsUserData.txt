@@ -18,8 +18,10 @@ Content-Transfer-Encoding: 7bit
 Content-Disposition: attachment; filename="userdata.txt"
 
 #! /bin/bash
+docker login -u USERNAME -p PASSWORD
 REPODIR="/home/ec2-user/nickzylstra-com/"
 COMPOSE1="${REPODIR}docker-compose.yml"
 COMPOSE2="${REPODIR}docker-compose.prod.yml"
 docker-compose -f $COMPOSE1 -f $COMPOSE2 up -d
+yes | docker system prune -a
 --//
