@@ -1,6 +1,8 @@
 version: '3.7'
 
 services:
+  postgres_db:
+    restart: unless-stopped
   app_server:
     image: nickzylstra/nickzylstra-com:latest
     ports:
@@ -9,7 +11,7 @@ services:
       NODE_ENV: production
     command: npm run start:docker
   nginx:
-    restart: always
+    restart: unless-stopped
     volumes:
       - ./deployData/nginx:/etc/nginx/conf.d
       - ./deployData/certbot/conf:/etc/letsencrypt
@@ -19,7 +21,7 @@ services:
       - "443:443"
     command: "/bin/sh -c 'while :; do sleep 6h & wait $${!}; nginx -s reload; done & nginx -g \"daemon off;\"'"
   certbot:
-    restart: always
+    restart: unless-stopped
     volumes:
       - ./deployData/certbot/conf:/etc/letsencrypt
       - ./deployData/certbot/www:/var/www/certbot
