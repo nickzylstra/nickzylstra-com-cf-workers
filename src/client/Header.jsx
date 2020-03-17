@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
-import { Container, Navbar, Nav } from 'react-bootstrap';
+import React from 'react';
+import { Navbar, Nav } from 'react-bootstrap';
 
-const Header = () => (
-  <Container fixed="top">
-    <Navbar collapseOnSelect expand="sm" variant="dark" bg="dark">
+const Header = ({ theme }) => {
+  const { variant, bg } = theme;
+  return (
+    <Navbar fixed="top" collapseOnSelect expand="sm" variant={variant} bg={bg}>
       <Navbar.Brand href="/">Nick Zylstra</Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav-header" />
       <Navbar.Collapse id="responsive-navbar-nav-header">
@@ -14,7 +15,7 @@ const Header = () => (
         </Nav>
       </Navbar.Collapse>
     </Navbar>
-  </Container>
-);
+  );
+};
 
 export default Header;
