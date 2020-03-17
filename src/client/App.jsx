@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Header from './Header.jsx';
 
 import './App.css';
 
@@ -9,6 +10,7 @@ const App = ({ host }) => {
 
   return (
     <div className="App" aria-label="app">
+      <Header />
       nickzylstra.com with CICD pipeline deploy
       <br />
       {`this React app expects to be running on ${host}`}
