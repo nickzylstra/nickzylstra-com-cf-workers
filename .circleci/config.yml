@@ -36,6 +36,16 @@ jobs:
       - run:
           name: Test
           command: npm run test
+      - setup_remote_docker:
+          docker_layer_caching: true
+      - run:
+          name: Build and push Docker image
+          command: |
+            echo 'export REPO_IMAGE_TAG=nickzylstra/nickzylstra-com:latest' >> $BASH_ENV
+            docker build -t $REPO_IMAGE_TAG
+            echo $DOCKER_PWD | docker login -u $DOCKER_LOGIN --password-stdin
+            docker push $REPO_IMAGE_TAG
+
 workflows:
   version: 2
   CICD:
