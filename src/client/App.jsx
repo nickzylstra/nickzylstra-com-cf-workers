@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 
 const App = ({ host }) => {
   const initTestState = 'init test state';
+  // eslint-disable-next-line no-unused-vars
   const [testState, setTestState] = useState(initTestState);
 
   return (
