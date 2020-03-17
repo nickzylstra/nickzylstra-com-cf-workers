@@ -60,10 +60,10 @@ docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d
 ```
 
 #### To update client or server code:
-- push changes to Github branch tracked by Docker Hub (master typically)
+- push changes to Github branch tracked by Docker Hub (master currently)
 - wait for Docker Hub to autobuild
 - reboot EC2 instance
-  - AWS userData script runs at every EC2 reboot and will pull new image from Docker Hub
+  - AWS userData script runs at every EC2 reboot, it will pull new image from Docker Hub
 
 #### To update deployment scripts and files used outside of app_server image
 - 'git pull' in repo on EC2 instance
