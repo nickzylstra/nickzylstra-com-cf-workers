@@ -8,7 +8,7 @@ const App = ({ host }) => {
 
   return (
     <div className="App" aria-label="app">
-      nickzylstra.com
+      nickzylstra.com with CICD pipeline
       <br />
       {`this React app expects to be running on ${host}`}
     </div>
