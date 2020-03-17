@@ -1,18 +1,41 @@
-version: 2.1
-orbs:
-  node: circleci/node@1.1.6
+version: 2
 jobs:
-  build-and-test:
-    executor:
-      name: node/default
-      tag: '12.15'
+  build-test-publish:
+    docker:
+      - image: circleci/node:12.15
+        environment:
+          POSTGRES_HOST: localhost
+      - image: postgres:12.1-alpine
+        environment:
+          POSTGRES_USER: test
+          POSTGRES_PASSWORD: test
+          POSTGRES_DB: boilerplate_test
     steps:
       - checkout
-      - node/with-cache:
-          steps:
-            - run: npm install
-            - run: npm test
+      - run:
+          name: Waiting for Postgres to be ready
+          command: |
+            for i in `seq 1 10`;
+            do
+              nc -z localhost 5432 && echo Success && exit 0
+              echo -n .
+              sleep 1
+            done
+            echo Failed waiting for Postgres && exit 1
+      - run: 
+          name: Setup
+          command: |
+            npm install
+            npm run build
+            npm run seed
+      - run:
+          name: Lint
+          command: npm run lint
+      - run:
+          name: Test
+          command: npm run test
 workflows:
-    build-and-test:
-      jobs:
-        - build-and-test
+  version: 2
+  CICD:
+    jobs:
+      - build-test-publish
