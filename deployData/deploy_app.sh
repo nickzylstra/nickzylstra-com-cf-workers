@@ -21,12 +21,15 @@ fi
 
 echo "Deploying App Server to Docker Container"
 
+
 #Check for running container & stop it before starting a new one
 if [ $(docker inspect -f '{{.State.Running}}' $CONTAINER_NAME) = "true" ]; then
     docker stop $CONTAINER_NAME
 fi
 
 docker rm $CONTAINER_NAME
+echo "Waiting for Docker Hub to ensure new image available"
+sleep 10
 docker pull $DOCKER_IMAGE
 REPODIR="/home/ec2-user/nickzylstra-com/"
 COMPOSE1="${REPODIR}docker-compose.yml"
