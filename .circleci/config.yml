@@ -43,6 +43,10 @@ jobs:
             docker build -t nickzylstra/nickzylstra-com:latest .
             echo $DOCKER_PWD | docker login -u $DOCKER_LOGIN --password-stdin
             docker push nickzylstra/nickzylstra-com:latest
+      - run:
+          name: Deploy app Docker Image to AWS
+          command: |
+            ssh -o StrictHostKeyChecking=no ec2-user@52.8.215.15 "/bin/bash /home/ec2-user/nickzylstra-com/deployData/deploy_app.sh nickzylstra/nickzylstra-com:latest"
 
 workflows:
   version: 2

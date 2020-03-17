@@ -5,6 +5,7 @@ services:
     restart: unless-stopped
   app_server:
     image: nickzylstra/nickzylstra-com:latest
+    restart: unless-stopped
     ports:
       - '3000:3000'
     environment:
