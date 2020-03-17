@@ -18,7 +18,9 @@ Content-Transfer-Encoding: 7bit
 Content-Disposition: attachment; filename="userdata.txt"
 
 #! /bin/bash
-docker login -u USERNAME -password-stdin <<< "PASSWORD"
+docker login -u USERNAME --password-stdin <<< "PASSWORD"
+docker rm nickzylstra-com_app_server_1
+docker pull nickzylstra/nickzylstra-com:latest
 REPODIR="/home/ec2-user/nickzylstra-com/"
 COMPOSE1="${REPODIR}docker-compose.yml"
 COMPOSE2="${REPODIR}docker-compose.prod.yml"

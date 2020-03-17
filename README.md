@@ -1,8 +1,9 @@
-# Boilerplate
+# www.nickzylstra.com
 - Express
 - PostgreSQL
 - React
 - Docker
+- AWS
 - Jest
 
 ## Setup
@@ -34,8 +35,9 @@ Uses letsencrypt with Certbot for HTTPS, NGINX proxy, and Docker Hub auto builds
 - point Cloudflare to AWS Elastic IP that will be assigned to EC2 instance
 - enable 'Full (strict) End to End' encryption to avoid redirect loop
 ##### Git Repo:
-- update 'app_server' image with name of Docker Hub image here:
-[docker setup](./docker-compose.prod.yml)
+- update 'app_server' image (and container names if desired) using Docker Hub image here:
+  - [docker setup](./docker-compose.prod.yml)
+  - [ec2 setup](./awsUserData.txt)
 - update 'domain names' and 'emails' here:
 [letsencrypt setup](./init-letsencrypt.sh)
 
@@ -59,12 +61,12 @@ docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d
 
 #### To update client or server code:
 - push changes to Github branch tracked by Docker Hub (master typically)
+- wait for Docker Hub to autobuild
 - reboot EC2 instance
   - AWS userData script runs at every EC2 reboot and will pull new image from Docker Hub
 
-#### To update deployment scripts and info outside of app_server image
+#### To update deployment scripts and files used outside of app_server image
 - 'git pull' in repo on EC2 instance
-
 
 #### To shutdown:
 - run the following command from repo directory:
