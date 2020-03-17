@@ -37,7 +37,7 @@ Uses letsencrypt with Certbot for HTTPS, NGINX proxy, and Docker Hub auto builds
 ##### Git Repo:
 - update 'app_server' image (and container names if desired) using Docker Hub image here:
   - [docker setup](./docker-compose.prod.yml)
-  - [ec2 setup](./awsUserData.txt)
+  - [ec2 user data](./awsUserData.txt)
 - update 'domain names' and 'emails' here:
 [letsencrypt setup](./init-letsencrypt.sh)
 
@@ -45,9 +45,9 @@ Uses letsencrypt with Certbot for HTTPS, NGINX proxy, and Docker Hub auto builds
 - create Amazon Linux 2 EC2 instance
 - install Docker, Docker-Compose, and Git on instance
 - clone git repo to EC2 instance
-- stop EC2 instance, add text to 'user data' field
-  [ec2 setup](./awsUserData.txt)
-  - if Docker Hub repo is private - <em>only on AWS</em> replace USERNAME and PASSWORD with actual values for Docker Hub
+- stop EC2 instance, add text from file to 'user data' field for EC2 instance
+  - [ec2 user data](./awsUserData.txt)
+  - if Docker Hub repo is private - <em>only for EC2 version</em> - replace USERNAME and PASSWORD with actual values for Docker Hub
   - if not, comment out the Docker Login line
   - restart EC2 instance
 - run the following commands from repo directory to setup encryption certs and start service:
