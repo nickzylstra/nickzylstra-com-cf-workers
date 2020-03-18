@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
   env: {
     browser: true,
@@ -24,11 +26,22 @@ module.exports = {
     'react',
     'react-hooks',
   ],
+  settings: {
+    'import/resolver': {
+      node: {
+        extensions: ['.mjs', '.js', '.jsx'],
+      },
+    },
+  },
   rules: {
     'jsx-a11y/label-has-associated-control': 0,
     'react/prop-types': 0,
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
-    'import/extensions': 0,
+    'import/extensions': ["error", "ignorePackages", {
+      "js": "never",
+      "jsx": "always",
+      "mjs": "never"
+    }],
   },
 };
