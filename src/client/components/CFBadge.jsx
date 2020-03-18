@@ -1,10 +1,7 @@
 import React from 'react';
 
-const CFBadge = () => {
-
-  return (
-    <div>hi</div>
-  );
-};
+const CFBadge = () => (
+  <div>hi</div>
+);
 
 export default CFBadge;
