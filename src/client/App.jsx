@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { Container } from 'react-bootstrap';
+import { Container, Spinner } from 'react-bootstrap';
 import Header from './components/Header.jsx';
-import Home from './components/Home/Home.jsx';
-
 import './App.css';
+
+const Home = lazy(() => import('./components/Home/Home.jsx'));
 
 const theme = {
   variant: 'dark',
@@ -22,17 +22,19 @@ const App = ({ host }) => {
       <Router>
         <Header theme={theme} />
         <Container bsPrefix="container-page">
-          <Switch>
-            <Route path="/portfolio">
-              portfolio
-            </Route>
-            <Route path="/about">
-              about
-            </Route>
-            <Route path="/">
-              <Home />
-            </Route>
-          </Switch>
+          <Suspense fallback={<Spinner animation="border" />}>
+            <Switch>
+              <Route path="/portfolio">
+                portfolio
+              </Route>
+              <Route path="/about">
+                about
+              </Route>
+              <Route exact path="/">
+                <Home />
+              </Route>
+            </Switch>
+          </Suspense>
         </Container>
       </Router>
     </div>
