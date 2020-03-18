@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { Container } from 'react-bootstrap';
 import Header from './components/Header.jsx';
-import Footer from './components/Footer.jsx';
+import Home from './components/Home/Home.jsx';
 
 import './App.css';
 
@@ -17,9 +19,22 @@ const App = ({ host }) => {
 
   return (
     <div className="App" aria-label="app">
-      <Header theme={theme} />
-      nickzylstra.com with CICD pipeline deploy
-      <Footer theme={theme} />
+      <Router>
+        <Header theme={theme} />
+        <Container bsPrefix="container-page">
+          <Switch>
+            <Route path="/portfolio">
+              portfolio
+            </Route>
+            <Route path="/about">
+              about
+            </Route>
+            <Route path="/">
+              <Home />
+            </Route>
+          </Switch>
+        </Container>
+      </Router>
     </div>
   );
 };

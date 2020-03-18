@@ -1,5 +1,6 @@
 import React from 'react';
 import { Navbar, Nav } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 import './Header.css';
 
@@ -11,9 +12,9 @@ const Header = ({ theme }) => {
       <Navbar.Toggle aria-controls="responsive-navbar-nav-header" />
       <Navbar.Collapse id="responsive-navbar-nav-header">
         <Nav defaultActiveKey="/">
-          <Nav.Link href="/">home</Nav.Link>
-          <Nav.Link href="#portfolio">portfolio</Nav.Link>
-          <Nav.Link href="#about">about</Nav.Link>
+          <Nav.Link as={Link} to="/" eventKey="/">home</Nav.Link>
+          <Nav.Link as={Link} to="portfolio" eventKey="portfolio">portfolio</Nav.Link>
+          <Nav.Link as={Link} to="about" eventKey="about">about</Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
