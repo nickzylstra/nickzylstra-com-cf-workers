@@ -19,7 +19,7 @@ const App = ({ host }) => {
     <div className="App" aria-label="app">
       <Header theme={theme} />
       nickzylstra.com with CICD pipeline deploy
-      {/* <Footer theme={theme} /> */}
+      <Footer theme={theme} />
     </div>
   );
 };
