@@ -1,6 +1,6 @@
 import React, { useState, Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { Container } from 'react-bootstrap';
+import { Container, Spinner } from 'react-bootstrap';
 import Header from './components/Header.jsx';
 import './App.css';
 
@@ -22,7 +22,7 @@ const App = ({ host }) => {
       <Router>
         <Header theme={theme} />
         <Container bsPrefix="container-page">
-          <Suspense fallback={<div>Loading...</div>}>
+          <Suspense fallback={<Spinner animation="border" />}>
             <Switch>
               <Route path="/portfolio">
                 portfolio
