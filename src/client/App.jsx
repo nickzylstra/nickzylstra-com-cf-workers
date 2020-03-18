@@ -22,7 +22,6 @@ const App = ({ host }) => {
       <Router>
         <Header theme={theme} />
         <Container bsPrefix="container-page">
-          nickzylstra.com with CICD pipeline deploy
           <Switch>
             <Route path="/portfolio">
               portfolio
