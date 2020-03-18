@@ -5,6 +5,8 @@ import Header from './components/Header.jsx';
 import './App.css';
 
 const Home = lazy(() => import('./components/Home/Home.jsx'));
+const Portfolio = lazy(() => import('./components/Portfolio/Portfolio.jsx'));
+const About = lazy(() => import('./components/About/About.jsx'));
 
 const theme = {
   variant: 'dark',
@@ -24,15 +26,9 @@ const App = ({ host }) => {
         <Container bsPrefix="container-page">
           <Suspense fallback={<Spinner animation="border" />}>
             <Switch>
-              <Route path="/portfolio">
-                portfolio
-              </Route>
-              <Route path="/about">
-                about
-              </Route>
-              <Route exact path="/">
-                <Home />
-              </Route>
+              <Route exact path="/" component={Home} />
+              <Route path="/portfolio" component={Portfolio} />
+              <Route path="/about" component={About} />
             </Switch>
           </Suspense>
         </Container>
