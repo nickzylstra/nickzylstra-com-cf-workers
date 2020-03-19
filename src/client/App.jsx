@@ -25,7 +25,7 @@ const App = ({ host }) => {
     <div className="App" aria-label="app">
       <Router>
         <Header theme={theme} />
-        <Container bsPrefix="container-page">
+        <Container as="main" bsPrefix="container-page">
           <Suspense fallback={<Spinner animation="border" />}>
             <Switch>
               <Route exact path="/" component={Home} />

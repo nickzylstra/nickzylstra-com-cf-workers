@@ -11,4 +11,4 @@ if (host === localhost) {
   console.log(`using ${localhost} for API server since client loaded at 'localhost'`);
 }
 
-ReactDOM.render((<App host={host} />), document.getElementById('app'));
+ReactDOM.render((<App host={host} />), document.getElementById('root'));
