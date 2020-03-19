@@ -6,12 +6,13 @@ import './Header.css';
 
 const Header = ({ theme }) => {
   const { variant, bg } = theme;
+  const path = window.location.pathname.substring(1) || '/';
   return (
     <Navbar fixed="top" collapseOnSelect expand="sm" variant={variant} bg={bg}>
       <Navbar.Brand href="/">nz</Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav-header" />
       <Navbar.Collapse id="responsive-navbar-nav-header">
-        <Nav defaultActiveKey="/">
+        <Nav defaultActiveKey={path}>
           <Nav.Link as={Link} to="/" eventKey="/">home</Nav.Link>
           <Nav.Link as={Link} to="portfolio" eventKey="portfolio">portfolio</Nav.Link>
           <Nav.Link as={Link} to="about" eventKey="about">about</Nav.Link>
