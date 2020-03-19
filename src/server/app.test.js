@@ -1,11 +1,12 @@
 const request = require('supertest');
 const app = require('./app');
 const {
-  pool, testDbConn, createTables, cleanTables, dropTables,
+  pool, testDbConn, createDb, createTables, cleanTables, dropTables,
 } = require('../database');
 
 describe('app', () => {
   beforeAll(async () => {
+    await createDb(process.env.POSTGRES_DB);
     await createTables(pool);
   });
 

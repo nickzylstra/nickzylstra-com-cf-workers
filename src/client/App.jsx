@@ -2,7 +2,9 @@ import React, { useState, Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { Container, Spinner } from 'react-bootstrap';
 import Header from './components/Header.jsx';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+
 
 const Home = lazy(() => import('./components/Home/Home.jsx'));
 const Portfolio = lazy(() => import('./components/Portfolio/Portfolio.jsx'));
