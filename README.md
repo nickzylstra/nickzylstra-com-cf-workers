@@ -8,7 +8,10 @@
 
 ## Setup
 
-### Run at 'localhost:3000': 
+### Run at 'localhost':
+UI with hot reload at http://localhost:4000
+
+Express server API at http://localhost:3000
 #### To startup:
 - ensure docker is running
 - clone repo to local machine
@@ -25,21 +28,21 @@ docker-compose down
 ```
 
 ### Run on AWS with Cloudflare protection:
-Uses letsencrypt with Certbot for HTTPS, NGINX proxy, and Docker Hub auto builds based on Git pushes.
+Uses letsencrypt with Certbot for HTTPS, NGINX proxy, and CircleCI with Docker Hub CICD based on Github commits.
 #### To deploy:
 ##### Docker Hub:
 - create repo
-- enable autobuilds and connect Git repo to Docker Hub repo
+
 ##### Cloudflare:
 - change domain registrar DNS servers to point at assigned Cloudflare DNS servers
 - point Cloudflare to AWS Elastic IP that will be assigned to EC2 instance
 - enable 'Full (strict) End to End' encryption to avoid redirect loop
+
 ##### Git Repo:
 - update 'app_server' image (and container names if desired) using Docker Hub image here:
   - [docker setup](./docker-compose.prod.yml)
-  - [ec2 user data](./awsUserData.txt)
 - update 'domain names' and 'emails' here:
-[letsencrypt setup](./init-letsencrypt.sh)
+  - [letsencrypt setup](./init-letsencrypt.sh)
 
 ##### AWS:
 - create Amazon Linux 2 EC2 instance
@@ -51,6 +54,11 @@ Uses letsencrypt with Certbot for HTTPS, NGINX proxy, and Docker Hub auto builds
   - if not, comment out the Docker Login line
   - restart EC2 instance
 - run the following commands from repo directory to setup encryption certs and start service:
+
+##### CircleCI:
+- connect github to CircleCI
+- add repo as project to CircleCI
+- add AWS ssh key to project secrets
 
 ```
 docker-compose down

@@ -7,6 +7,7 @@ services:
       - .:/app
     ports:
       - '3000:3000'
+      - '4000:4000'
     environment:
       NODE_ENV: development
-    command: npm run start:docker:development
+    command: sh -c "apk --no-cache add inotify-tools && npm run start:docker:development"
