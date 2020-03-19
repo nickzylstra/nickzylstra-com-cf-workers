@@ -34,14 +34,14 @@ describe('app', () => {
     });
   });
 
-  describe('/customers', () => {
+  describe('/api/customers', () => {
     const name = 'bob';
     const email = 'bob@business.com';
 
     describe('POST', () => {
       test('should create customer', async () => {
         const data = { name, email };
-        const res = await request(app).post('/customers').send(data);
+        const res = await request(app).post('/api/customers').send(data);
         expect(res.statusCode).toBe(201);
         expect(res.body.customerId).toBeDefined();
       });

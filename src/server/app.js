@@ -11,6 +11,12 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 app.use('/', express.static(path.resolve(__dirname, '..', '..', 'public')));
-app.use('/customers', customersRouter);
+
+const reactRouterRoutesRE = /\/(?!api).*(?!\.).*$/;
+app.use(reactRouterRoutesRE, (req, res) => {
+  res.sendFile(path.resolve(__dirname, '..', '..', 'public', 'index.html'));
+});
+
+app.use('/api/customers', customersRouter);
 
 module.exports = app;
