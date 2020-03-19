@@ -5,12 +5,14 @@ module.exports = {
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'public'),
+    publicPath: '/',
   },
   devServer: {
     contentBase: path.resolve(__dirname, 'public'),
     port: 4000,
     watchContentBase: true,
     writeToDisk: true,
+    historyApiFallback: true,
   },
   module: {
     rules: [
