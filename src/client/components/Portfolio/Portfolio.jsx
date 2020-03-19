@@ -1,10 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Projects from './Projects.jsx';
 
 
-const Portfolio = () => (
-  <div>
-    Portfolio
-  </div>
-);
+const initProjects = [{
+  id: 1,
+  name: 'Home Payment Calculator',
+  description: 'Front end focused microservice to calculate monthly home ownership costs.  Part of larger real estate site.',
+  githubLink: 'https://github.com/fRiend-hrsf124/costHomeOwnership-service',
+  lastUpdated: new Date(),
+  image: 'https://github.com/fRiend-hrsf124/costHomeOwnership-service/blob/master/fec.gif',
+  tags: ['react', 'mysql', 'jest', 'enzyme', 'react-styled-components', 'express', 'node.js', 'webpack', 'gulp', 'circleci', 'aws-s3', 'aws-ec2', 'docker'],
+}];
+
+const Portfolio = () => {
+  const [projects, setProjects] = useState(initProjects);
+
+  return (
+    <div>
+      Portfolio
+      <Projects projects={projects} />
+    </div>
+  );
+};
 
 export default Portfolio;
