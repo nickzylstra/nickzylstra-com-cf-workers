@@ -13,6 +13,7 @@ const initProjects = [{
 }];
 
 const Portfolio = () => {
+  // eslint-disable-next-line no-unused-vars
   const [projects, setProjects] = useState(initProjects);
 
   return (

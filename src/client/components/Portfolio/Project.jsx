@@ -19,6 +19,7 @@ const Project = ({ project }) => {
         <Text>{description}</Text>
         <Text>{tags.reduce((list, tag) => `${list}, ${tag}`)}</Text>
         <Card.Link>{githubLink}</Card.Link>
+        <Card.Link>{image}</Card.Link>
       </Body>
     </Card>
   );
