@@ -17,7 +17,7 @@ const Portfolio = () => {
   const [projects, setProjects] = useState(initProjects);
 
   return (
-    <div>
+    <div aria-label="portfolio-page">
       Portfolio
       <Projects projects={projects} />
     </div>

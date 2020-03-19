@@ -13,9 +13,30 @@ const Header = ({ theme }) => {
       <Navbar.Toggle aria-controls="responsive-navbar-nav-header" />
       <Navbar.Collapse id="responsive-navbar-nav-header">
         <Nav defaultActiveKey={path}>
-          <Nav.Link as={Link} to="/" eventKey="/">home</Nav.Link>
-          <Nav.Link as={Link} to="portfolio" eventKey="portfolio">portfolio</Nav.Link>
-          <Nav.Link as={Link} to="about" eventKey="about">about</Nav.Link>
+          <Nav.Link
+            as={Link}
+            to="/"
+            eventKey="/"
+            aria-label="home-link"
+          >
+            home
+          </Nav.Link>
+          <Nav.Link
+            as={Link}
+            to="portfolio"
+            eventKey="portfolio"
+            aria-label="portfolio-link"
+          >
+            portfolio
+          </Nav.Link>
+          <Nav.Link
+            as={Link}
+            to="about"
+            eventKey="about"
+            aria-label="about-link"
+          >
+            about
+          </Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>

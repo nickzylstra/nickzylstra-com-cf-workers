@@ -2,7 +2,7 @@ import React from 'react';
 
 
 const Home = () => (
-  <div>
+  <div aria-label="home-page">
     Home
   </div>
 );
