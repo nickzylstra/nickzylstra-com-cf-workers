@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
+import './Project.css';
 
 
 const Project = ({ project }) => {
@@ -8,19 +9,20 @@ const Project = ({ project }) => {
   } = project;
 
   const {
-    Body, Title, Subtitle, Text,
+    Title, Subtitle, Text, Img, ImgOverlay,
   } = Card;
 
   return (
-    <Card id={`card-${id}`}>
-      <Body>
+    // TODO - use themeprovider hook
+    <Card id={`card-${id}`} className="bg-dark text-white">
+      <Img src={image} crossOrigin="anonymous" alt={`${name} project card image`} className="img-hover" />
+      <ImgOverlay className="text-hover">
         <Title>{name}</Title>
         <Subtitle>{`last updated: ${lastUpdated}`}</Subtitle>
         <Text>{description}</Text>
         <Text>{tags.reduce((list, tag) => `${list}, ${tag}`)}</Text>
         <Card.Link>{githubLink}</Card.Link>
-        <Card.Link>{image}</Card.Link>
-      </Body>
+      </ImgOverlay>
     </Card>
   );
 };

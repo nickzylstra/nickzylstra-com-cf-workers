@@ -8,7 +8,7 @@ const initProjects = [{
   description: 'Front end focused microservice to calculate monthly home ownership costs.  Part of larger real estate site.',
   githubLink: 'https://github.com/fRiend-hrsf124/costHomeOwnership-service',
   lastUpdated: new Date(),
-  image: 'https://github.com/fRiend-hrsf124/costHomeOwnership-service/blob/master/fec.gif',
+  image: 'https://raw.githubusercontent.com/fRiend-hrsf124/costHomeOwnership-service/master/fec.gif',
   tags: ['react', 'mysql', 'jest', 'enzyme', 'react-styled-components', 'express', 'node.js', 'webpack', 'gulp', 'circleci', 'aws-s3', 'aws-ec2', 'docker'],
 }];
 
