@@ -23,9 +23,15 @@ const App = ({ host }) => (
       <Container as="main" bsPrefix="container-page">
         <Suspense fallback={<Spinner animation="border" />}>
           <Switch>
-            <Route exact path="/" component={Home} />
-            <Route path="/portfolio" component={Portfolio} />
-            <Route path="/about" component={About} />
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route path="/portfolio">
+              <Portfolio />
+            </Route>
+            <Route path="/about">
+              <About />
+            </Route>
           </Switch>
         </Suspense>
       </Container>
