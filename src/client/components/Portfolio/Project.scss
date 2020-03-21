@@ -1,15 +1,15 @@
-.img-hover {
+.img-hoverchild {
   opacity: 1;
-
-  &:hover {
-    opacity: 0.1;
-  }
 }
 
-.text-hover {
+.text-hoverchild {
   opacity: 0;
+}
 
-  &:hover {
+.hoverparent:hover .img-hoverchild {
+    opacity: 0.1;
+}
+
+.hoverparent:hover .text-hoverchild {
     opacity: 1;
-  }
 }

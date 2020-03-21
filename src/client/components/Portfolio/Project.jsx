@@ -14,9 +14,9 @@ const Project = ({ project }) => {
 
   return (
     // TODO - use themeprovider hook
-    <Card id={`card-${id}`} className="bg-dark text-white">
-      <Img src={image} crossOrigin="anonymous" alt={`${name} project card image`} className="img-hover" />
-      <ImgOverlay className="text-hover">
+    <Card id={`card-${id}`} className="bg-dark text-white hoverparent">
+      <Img src={image} crossOrigin="anonymous" alt={`${name} project card image`} className="img-hoverchild" />
+      <ImgOverlay className="text-hoverchild">
         <Title>{name}</Title>
         <Subtitle>{`last updated: ${lastUpdated}`}</Subtitle>
         <Text>{description}</Text>
