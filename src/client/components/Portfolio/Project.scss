@@ -1,12 +1,21 @@
+$transition-duration: 300ms;
+$transition-type: ease-in;
+
 .project {
   margin: 15px;
-  max-width: 400px;
-  max-height: 500px;
+  $width: 400px;
+  width: $width;
+  height: unquote('min(453px, 100vw)');
+  
+  &:hover {
+    background-color: #343a40;
+    transition: background-color ($transition-duration * 2) $transition-type;
+  }
 }
 
 @mixin add-opacity-transition($opacity) {
   opacity: $opacity;
-  transition: opacity 400ms;
+  transition: opacity $transition-duration $transition-type;
 }
 
 .img-hoverchild {

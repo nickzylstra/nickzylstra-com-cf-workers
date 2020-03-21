@@ -10,20 +10,18 @@ const Project = ({ project }) => {
   } = project;
 
   const {
-    Title, Text, Img, ImgOverlay, Body,
+    Title, Text, Img, ImgOverlay,
   } = Card;
 
   return (
     // TODO - use themeprovider hook
-    <Card id={`card-${id}`} className="project bg-dark text-white hoverparent">
+    <Card id={`card-${id}`} className="project text-white hoverparent">
       <Img src={image} crossOrigin="anonymous" alt={`${name} project card image`} className="img-hoverchild" />
       <ImgOverlay className="text-hoverchild">
-        <Body>
-          <Title>{name}</Title>
-          <Card.Link href={githubLink}>{`Github code last updated: ${moment(lastUpdated).calendar()}`}</Card.Link>
-          <Text>{description}</Text>
-          <Text>{`Tech: ${tags.reduce((list, tag) => `${list}, ${tag}`)}`}</Text>
-        </Body>
+        <Title>{name}</Title>
+        <Card.Link href={githubLink}>{`Github last updated: ${moment(lastUpdated).calendar()}`}</Card.Link>
+        <Text>{description}</Text>
+        <Text>{`Tech: ${tags.reduce((list, tag) => `${list}, ${tag}`)}`}</Text>
       </ImgOverlay>
     </Card>
   );

@@ -15,16 +15,16 @@ const initProjects = [
   {
     id: 2,
     name: 'Referral eSignature Integration',
-    description: 'Designed embedded app to retrieve Docusign hosted contacts and forms, add form info, send for signature, and receive signature status updates.',
+    description: 'Embedded iframe app to retrieve Docusign hosted contacts and forms, add form info, send for signature, and receive signature status updates.',
     githubLink: 'https://github.com/nickzylstra/eSignIntegration',
     lastUpdated: '2020-03-09T17:39:14Z',
     image: 'https://raw.githubusercontent.com/nickzylstra/eSignIntegration/master/demo.gif',
-    tags: ['react', 'bootstrap', 'express', 'node.js', 'mongodb', 'webpack', 'aws-ec2', 'nginx', 'docusign-esign', 'jwt', 'jest', 'testing-library/react'],
+    tags: ['react', 'bootstrap', 'express', 'node.js', 'mongodb', 'webpack', 'aws-ec2', 'nginx', 'docusign-esign', 'jwt', 'jest', 'react-testing-library'],
   },
   {
     id: 3,
     name: 'Stock Price History Graph Backend',
-    description: 'Scaled service to 2500 RPS deployed throughput with NGINX load balancer, four Express app servers, one Redis API cache, and one 105M record PostgreSQL database, each on AWS EC2 T2 micros.',
+    description: 'Service scaled to 2500 RPS deployed throughput with NGINX load balancer, four Express app servers, one Redis API cache, and one 105M record PostgreSQL database, each on AWS EC2 T2 micros.',
     githubLink: 'https://github.com/Camelot-Stocks/Graph-Service',
     lastUpdated: '2020-01-10T17:39:14Z',
     image: 'https://i.imgur.com/ZtBOqYf.png',
@@ -46,7 +46,7 @@ const initProjects = [
     githubLink: 'https://github.com/nickzylstra/mini-apps-2/tree/master/challenge_4',
     lastUpdated: '2020-02-04T17:39:14Z',
     image: 'https://raw.githubusercontent.com/nickzylstra/mini-apps-2/master/challenge_4/demo.gif',
-    tags: ['create-react-app', 'redux', 'redux-thunk', 'jest', 'testing-library/react'],
+    tags: ['create-react-app', 'redux', 'redux-thunk', 'jest', 'react-testing-library'],
   },
   {
     id: 6,
