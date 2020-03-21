@@ -3,7 +3,9 @@ import React from 'react';
 
 const Home = () => (
   <div aria-label="home-page">
-    Home
+    <div style={{ textAlign: 'center' }}>
+      Home
+    </div>
   </div>
 );
 
