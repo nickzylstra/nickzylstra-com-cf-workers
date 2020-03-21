@@ -24,7 +24,7 @@ const initProjects = [
   {
     id: 3,
     name: 'Stock Price History Graph Backend',
-    description: 'Service scaled to 2500 RPS deployed throughput with NGINX load balancer, four Express app servers, one Redis API cache, and one 105M record PostgreSQL database, each on AWS EC2 T2 micros.',
+    description: 'Service scaled to 2500 RPS throughput with one load balancer, four app servers, one API cache, and one 105M record PostgreSQL database on AWS EC2 T2 micros.',
     githubLink: 'https://github.com/Camelot-Stocks/Graph-Service',
     lastUpdated: '2020-01-10T17:39:14Z',
     image: 'https://i.imgur.com/ZtBOqYf.png',
@@ -34,7 +34,7 @@ const initProjects = [
     id: 4,
     name: 'Bowling Score Simulation',
     description: 'App to test Xstate finite state machine library on handling game scoring and progress. Used model-based testing to automatically generate tests for relevant paths of state machine graph model.',
-    githubLink: 'https://github.com/nickzylstra/mini-apps-2/master/challenge_3',
+    githubLink: 'https://github.com/nickzylstra/mini-apps-2/tree/master/challenge_3',
     lastUpdated: '2020-01-22T17:39:14Z',
     image: 'https://raw.githubusercontent.com/nickzylstra/mini-apps-2/master/challenge_3/statechart.png',
     tags: ['react', 'xstate', 'express', 'node.js', 'webpack', 'jest', 'enzyme'],

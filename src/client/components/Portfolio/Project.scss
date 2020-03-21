@@ -1,16 +1,11 @@
 $transition-duration: 300ms;
-$transition-type: ease-in;
+$transition-type: ease-out;
 
 .project {
   margin: 15px;
-  $width: 400px;
-  width: $width;
-  height: unquote('min(453px, 100vw)');
-  
-  &:hover {
-    background-color: #343a40;
-    transition: background-color ($transition-duration * 2) $transition-type;
-  }
+  // $width: 400px;
+  // width: $width;
+  // height: unquote('max(80vh, 453px)');
 }
 
 @mixin add-opacity-transition($opacity) {
@@ -28,6 +23,7 @@ $transition-type: ease-in;
 
 .text-hoverchild {
   opacity: 0;
+  margin-top: 45px;
 
   .hoverparent:hover & {
     @include add-opacity-transition(1);
