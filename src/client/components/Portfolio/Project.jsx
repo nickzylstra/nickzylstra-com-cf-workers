@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
-import './Project.css';
+import './Project.scss';
 
 
 const Project = ({ project }) => {
