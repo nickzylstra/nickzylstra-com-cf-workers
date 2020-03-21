@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
+import moment from 'moment';
 import './Project.scss';
 
 
@@ -9,7 +10,7 @@ const Project = ({ project }) => {
   } = project;
 
   const {
-    Title, Subtitle, Text, Img, ImgOverlay,
+    Title, Text, Img, ImgOverlay, Body,
   } = Card;
 
   return (
@@ -17,11 +18,15 @@ const Project = ({ project }) => {
     <Card id={`card-${id}`} className="bg-dark text-white hoverparent">
       <Img src={image} crossOrigin="anonymous" alt={`${name} project card image`} className="img-hoverchild" />
       <ImgOverlay className="text-hoverchild">
-        <Title>{name}</Title>
-        <Subtitle>{`last updated: ${lastUpdated}`}</Subtitle>
-        <Text>{description}</Text>
-        <Text>{tags.reduce((list, tag) => `${list}, ${tag}`)}</Text>
-        <Card.Link>{githubLink}</Card.Link>
+        <Body>
+          <Title>{name}</Title>
+          <Text>{description}</Text>
+          <Text>
+            {`Tech: ${tags.reduce((list, tag) => `${list}, ${tag}`)}`}
+          </Text>
+          <Text>{`Last Updated: ${moment(lastUpdated).calendar()}`}</Text>
+          <Card.Link href={githubLink} className="text-purple">Github Link</Card.Link>
+        </Body>
       </ImgOverlay>
     </Card>
   );
