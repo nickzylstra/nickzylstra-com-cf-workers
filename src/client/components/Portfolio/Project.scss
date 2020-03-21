@@ -1,15 +1,20 @@
+@mixin add-opacity-transition($opacity) {
+  opacity: $opacity;
+  transition: opacity 400ms;
+}
+
 .img-hoverchild {
   opacity: 1;
+
+  .hoverparent:hover & {
+    @include add-opacity-transition(0.1);
+  }
 }
 
 .text-hoverchild {
   opacity: 0;
-}
 
-.hoverparent:hover .img-hoverchild {
-    opacity: 0.1;
-}
-
-.hoverparent:hover .text-hoverchild {
-    opacity: 1;
+  .hoverparent:hover & {
+    @include add-opacity-transition(1);
+  }
 }
