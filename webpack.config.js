@@ -4,12 +4,14 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const isDevelopment = process.env.NODE_ENV === 'development';
 
 module.exports = {
+  mode: isDevelopment ? 'development' : 'production',
   entry: path.resolve(__dirname, 'src', 'client', 'index.jsx'),
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'public'),
     publicPath: '/',
   },
+  devtool: isDevelopment ? 'inline-source-map' : false,
   devServer: {
     contentBase: path.resolve(__dirname, 'public'),
     port: 4000,
