@@ -20,7 +20,7 @@ const Project = ({ project }) => {
       <ImgOverlay className="text-hoverchild">
         <Body>
           <Title>{name}</Title>
-          <Card.Link href={githubLink}>{`Github last updated: ${moment(lastUpdated).calendar()}`}</Card.Link>
+          <Card.Link href={githubLink}>{`Github code last updated: ${moment(lastUpdated).calendar()}`}</Card.Link>
           <Text>{description}</Text>
           <Text>{`Tech: ${tags.reduce((list, tag) => `${list}, ${tag}`)}`}</Text>
         </Body>
