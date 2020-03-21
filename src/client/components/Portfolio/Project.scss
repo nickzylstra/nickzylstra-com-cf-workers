@@ -1,3 +1,9 @@
+.project {
+  margin: 15px;
+  max-width: 400px;
+  max-height: 500px;
+}
+
 @mixin add-opacity-transition($opacity) {
   opacity: $opacity;
   transition: opacity 400ms;

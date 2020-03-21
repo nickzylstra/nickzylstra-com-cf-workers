@@ -1,13 +1,12 @@
 import React from 'react';
-import { CardDeck, Container } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import Project from './Project.jsx';
+import './Projects.scss';
 
 
 const Projects = ({ projects }) => (
-  <Container>
-    <CardDeck>
-      {projects.map((p) => <Project key={p.id} project={p} />)}
-    </CardDeck>
+  <Container className="projects">
+    {projects.map((p) => <Project key={p.id} project={p} />)}
   </Container>
 );
 
