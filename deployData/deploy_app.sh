@@ -25,7 +25,7 @@ docker system prune -f --volumes
 
 echo "Deploying App Server to Docker Container"
 #Check for running container & stop it before starting a new one
-if [ $(docker inspect -f '{{.State.Running}}' $CONTAINER_NAME) = "true" ]; then
+if [ $(docker ps -q -f name=$CONTAINER_NAME) && $(docker inspect -f '{{.State.Running}}' $CONTAINER_NAME) = "true" ]; then
     docker stop $CONTAINER_NAME
 fi
 
