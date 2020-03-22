@@ -19,9 +19,11 @@ if [[ $# -lt 1 ]] ; then
     exit 1
 fi
 
+
+echo "Pruning unused Docker data"
+docker system prune -f --volumes
+
 echo "Deploying App Server to Docker Container"
-
-
 #Check for running container & stop it before starting a new one
 if [ $(docker inspect -f '{{.State.Running}}' $CONTAINER_NAME) = "true" ]; then
     docker stop $CONTAINER_NAME
@@ -35,5 +37,4 @@ REPODIR="/home/ec2-user/nickzylstra-com/"
 COMPOSE1="${REPODIR}docker-compose.yml"
 COMPOSE2="${REPODIR}docker-compose.prod.yml"
 docker-compose -f $COMPOSE1 -f $COMPOSE2 up -d
-docker system prune -f --volumes
 docker ps -a
