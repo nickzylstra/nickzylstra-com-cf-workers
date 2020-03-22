@@ -5,7 +5,7 @@ function configThree(threeRef) {
   const scene = new THREE.Scene();
 
   const width = window.innerWidth;
-  const height = window.innerHeight - 70;
+  const height = window.innerHeight - 68;
 
   const camConf = {
     fieldOfView: 75,
