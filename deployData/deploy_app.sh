@@ -20,16 +20,17 @@ if [[ $# -lt 1 ]] ; then
 fi
 
 
+echo "Deploying App Server to Docker Container"
+#Check for running container & stop it before starting a new one
+if [ $(docker ps -q -f name=$CONTAINER_NAME) ]; then
+    if [$(docker inspect -f '{{.State.Running}}' $CONTAINER_NAME) = "true" ]; then
+        docker stop $CONTAINER_NAME
+    fi
+fi
+
 echo "Pruning unused Docker data"
 docker system prune -f --volumes
 
-echo "Deploying App Server to Docker Container"
-#Check for running container & stop it before starting a new one
-if [ $(docker ps -q -f name=$CONTAINER_NAME) && $(docker inspect -f '{{.State.Running}}' $CONTAINER_NAME) = "true" ]; then
-    docker stop $CONTAINER_NAME
-fi
-
-docker rm $CONTAINER_NAME
 echo "Waiting for Docker Hub to ensure new image available"
 sleep 10
 docker pull $DOCKER_IMAGE
