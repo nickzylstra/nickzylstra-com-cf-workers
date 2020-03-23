@@ -42,22 +42,11 @@ describe('app', () => {
     describe('POST', () => {
       const data = { name, email };
       test('should create customer', async () => {
-        const host = 'www.nickzylstra.com';
         const res = await request(app)
           .post('/api/customers')
-          .set('origin', `https://${host}`)
           .send(data);
         expect(res.statusCode).toBe(201);
         expect(res.body.customerId).toBeDefined();
-      });
-
-      test('should fail for non-whitelisted host', async () => {
-        const host = 'www.badactor.com';
-        const res = await request(app)
-          .post('/api/customers')
-          .set('origin', `http://${host}`)
-          .send(data);
-        expect(res.statusCode).toBe(500);
       });
     });
   });

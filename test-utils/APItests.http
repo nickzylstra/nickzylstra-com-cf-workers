@@ -1,19 +1,37 @@
-GET http://localhost:3000
+@localHost = http://localhost
+@localPort = 3000
+@localUrl = {{localHost}}:{{localPort}}
+@deployedUrl = https://www.nickzylstra.com
+
+###
+
+GET {{localUrl}}
 
 # sample response body: API server running
 
 ###
-GET https://www.nickzylstra.com
+GET {{deployedUrl}}
 
 # sample response body: API server running
 
 ###
-POST http://localhost:3000/customers
+POST {{localUrl}}/api/customers
 content-type: application/json
 
 {
     "name": "sample",
-    "email": "bob1@business.com"
+    "email": "bob@business.com"
+}
+
+# sample response body: {"customerId":4}
+
+###
+POST {{deployedUrl}}/api/customers
+content-type: application/json
+
+{
+    "name": "sample",
+    "email": "bob@business.com"
 }
 
 # sample response body: {"customerId":4}
