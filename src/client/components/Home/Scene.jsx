@@ -1,12 +1,24 @@
 import React, { useEffect, useRef } from 'react';
 import * as THREE from 'three';
 
+const getWindowSize = () => ({
+  width: window.innerWidth,
+  height: window.innerHeight - 68,
+});
+
+function onWindowResize(camera, renderer) {
+  const { width, height } = getWindowSize();
+  // eslint-disable-next-line no-param-reassign
+  camera.aspect = width / height;
+  camera.updateProjectionMatrix();
+
+  renderer.setSize(width, height);
+}
+
 function configThree(threeRef) {
   const scene = new THREE.Scene();
 
-  const width = window.innerWidth;
-  const height = window.innerHeight - 68;
-
+  const { width, height } = getWindowSize();
   const camConf = {
     fieldOfView: 75,
     aspectRatio: width / height,
@@ -26,6 +38,8 @@ function configThree(threeRef) {
   scene.add(cube);
 
   camera.position.z = 5;
+
+  window.addEventListener('resize', () => onWindowResize(camera, renderer), false);
 
   return {
     renderer, geometry, material, cube, scene, camera,
