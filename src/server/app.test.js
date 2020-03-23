@@ -45,7 +45,6 @@ describe('app', () => {
         const host = 'www.nickzylstra.com';
         const res = await request(app)
           .post('/api/customers')
-          .set('host', host)
           .set('origin', `https://${host}`)
           .send(data);
         expect(res.statusCode).toBe(201);
@@ -56,7 +55,6 @@ describe('app', () => {
         const host = 'www.badactor.com';
         const res = await request(app)
           .post('/api/customers')
-          .set('host', host)
           .set('origin', `http://${host}`)
           .send(data);
         expect(res.statusCode).toBe(500);
