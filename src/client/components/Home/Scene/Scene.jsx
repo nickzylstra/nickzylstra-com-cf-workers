@@ -102,7 +102,7 @@ const Scene = () => {
       }
       if (cube.position.z < 40) {
         // cube.position.z += 1000 * Math.abs(Math.sin(t));
-        cube.position.z += 0.1;
+        cube.position.z += 0.2;
       }
 
       water.material.uniforms.time.value += 1 / 60;
@@ -113,7 +113,7 @@ const Scene = () => {
       scene.dispose();
       renderer.dispose();
       shapeParts.forEach((part) => { part.dispose(); });
-      document.body.style.overflow = 'scroll';
+      document.body.style.overflow = '';
     };
   }, []);
   return (
