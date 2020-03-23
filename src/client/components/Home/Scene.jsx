@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import * as THREE from 'three';
+import Water from './Water';
 
 const getWindowSize = () => ({
   width: window.innerWidth,
@@ -15,34 +16,68 @@ function onWindowResize(camera, renderer) {
   renderer.setSize(width, height);
 }
 
-function configThree(threeRef) {
-  const scene = new THREE.Scene();
-
+function configScene() {
   const { width, height } = getWindowSize();
+
+  const scene = new THREE.Scene();
+  scene.background = new THREE.Color(0xffffff);
+
+  const light = new THREE.DirectionalLight(0xffffff, 0.8);
+  light.castShadow = true;
+  scene.add(light);
+
   const camConf = {
     fieldOfView: 75,
     aspectRatio: width / height,
     clippingPlaneNear: 0.1,
-    clippingPlaneFar: 1000,
+    clippingPlaneFar: 10000,
   };
-  // eslint-disable-next-line max-len
-  const camera = new THREE.PerspectiveCamera(camConf.fieldOfView, camConf.aspectRatio, camConf.clippingPlaneNear, camConf.clippingPlaneFar);
+  const camera = new THREE.PerspectiveCamera(
+    camConf.fieldOfView, camConf.aspectRatio, camConf.clippingPlaneNear, camConf.clippingPlaneFar,
+  );
+  camera.position.set(0, 30, 100);
 
   const renderer = new THREE.WebGLRenderer();
   renderer.setSize(width, height);
-  threeRef.current.appendChild(renderer.domElement);
+  renderer.shadowMap.enabled = true;
 
-  const geometry = new THREE.BoxGeometry();
-  const material = new THREE.MeshBasicMaterial({ color: 0x007bff });
-  const cube = new THREE.Mesh(geometry, material);
+  const cubeGeometry = new THREE.BoxGeometry(20, 20, 20);
+  const cubeMaterial = new THREE.MeshPhongMaterial({ color: 0x007bff });
+  const cube = new THREE.Mesh(cubeGeometry, cubeMaterial);
+  cube.position.y = 30;
+  cube.position.z = 20;
+  cube.castShadow = true;
   scene.add(cube);
 
-  camera.position.z = 5;
+  // const wireMaterial = new THREE.MeshPhongMaterial
+
+  const waterGeometry = new THREE.PlaneBufferGeometry(10000, 10000);
+  const water = new Water(
+    waterGeometry,
+    {
+      textureWidth: 512,
+      textureHeight: 512,
+      waterNormals: new THREE.TextureLoader().load('three/textures/waternormals.jpg', (texture) => {
+        // eslint-disable-next-line
+        texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
+      }),
+      alpha: 1.0,
+      sunDirection: light.position.clone().normalize(),
+      sunColor: 0xffffff,
+      waterColor: 0x001e0f,
+      distortionScale: 3.7,
+      fog: scene.fog !== undefined,
+    },
+  );
+  water.rotation.x = -Math.PI / 2;
+  scene.add(water);
+
+  const shapeParts = [cubeGeometry, cubeMaterial, waterGeometry];
 
   window.addEventListener('resize', () => onWindowResize(camera, renderer), false);
 
   return {
-    renderer, geometry, material, cube, scene, camera,
+    renderer, shapeParts, cube, scene, camera,
   };
 }
 
@@ -52,21 +87,26 @@ const Scene = () => {
 
   useEffect(() => {
     const {
-      renderer, geometry, material, cube, scene, camera,
-    } = configThree(threeRef);
+      renderer, shapeParts, cube, scene, camera,
+    } = configScene();
 
-    (function animate() {
+    threeRef.current.appendChild(renderer.domElement);
+
+    const cubeYOffset = 10;
+    const cubeZOffset = 20;
+    (function animate(t) {
       requestAnimationFrame(animate);
       cube.rotation.x += 0.01;
       cube.rotation.y += 0.01;
+      cube.position.y = cubeYOffset + 10 * Math.sin(t / 500);
+      cube.position.z = cubeZOffset + 10 * Math.sin(t / 1000);
       renderer.render(scene, camera);
     }());
 
     return () => {
       scene.dispose();
       renderer.dispose();
-      material.dispose();
-      geometry.dispose();
+      shapeParts.forEach((part) => { part.dispose(); });
     };
   }, []);
   return (
