@@ -23,7 +23,7 @@ function configScene() {
   scene.background = new THREE.Color(0xffffff);
 
   const light = new THREE.DirectionalLight(0xffffff, 0.8);
-  light.castShadow = true;
+  // light.castShadow = true;
   scene.add(light);
 
   const camConf = {
@@ -39,14 +39,14 @@ function configScene() {
 
   const renderer = new THREE.WebGLRenderer();
   renderer.setSize(width, height);
-  renderer.shadowMap.enabled = true;
+  // renderer.shadowMap.enabled = true;
 
   const cubeGeometry = new THREE.BoxGeometry(20, 20, 20);
   const cubeMaterial = new THREE.MeshPhongMaterial({ color: 0x007bff });
   const cube = new THREE.Mesh(cubeGeometry, cubeMaterial);
-  cube.position.y = 30;
-  cube.position.z = 20;
-  cube.castShadow = true;
+  cube.position.y = -20;
+  cube.position.z = -150;
+  // cube.castShadow = true;
   scene.add(cube);
 
   // const wireMaterial = new THREE.MeshPhongMaterial
@@ -72,12 +72,12 @@ function configScene() {
   water.rotation.x = -Math.PI / 2;
   scene.add(water);
 
-  const shapeParts = [cubeGeometry, cubeMaterial, waterGeometry];
+  const shapeParts = [cubeGeometry, cubeMaterial, waterGeometry, water.material];
 
   window.addEventListener('resize', () => onWindowResize(camera, renderer), false);
 
   return {
-    renderer, shapeParts, cube, scene, camera,
+    renderer, shapeParts, cube, water, scene, camera,
   };
 }
 
@@ -87,19 +87,24 @@ const Scene = () => {
 
   useEffect(() => {
     const {
-      renderer, shapeParts, cube, scene, camera,
+      renderer, shapeParts, cube, water, scene, camera,
     } = configScene();
 
     threeRef.current.appendChild(renderer.domElement);
 
-    const cubeYOffset = 10;
-    const cubeZOffset = 20;
     (function animate(t) {
       requestAnimationFrame(animate);
       cube.rotation.x += 0.01;
-      cube.rotation.y += 0.01;
-      cube.position.y = cubeYOffset + 10 * Math.sin(t / 500);
-      cube.position.z = cubeZOffset + 10 * Math.sin(t / 1000);
+      cube.rotation.y += 0.007;
+      if (cube.position.y < 25) {
+        cube.position.y += 0.1;
+      }
+      if (cube.position.z < 40) {
+        // cube.position.z += 1000 * Math.abs(Math.sin(t));
+        cube.position.z += 0.1;
+      }
+
+      water.material.uniforms.time.value += 1 / 60;
       renderer.render(scene, camera);
     }());
 
