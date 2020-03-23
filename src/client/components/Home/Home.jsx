@@ -1,8 +1,9 @@
 import React from 'react';
 import Scene from './Scene/Scene.jsx';
+import './Home.scss';
 
 const Home = () => (
-  <div aria-label="home-page">
+  <div className="Home" aria-label="home-page">
     <Scene />
   </div>
 );

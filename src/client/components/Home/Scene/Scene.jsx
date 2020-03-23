@@ -4,7 +4,7 @@ import Water from './Water';
 
 const getWindowSize = () => ({
   width: window.innerWidth,
-  height: window.innerHeight - 68,
+  height: window.innerHeight - 50,
 });
 
 function onWindowResize(camera, renderer) {
@@ -86,6 +86,7 @@ const Scene = () => {
   const threeRef = useRef(null);
 
   useEffect(() => {
+    document.body.style.overflow = 'hidden';
     const {
       renderer, shapeParts, cube, water, scene, camera,
     } = configScene();
@@ -112,6 +113,7 @@ const Scene = () => {
       scene.dispose();
       renderer.dispose();
       shapeParts.forEach((part) => { part.dispose(); });
+      document.body.style.overflow = 'scroll';
     };
   }, []);
   return (
