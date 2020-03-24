@@ -1,76 +1,35 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import Projects from './Projects.jsx';
 
 
 const initProjects = [
   {
     id: 1,
-    name: 'Home Payment Calculator',
-    description: 'Front end focused microservice to calculate monthly home ownership costs.  Part of larger real estate site.',
-    githubLink: 'https://github.com/fRiend-hrsf124/costHomeOwnership-service',
-    lastUpdated: '2019-12-15T17:39:14Z',
-    image: 'https://raw.githubusercontent.com/fRiend-hrsf124/costHomeOwnership-service/master/fec.gif',
-    tags: ['react', 'react-styled-components', 'express', 'node.js', 'mysql', 'webpack', 'gulp', 'circleci', 'aws-s3', 'aws-ec2', 'docker', 'jest', 'enzyme'],
-  },
-  {
-    id: 2,
-    name: 'Referral eSignature Integration',
-    description: 'Embedded iframe app to retrieve Docusign hosted contacts and forms, add form info, send for signature, and receive signature status updates.',
-    githubLink: 'https://github.com/nickzylstra/eSignIntegration',
-    lastUpdated: '2020-03-09T17:39:14Z',
-    image: 'https://raw.githubusercontent.com/nickzylstra/eSignIntegration/master/demo.gif',
-    tags: ['react', 'bootstrap', 'express', 'node.js', 'mongodb', 'webpack', 'aws-ec2', 'nginx', 'docusign-esign', 'jwt', 'jest', 'react-testing-library'],
-  },
-  {
-    id: 3,
-    name: 'Stock Price History Graph Backend',
-    description: 'Service scaled to 2500 RPS throughput with one load balancer, four app servers, one API cache, and one 105M record PostgreSQL database on AWS EC2 T2 micros.',
-    githubLink: 'https://github.com/Camelot-Stocks/Graph-Service',
-    lastUpdated: '2020-01-10T17:39:14Z',
-    image: 'https://i.imgur.com/ZtBOqYf.png',
-    tags: ['react', 'express', 'node.js', 'postgresql', 'cassandra', 'redis', 'aws-ec2', 'nginx', 'jest', 'artillery.io', 'loader.io', 'newrelic'],
-  },
-  {
-    id: 4,
-    name: 'Bowling Score Simulation',
-    description: 'App to test Xstate finite state machine library on handling game scoring and progress. Used model-based testing to automatically generate tests for relevant paths of state machine graph model.',
-    githubLink: 'https://github.com/nickzylstra/mini-apps-2/tree/master/challenge_3',
-    lastUpdated: '2020-01-22T17:39:14Z',
-    image: 'https://raw.githubusercontent.com/nickzylstra/mini-apps-2/master/challenge_3/statechart.png',
-    tags: ['react', 'xstate', 'express', 'node.js', 'webpack', 'jest', 'enzyme'],
-  },
-  {
-    id: 5,
-    name: 'Minesweeper',
-    description: 'Minesweeper clone to test redux and create react app.',
-    githubLink: 'https://github.com/nickzylstra/mini-apps-2/tree/master/challenge_4',
-    lastUpdated: '2020-02-04T17:39:14Z',
-    image: 'https://raw.githubusercontent.com/nickzylstra/mini-apps-2/master/challenge_4/demo.gif',
-    tags: ['create-react-app', 'redux', 'redux-thunk', 'jest', 'react-testing-library'],
-  },
-  {
-    id: 6,
-    name: 'Collider',
-    description: 'Collider game to test d3',
-    githubLink: 'https://github.com/nickzylstra/collider',
-    lastUpdated: '2020-03-07T17:39:14Z',
-    image: 'https://raw.githubusercontent.com/nickzylstra/collider/master/demo.gif',
-    tags: ['create-react-app', 'd3'],
-  },
-  {
-    id: 7,
-    name: 'www.nickzylstra.com',
-    description: 'Personal website for sharing projects and testing new tech (private Github).  Webpack setup to split client JS and CSS bundles per view to increase page load speed and hash/auto-inject filenames for cache-busting.  Deployment through a fully automated CICD pipeline using Github, CircleCI, Docker Hub, and AWS EC2.  Development environment setup with webpack dev server including hot module reload to instantly see code changes.  Docker-compose configurations for development and production for easy setup.  Utilizes helmet library and Cloudflare service for security and additional monitoring data.',
-    githubLink: 'https://www.nickzylstra.com',
-    lastUpdated: '2020-03-24T17:39:14Z',
-    image: 'https://i.imgur.com/y4Sifea.png',
-    tags: ['react', 'react-bootstrap', 'scss/sass', 'react-router', 'three.js', 'express', 'helmet', 'node.js', 'postgresql', 'webpack', 'webpack-dev-server', 'cloudflare', 'aws-ec2', 'docker', 'nginx', 'letsencrypt', 'jest', 'react-testing-library'],
+    name: 'Projects not loaded',
+    description: 'Something went wrong.  See my github at the link.',
+    githubLink: 'https://github.com/nickzylstra',
+    lastUpdated: new Date(),
+    image: '/assets/favicon_io/android-chrome-512x512.png',
+    tags: ['interwebs'],
   },
 ];
 
 const Portfolio = () => {
-  // eslint-disable-next-line no-unused-vars
   const [projects, setProjects] = useState(initProjects);
+
+  useEffect(() => {
+    const getProjects = async () => {
+      try {
+        const { data } = await axios.get('/assets/projects.json');
+        setProjects(data.projects);
+      } catch (error) {
+        // eslint-disable-next-line no-console
+        console.log(error);
+      }
+    };
+    getProjects();
+  }, []);
 
   return (
     <div aria-label="portfolio-page">
