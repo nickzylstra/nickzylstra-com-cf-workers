@@ -22,6 +22,7 @@ const Portfolio = () => {
     const getProjects = async () => {
       try {
         const { data } = await axios.get('/assets/projects.json');
+        if (!data.projects) throw new Error('no projects retrieved');
         setProjects(data.projects);
       } catch (error) {
         // eslint-disable-next-line no-console
