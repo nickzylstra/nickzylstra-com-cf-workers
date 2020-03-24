@@ -7,7 +7,7 @@ const initProjects = [
   {
     id: 1,
     name: 'Projects not loaded',
-    description: 'Something went wrong.  See my github at the link.',
+    description: 'Something went wrong.  See my github at the link instead.',
     githubLink: 'https://github.com/nickzylstra',
     lastUpdated: new Date(),
     image: '/assets/favicon_io/android-chrome-512x512.png',
