@@ -1,5 +1,5 @@
 node_modules
 coverage
-public/**
+public/*
 !public/assets
 *.pem
