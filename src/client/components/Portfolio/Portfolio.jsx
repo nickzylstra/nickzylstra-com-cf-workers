@@ -5,7 +5,7 @@ import Projects from './Projects.jsx';
 
 const initProjects = [
   {
-    id: 1,
+    id: 0,
     name: 'Projects not loaded',
     description: 'Something went wrong.  See my github at the link instead.',
     githubLink: 'https://github.com/nickzylstra',
