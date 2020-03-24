@@ -57,6 +57,15 @@ const initProjects = [
     image: 'https://raw.githubusercontent.com/nickzylstra/collider/master/demo.gif',
     tags: ['create-react-app', 'd3'],
   },
+  {
+    id: 7,
+    name: 'www.nickzylstra.com',
+    description: 'Personal website for sharing projects and testing new tech (private Github).  Webpack setup to split client JS and CSS bundles per view to increase page load speed and hash/auto-inject filenames for cache-busting.  Deployment through a fully automated CICD pipeline using Github, CircleCI, Docker Hub, and AWS EC2.  Development environment setup with webpack dev server including hot module reload to instantly see code changes.  Docker-compose configurations for development and production for easy setup.  Utilizes helmet library and Cloudflare service for security and additional monitoring data.',
+    githubLink: 'https://www.nickzylstra.com',
+    lastUpdated: '2020-03-24T17:39:14Z',
+    image: 'https://i.imgur.com/y4Sifea.png',
+    tags: ['react', 'react-bootstrap', 'scss/sass', 'react-router', 'three.js', 'express', 'helmet', 'node.js', 'postgresql', 'webpack', 'webpack-dev-server', 'cloudflare', 'aws-ec2', 'docker', 'nginx', 'letsencrypt', 'jest', 'react-testing-library'],
+  },
 ];
 
 const Portfolio = () => {
