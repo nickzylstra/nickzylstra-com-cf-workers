@@ -57,7 +57,7 @@ function configScene() {
     {
       textureWidth: 512,
       textureHeight: 512,
-      waterNormals: new THREE.TextureLoader().load('three/textures/waternormals.jpg', (texture) => {
+      waterNormals: new THREE.TextureLoader().load('/assets/three/textures/waternormals.jpg', (texture) => {
         // eslint-disable-next-line
         texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
       }),
