@@ -1,6 +1,5 @@
 node_modules
 coverage
-public/*bundle.js
-public/*.css
-public/index.html
+public/**
+!public/assets
 *.pem

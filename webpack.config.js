@@ -12,6 +12,7 @@ module.exports = {
   entry: path.resolve(__dirname, 'src', 'client', 'index.jsx'),
   output: {
     filename: isDevelopment ? 'bundle.js' : 'bundle.[hash].js',
+    chunkFilename: isDevelopment ? 'bundle.[id].js' : 'bundle.[id].[hash].js',
     path: publicDirPath,
     publicPath: '/',
   },
@@ -86,7 +87,7 @@ module.exports = {
     }),
     new MiniCssExtractPlugin({
       filename: isDevelopment ? 'styles.css' : 'styles.[hash].css',
-      chunkFilename: isDevelopment ? '[id].css' : '[id].[hash].css',
+      chunkFilename: isDevelopment ? 'styles.[id].css' : 'styles.[id].[hash].css',
     }),
     // new CleanWebpackPlugin(),
   ],

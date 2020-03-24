@@ -1,8 +1,7 @@
 node_modules
 coverage
 .DS_Store
-public/*bundle.js
-public/*.css
-public/index.html
+public/**
+!public/assets
 *.pem
 deployData/certbot
