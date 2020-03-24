@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
 import moment from 'moment';
-import './Project.scss';
+import './Project.module.scss';
 
 
 const Project = ({ project }) => {

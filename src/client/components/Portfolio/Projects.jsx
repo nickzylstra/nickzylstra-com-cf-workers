@@ -2,7 +2,7 @@ import React from 'react';
 import { Container } from 'react-bootstrap';
 import moment from 'moment';
 import Project from './Project.jsx';
-import './Projects.scss';
+import './Projects.module.scss';
 
 
 const sortByDate = (a, b) => moment(b.lastUpdated).diff(moment(a.lastUpdated));

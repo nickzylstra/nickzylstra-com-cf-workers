@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { Container, Spinner } from 'react-bootstrap';
 import Header from './components/Header.jsx';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.scss';
+import './App.module.scss';
 
 
 const Home = lazy(() => import('./components/Home/Home.jsx'));

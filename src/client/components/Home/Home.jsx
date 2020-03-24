@@ -1,6 +1,6 @@
 import React from 'react';
 import Scene from './Scene/Scene.jsx';
-import './Home.scss';
+import './Home.module.scss';
 
 const Home = () => (
   <div className="Home" aria-label="home-page">
