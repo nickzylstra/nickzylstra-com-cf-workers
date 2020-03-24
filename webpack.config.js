@@ -1,6 +1,7 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 const isDevelopment = process.env.NODE_ENV === 'development';
 
@@ -10,7 +11,7 @@ module.exports = {
   mode: isDevelopment ? 'development' : 'production',
   entry: path.resolve(__dirname, 'src', 'client', 'index.jsx'),
   output: {
-    filename: 'bundle.js',
+    filename: isDevelopment ? 'bundle.js' : 'bundle.[hash].js',
     path: publicDirPath,
     publicPath: '/',
   },
@@ -23,6 +24,15 @@ module.exports = {
   },
   module: {
     rules: [
+      {
+        test: /\.html$/,
+        use: [
+          {
+            loader: 'html-loader',
+            options: { minimize: !isDevelopment },
+          },
+        ],
+      },
       {
         test: /.js$|.jsx$/,
         exclude: /node_modules/,
@@ -71,12 +81,14 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.join(publicDirPath, 'index.template.html'),
+      template: path.resolve(__dirname, 'src', 'client', 'index.template.html'),
+      scriptLoading: 'defer',
     }),
     new MiniCssExtractPlugin({
-      filename: isDevelopment ? '[name].css' : '[name].[hash].css',
+      filename: isDevelopment ? 'styles.css' : 'styles.[hash].css',
       chunkFilename: isDevelopment ? '[id].css' : '[id].[hash].css',
     }),
+    // new CleanWebpackPlugin(),
   ],
   resolve: {
     extensions: ['.js', '.jsx', '.scss'],

@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { Container, Spinner } from 'react-bootstrap';
 import Header from './components/Header.jsx';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.module.scss';
+import styles from './App.module.scss';
 
 
 const Home = lazy(() => import('./components/Home/Home.jsx'));
@@ -17,10 +17,10 @@ const theme = {
 
 // eslint-disable-next-line no-unused-vars
 const App = ({ host }) => (
-  <div className="App" aria-label="app">
+  <div className={styles.app} aria-label="app">
     <Router>
       <Header theme={theme} />
-      <Container as="main" bsPrefix="container-page">
+      <Container className={styles['container-page']} as="main">
         <Suspense fallback={<Spinner animation="border" />}>
           <Switch>
             <Route exact path="/">
