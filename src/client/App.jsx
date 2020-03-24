@@ -1,6 +1,6 @@
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { Container, Spinner } from 'react-bootstrap';
+import { Spinner } from 'react-bootstrap';
 import Header from './components/Header.jsx';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import styles from './App.module.scss';
@@ -20,7 +20,7 @@ const App = ({ host }) => (
   <div className={styles.app} aria-label="app">
     <Router>
       <Header theme={theme} />
-      <Container className={styles['container-page']} as="main">
+      <main className={styles['container-page']}>
         <Suspense fallback={<Spinner animation="border" />}>
           <Switch>
             <Route exact path="/">
@@ -34,7 +34,7 @@ const App = ({ host }) => (
             </Route>
           </Switch>
         </Suspense>
-      </Container>
+      </main>
     </Router>
   </div>
 );
