@@ -2,7 +2,7 @@ import React from 'react';
 import { Navbar, Nav } from 'react-bootstrap';
 import { Link, useLocation } from 'react-router-dom';
 
-import './Header.css';
+import './Header.scss';
 
 const Header = ({ theme }) => {
   const { variant, bg } = theme;
