@@ -2,7 +2,7 @@ import React from 'react';
 import { Navbar, Nav } from 'react-bootstrap';
 import { Link, useLocation } from 'react-router-dom';
 
-import './Header.module.scss';
+import styles from './Header.module.scss';
 
 const Header = ({ theme }) => {
   const { variant, bg } = theme;
@@ -13,7 +13,7 @@ const Header = ({ theme }) => {
       <Navbar.Brand href="/">nz</Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav-header" />
       <Navbar.Collapse id="responsive-navbar-nav-header">
-        <Nav activeKey={pathname}>
+        <Nav className={styles['navbar-nav']} activeKey={pathname}>
           <Nav.Item>
             <Nav.Link
               as={Link}
