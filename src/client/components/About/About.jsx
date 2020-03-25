@@ -1,14 +1,10 @@
 import React from 'react';
-import GithubIcon from './GithubIcon.jsx';
-import LinkedInIcon from './LinkedInIcon.jsx';
-import MailIcon from './MailIcon.jsx';
+import Contact from './Contact/Contact.jsx';
 
 
 const About = () => (
   <div aria-label="about-page">
-    <GithubIcon />
-    <LinkedInIcon />
-    <MailIcon />
+    <Contact />
   </div>
 );
 

@@ -9,6 +9,7 @@ const SocialIcon = ({ url, viewBox, pathD }) => (
     href={url}
     target="_blank"
     rel="noreferrer noopener"
+    className={styles.SocialButton}
   >
     <svg
       className={styles.SocialIcon}
