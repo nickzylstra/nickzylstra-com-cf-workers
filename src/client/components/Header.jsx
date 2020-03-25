@@ -31,7 +31,7 @@ const Header = ({ theme }) => {
               eventKey="/portfolio"
               aria-label="portfolio-link"
             >
-              portfolio
+              works
             </Nav.Link>
           </Nav.Item>
           <Nav.Item>
