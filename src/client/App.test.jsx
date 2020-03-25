@@ -1,5 +1,6 @@
 import React from 'react';
 import { render, fireEvent, waitForElement } from '@testing-library/react';
+import axios from 'axios';
 import App from './App.jsx';
 
 // Remove testing of components including Three.js since I'm not sure how to get
@@ -9,44 +10,40 @@ jest.mock('./components/Home/Scene/Scene.jsx', () => ({ __esModule: true, defaul
 const host = 'http://localhost:3000';
 
 describe('Client App', () => {
-  test('should load app component', async () => {
-    const { getByLabelText } = render(<App host={host} />);
-    const label = getByLabelText(/app/i);
+  const testProject = {
+    id: 1,
+    name: 'portfolio test project',
+    description: 'test desc',
+    githubLink: 'https://github.com/nickzylstra',
+    lastUpdated: '2019-12-15T17:39:14Z',
+    image: '/assets/favicon_io/favicon-16x16.png',
+    tags: ['interwebs'],
+  };
+  axios.get.mockImplementationOnce(() => Promise.resolve({
+    data: { projects: [testProject] },
+  }));
 
-    expect(label).toBeInTheDocument();
-  });
+  test('should load app and lazy load each navbar component', async () => {
+    const { getByLabelText, getByText, getByTestId } = render(<App host={host} />);
+    expect(getByLabelText(/app/i)).toBeInTheDocument();
+    expect(getByTestId(/spinner/i)).toBeInTheDocument();
+    expect(() => getByLabelText('home-page')).toThrowError();
 
-  describe('Home', () => {
-    let app;
-    beforeEach(async () => {
-      app = render(<App host={host} />);
-    });
+    const homePageElem = await waitForElement(() => getByLabelText('home-page'));
+    expect(homePageElem).toBeInTheDocument();
 
-    test('should load home component', async () => {
-      const { getByLabelText } = app;
-      const homeLinkElem = await waitForElement(() => getByLabelText('home-link'));
-      fireEvent.click(homeLinkElem);
+    fireEvent.click(getByLabelText('portfolio-link'));
+    const portfolioTestProjectElem = await waitForElement(() => getByText(testProject.name));
+    expect(portfolioTestProjectElem).toBeInTheDocument();
+    expect(() => getByLabelText('home-page')).toThrowError();
 
-      const homePage = await waitForElement(() => getByLabelText('home-page'));
-      expect(homePage).toBeInTheDocument();
-    });
+    fireEvent.click(getByLabelText('about-link'));
+    const aboutPageElem = await waitForElement(() => getByLabelText('about-page'));
+    expect(aboutPageElem).toBeInTheDocument();
+    expect(() => getByLabelText('portfolio-page')).toThrowError();
 
-    test('should load portfolio component', async () => {
-      const { getByLabelText } = app;
-      const portfolioLinkElem = await waitForElement(() => getByLabelText('portfolio-link'));
-      fireEvent.click(portfolioLinkElem);
-
-      const portfolioPage = await waitForElement(() => getByLabelText('portfolio-page'));
-      expect(portfolioPage).toBeInTheDocument();
-    });
-
-    test('should load about component', async () => {
-      const { getByLabelText } = app;
-      const aboutLinkElem = await waitForElement(() => getByLabelText('about-link'));
-      fireEvent.click(aboutLinkElem);
-
-      const aboutPage = await waitForElement(() => getByLabelText('about-page'));
-      expect(aboutPage).toBeInTheDocument();
-    });
+    fireEvent.click(getByLabelText('home-link'));
+    const homePageElemRepeat = await waitForElement(() => getByLabelText('home-page'));
+    expect(homePageElemRepeat).toBeInTheDocument();
   });
 });

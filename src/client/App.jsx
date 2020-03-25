@@ -21,7 +21,7 @@ const App = ({ host }) => (
     <Router>
       <Header theme={theme} />
       <main className={styles['container-page']}>
-        <Suspense fallback={<Spinner animation="border" />}>
+        <Suspense fallback={<Spinner data-testid="spinner" animation="border" />}>
           <Switch>
             <Route exact path="/">
               <Home />
