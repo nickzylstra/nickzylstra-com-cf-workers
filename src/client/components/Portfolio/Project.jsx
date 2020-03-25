@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
 import moment from 'moment';
+import theme from '../../theme';
 
 import styles from './Project.module.scss';
 
@@ -16,7 +17,7 @@ const Project = ({ project }) => {
 
   return (
     // TODO - use themeprovider hook
-    <Card id={`card-${id}`} className={`${styles.project} bg-dark text-white ${styles.hoverparent}`}>
+    <Card id={`card-${id}`} className={`${styles.project} bg-${theme.bg} text-${theme.text} ${styles.hoverparent}`}>
       <Header>
         <Title>{name}</Title>
       </Header>
