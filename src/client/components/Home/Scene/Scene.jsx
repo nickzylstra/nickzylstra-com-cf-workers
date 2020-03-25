@@ -18,7 +18,7 @@ function onWindowResize(camera, renderer) {
   renderer.setSize(width, height);
 }
 
-function configScene() {
+function configScene(canvas) {
   const { width, height } = getWindowSize();
 
   const scene = new THREE.Scene();
@@ -39,7 +39,7 @@ function configScene() {
   );
   camera.position.set(0, 30, 100);
 
-  const renderer = new THREE.WebGLRenderer();
+  const renderer = new THREE.WebGLRenderer({ canvas });
   renderer.setSize(width, height);
   // renderer.shadowMap.enabled = true;
 
@@ -91,9 +91,7 @@ const Scene = () => {
     document.body.style.overflow = 'hidden';
     const {
       renderer, shapeParts, cube, water, scene, camera,
-    } = configScene();
-
-    threeRef.current.appendChild(renderer.domElement);
+    } = configScene(threeRef.current);
 
     (function animate() {
       requestAnimationFrame(animate);
@@ -119,7 +117,7 @@ const Scene = () => {
     };
   }, []);
   return (
-    <div ref={threeRef} />
+    <canvas ref={threeRef} />
   );
 };
 
