@@ -10,16 +10,12 @@ const Home = lazy(() => import('./components/Home/Home.jsx'));
 const Portfolio = lazy(() => import('./components/Portfolio/Portfolio.jsx'));
 const About = lazy(() => import('./components/About/About.jsx'));
 
-const theme = {
-  variant: 'dark',
-  bg: 'dark',
-};
 
 // eslint-disable-next-line no-unused-vars
 const App = ({ host }) => (
   <div className={styles.app} aria-label="app">
     <Router>
-      <Header theme={theme} />
+      <Header />
       <main className={styles['container-page']}>
         <Suspense fallback={<Spinner data-testid="spinner" animation="border" />}>
           <Switch>

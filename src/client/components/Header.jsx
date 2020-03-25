@@ -1,10 +1,12 @@
 import React from 'react';
 import { Navbar, Nav } from 'react-bootstrap';
 import { Link, useLocation } from 'react-router-dom';
+import theme from '../theme';
+
 
 import styles from './Header.module.scss';
 
-const Header = ({ theme }) => {
+const Header = () => {
   const { variant, bg } = theme;
   const { pathname } = useLocation();
 
