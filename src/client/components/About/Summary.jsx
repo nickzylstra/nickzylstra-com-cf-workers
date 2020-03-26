@@ -17,7 +17,7 @@ const Summary = () => (
       {' '}
       <a href="https://www.mckinstry.com" target="_blank" rel="noopener noreferrer">McKinstry</a>
       , making buildings energy efficient.
-      Now I&apos;m at
+      On April 6th, 2020 I start at
       {' '}
       <a href="https://www.cloudflare.com" target="_blank" rel="noopener noreferrer">Cloudflare</a>
       , building a better internet.
