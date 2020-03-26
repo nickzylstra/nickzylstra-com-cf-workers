@@ -6,7 +6,7 @@ import styles from './SocialIcon.module.scss';
 
 const SocialIcon = ({ url, viewBox, pathD }) => (
   <Button
-    variant={`outline-${theme.variant}`}
+    variant={`${theme.variant}`}
     href={url}
     target="_blank"
     rel="noreferrer noopener"
@@ -17,7 +17,7 @@ const SocialIcon = ({ url, viewBox, pathD }) => (
       viewBox={viewBox}
       xmlns="http://www.w3.org/2000/svg"
     >
-      <path d={pathD} />
+      <path className={styles.SocialIconPath} d={pathD} />
     </svg>
   </Button>
 );

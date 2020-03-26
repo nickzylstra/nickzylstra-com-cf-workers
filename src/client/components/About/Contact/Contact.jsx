@@ -1,15 +1,11 @@
 import React from 'react';
-import GithubIcon from './GithubIcon.jsx';
-import LinkedInIcon from './LinkedInIcon.jsx';
-import MailIcon from './MailIcon.jsx';
-
+import { Container } from 'react-bootstrap';
+import SocialIcons from './SocialIcons.jsx';
 
 const About = () => (
-  <div aria-label="about-page">
-    <GithubIcon />
-    <LinkedInIcon />
-    <MailIcon />
-  </div>
+  <Container>
+    <SocialIcons />
+  </Container>
 );
 
 export default About;
