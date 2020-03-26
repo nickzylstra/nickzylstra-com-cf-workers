@@ -4,10 +4,17 @@ import Water from './Water';
 
 // import Water from 'three/examples/jsm/objects/Water';
 
-const getWindowSize = () => ({
-  width: window.innerWidth,
-  height: window.innerHeight - 50,
-});
+const getWindowSize = () => {
+  // can increase density for high DPI mobile devices if desired
+  // const ratio = window.devicePixelRatio;
+  const tempHeight = window.innerHeight;
+  const tempWidth = window.innerWidth;
+  // const height = tempHeight * ratio || tempHeight;
+  const height = tempHeight;
+  // const width = tempWidth * ratio || tempWidth;
+  const width = tempWidth;
+  return ({ width, height });
+};
 
 function onWindowResize(camera, renderer) {
   const { width, height } = getWindowSize();
@@ -32,7 +39,7 @@ function configScene(canvas) {
     fieldOfView: 75,
     aspectRatio: width / height,
     clippingPlaneNear: 0.1,
-    clippingPlaneFar: 10000,
+    clippingPlaneFar: 1000,
   };
   const camera = new THREE.PerspectiveCamera(
     camConf.fieldOfView, camConf.aspectRatio, camConf.clippingPlaneNear, camConf.clippingPlaneFar,
