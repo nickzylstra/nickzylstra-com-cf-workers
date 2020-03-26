@@ -13,8 +13,14 @@ const Summary = () => (
     </h4>
     <br />
     <h5>
-      I spent the first 11 years of my career making buildings more energy efficient.
-      Now I build apps and tools in software.
+      The first 11 years of my career were at
+      {' '}
+      <a href="https://www.mckinstry.com" target="_blank" rel="noopener noreferrer">McKinstry</a>
+      , making buildings energy efficient.
+      Now I&apos;m at
+      {' '}
+      <a href="https://www.cloudflare.com" target="_blank" rel="noopener noreferrer">Cloudflare</a>
+      , building a better internet.
     </h5>
     <br />
   </>
