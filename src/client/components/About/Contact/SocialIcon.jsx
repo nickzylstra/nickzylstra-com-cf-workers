@@ -1,11 +1,12 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
+import theme from '../../../theme';
 
 import styles from './SocialIcon.module.scss';
 
 const SocialIcon = ({ url, viewBox, pathD }) => (
   <Button
-    variant="outline-light"
+    variant={`outline-${theme.variant}`}
     href={url}
     target="_blank"
     rel="noreferrer noopener"
