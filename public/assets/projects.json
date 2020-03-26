@@ -138,6 +138,19 @@
            "jest",
            "react-testing-library"
         ]
-     }
+     },
+     {
+      "id":8,
+      "name":"Keyboard Firmware Customization",
+      "description":"Designed custom keyboard layout and customized C/C++ firmware to support design.",
+      "githubLink":"https://github.com/nickzylstra/keyboardio",
+      "lastUpdated":"2020-01-10T17:39:14Z",
+      "image":"https://raw.githubusercontent.com/nickzylstra/keyboardio/master/keyboardlayout.png",
+      "tags":[
+         "C/C++",
+         "arduino",
+         "kaleidoscope"
+      ]
+   }
   ]
 }
