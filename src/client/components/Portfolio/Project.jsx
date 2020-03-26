@@ -23,7 +23,7 @@ const Project = ({ project }) => {
       </Header>
       <Img src={image} crossOrigin="anonymous" alt={`${name} project card image`} className={styles['img-hoverchild']} />
       <ImgOverlay className={styles['text-hoverchild']}>
-        <Card.Link href={githubLink}>{`Github last updated: ${moment(lastUpdated).calendar()}`}</Card.Link>
+        <Card.Link href={githubLink} target="_blank" rel="noreferrer noopener">{`Github last updated: ${moment(lastUpdated).calendar()}`}</Card.Link>
         <Text>{description}</Text>
         <Text>{`Tech: ${tags.reduce((list, tag) => `${list}, ${tag}`)}`}</Text>
       </ImgOverlay>
