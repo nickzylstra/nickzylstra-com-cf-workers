@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import Projects from './Projects.jsx';
+import Projects from './Projects';
 
 
 const initProjects = [

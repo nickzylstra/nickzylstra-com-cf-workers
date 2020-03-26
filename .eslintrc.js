@@ -41,7 +41,7 @@ module.exports = {
     'react-hooks/exhaustive-deps': 'warn',
     'import/extensions': ["error", "ignorePackages", {
       "js": "never",
-      "jsx": "always",
+      "jsx": "never",
       "mjs": "never"
     }],
   },

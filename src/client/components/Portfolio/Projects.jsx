@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
 import moment from 'moment';
-import Project from './Project.jsx';
+import Project from './Project';
 
 import styles from './Projects.module.scss';
 

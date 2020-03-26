@@ -1,7 +1,7 @@
 import React from 'react';
-import GithubIcon from './GithubIcon.jsx';
-import LinkedInIcon from './LinkedInIcon.jsx';
-import MailIcon from './MailIcon.jsx';
+import GithubIcon from './GithubIcon';
+import LinkedInIcon from './LinkedInIcon';
+import MailIcon from './MailIcon';
 
 import styles from './SocialIcons.module.scss';
 

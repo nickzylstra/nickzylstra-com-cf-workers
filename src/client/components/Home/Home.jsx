@@ -1,5 +1,5 @@
 import React from 'react';
-import Scene from './Scene/Scene.jsx';
+import Scene from './Scene/Scene';
 
 import styles from './Home.module.scss';
 

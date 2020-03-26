@@ -1,6 +1,6 @@
 import React from 'react';
-import Summary from './Summary.jsx';
-import Contact from './Contact/Contact.jsx';
+import Summary from './Summary';
+import Contact from './Contact/Contact';
 
 
 const About = () => (

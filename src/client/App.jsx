@@ -1,15 +1,15 @@
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { Spinner } from 'react-bootstrap';
-import Header from './components/Header.jsx';
+import Header from './components/Header';
 
 import './App.scss';
 import styles from './App.module.scss';
 
 
-const Home = lazy(() => import('./components/Home/Home.jsx'));
-const Portfolio = lazy(() => import('./components/Portfolio/Portfolio.jsx'));
-const About = lazy(() => import('./components/About/About.jsx'));
+const Home = lazy(() => import('./components/Home/Home'));
+const Portfolio = lazy(() => import('./components/Portfolio/Portfolio'));
+const About = lazy(() => import('./components/About/About'));
 
 
 // eslint-disable-next-line no-unused-vars

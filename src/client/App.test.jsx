@@ -1,11 +1,11 @@
 import React from 'react';
 import { render, fireEvent, waitForElement } from '@testing-library/react';
 import axios from 'axios';
-import App from './App.jsx';
+import App from './App';
 
 // Remove testing of components including Three.js since I'm not sure how to get
 // Jest to handle the library.  Scene.jsx also removed from test coverage.
-jest.mock('./components/Home/Scene/Scene.jsx', () => ({ __esModule: true, default: jest.fn(() => <div />) }));
+jest.mock('./components/Home/Scene/Scene', () => ({ __esModule: true, default: jest.fn(() => <div />) }));
 
 const host = 'http://localhost:3000';
 
