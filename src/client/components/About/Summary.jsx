@@ -14,7 +14,7 @@ const Summary = () => (
     <br />
     <h5>
       I spent the first 11 years of my career making buildings more energy efficient.
-      Now I build tools in software.
+      Now I build apps and tools in software.
     </h5>
     <br />
   </>
