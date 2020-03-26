@@ -50,7 +50,7 @@ function configScene(canvas) {
   renderer.setSize(width, height);
   // renderer.shadowMap.enabled = true;
 
-  const cubeGeometry = new THREE.BoxGeometry(20, 20, 20);
+  const cubeGeometry = new THREE.BoxBufferGeometry(20, 20, 20);
   const cubeMaterial = new THREE.MeshPhongMaterial({ color: 0x007bff });
   const cube = new THREE.Mesh(cubeGeometry, cubeMaterial);
   cube.position.y = -20;
