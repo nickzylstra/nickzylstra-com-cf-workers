@@ -2,7 +2,8 @@ import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { Spinner } from 'react-bootstrap';
 import Header from './components/Header.jsx';
-import 'bootstrap/dist/css/bootstrap.min.css';
+
+import './App.scss';
 import styles from './App.module.scss';
 
 
