@@ -8,9 +8,9 @@ import styles from './SocialIcons.module.scss';
 const SocialIcons = () => (
   <div className={styles.SocialIconsContainer}>
     <div className={styles.SocialIcons}>
+      <MailIcon />
       <GithubIcon />
       <LinkedInIcon />
-      <MailIcon />
     </div>
   </div>
 );
