@@ -8,7 +8,7 @@ import styles from './App.module.scss';
 
 
 const Home = lazy(() => import('./components/Home/Home'));
-const Portfolio = lazy(() => import('./components/Portfolio/Portfolio'));
+const Works = lazy(() => import('./components/Works/Works'));
 const About = lazy(() => import('./components/About/About'));
 
 
@@ -23,8 +23,8 @@ const App = ({ host }) => (
             <Route exact path="/">
               <Home />
             </Route>
-            <Route path="/portfolio">
-              <Portfolio />
+            <Route path="/works">
+              <Works />
             </Route>
             <Route path="/about">
               <About />

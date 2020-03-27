@@ -29,9 +29,9 @@ const Header = () => {
           <Nav.Item>
             <Nav.Link
               as={Link}
-              to="/portfolio"
-              eventKey="/portfolio"
-              aria-label="portfolio-link"
+              to="/works"
+              eventKey="/works"
+              aria-label="works-link"
             >
               works
             </Nav.Link>

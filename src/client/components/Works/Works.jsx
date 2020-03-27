@@ -15,7 +15,7 @@ const initProjects = [
   },
 ];
 
-const Portfolio = () => {
+const Works = () => {
   const [projects, setProjects] = useState(initProjects);
 
   useEffect(() => {
@@ -33,10 +33,10 @@ const Portfolio = () => {
   }, []);
 
   return (
-    <div aria-label="portfolio-page">
+    <div aria-label="works-page">
       <Projects projects={projects} />
     </div>
   );
 };
 
-export default Portfolio;
+export default Works;

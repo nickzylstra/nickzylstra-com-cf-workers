@@ -12,7 +12,7 @@ const host = 'http://localhost:3000';
 describe('Client App', () => {
   const testProject = {
     id: 1,
-    name: 'portfolio test project',
+    name: 'works test project',
     description: 'test desc',
     githubLink: 'https://github.com/nickzylstra',
     lastUpdated: '2019-12-15T17:39:14Z',
@@ -32,15 +32,15 @@ describe('Client App', () => {
     const homePageElem = await waitForElement(() => getByLabelText('home-page'));
     expect(homePageElem).toBeInTheDocument();
 
-    fireEvent.click(getByLabelText('portfolio-link'));
-    const portfolioTestProjectElem = await waitForElement(() => getByText(testProject.name));
-    expect(portfolioTestProjectElem).toBeInTheDocument();
+    fireEvent.click(getByLabelText('works-link'));
+    const worksTestProjectElem = await waitForElement(() => getByText(testProject.name));
+    expect(worksTestProjectElem).toBeInTheDocument();
     expect(() => getByLabelText('home-page')).toThrowError();
 
     fireEvent.click(getByLabelText('about-link'));
     const aboutPageElem = await waitForElement(() => getByLabelText('about-page'));
     expect(aboutPageElem).toBeInTheDocument();
-    expect(() => getByLabelText('portfolio-page')).toThrowError();
+    expect(() => getByLabelText('works-page')).toThrowError();
 
     fireEvent.click(getByLabelText('home-link'));
     const homePageElemRepeat = await waitForElement(() => getByLabelText('home-page'));
