@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 
 const Summary = () => (
@@ -26,11 +27,10 @@ const Summary = () => (
     </h5>
     <br />
     <h5>
-      You can check out my personal projects at the
+      You can check out my personal projects
       {' '}
-      <span>&apos;works&apos;</span>
-      {' '}
-      page.
+      <Link to="/works">here</Link>
+      .
     </h5>
     <br />
   </>
