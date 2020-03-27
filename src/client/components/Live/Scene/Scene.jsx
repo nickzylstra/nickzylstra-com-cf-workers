@@ -1,8 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import * as THREE from 'three';
-import Water from './Water';
+import { Water } from 'three/examples/jsm/objects/Water';
 
-// import Water from 'three/examples/jsm/objects/Water';
 
 const getWindowSize = () => {
   // can increase density for high DPI mobile devices if desired
