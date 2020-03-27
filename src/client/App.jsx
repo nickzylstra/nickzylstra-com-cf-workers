@@ -1,5 +1,7 @@
 import React, { Suspense, lazy } from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import {
+  BrowserRouter as Router, Switch, Route, Redirect,
+} from 'react-router-dom';
 import { Spinner } from 'react-bootstrap';
 import Header from './components/Header';
 
@@ -21,13 +23,16 @@ const App = ({ host }) => (
         <Suspense fallback={<Spinner data-testid="spinner" animation="border" />}>
           <Switch>
             <Route exact path="/">
-              <Live />
+              <Redirect to="/about" />
+            </Route>
+            <Route path="/about">
+              <About />
             </Route>
             <Route path="/works">
               <Works />
             </Route>
-            <Route path="/about">
-              <About />
+            <Route path="/live">
+              <Live />
             </Route>
           </Switch>
         </Suspense>

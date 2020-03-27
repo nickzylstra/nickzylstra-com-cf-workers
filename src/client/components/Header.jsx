@@ -19,11 +19,11 @@ const Header = () => {
           <Nav.Item>
             <Nav.Link
               as={Link}
-              to="/"
-              eventKey="/"
-              aria-label="live-link"
+              to="/about"
+              eventKey="/about"
+              aria-label="about-link"
             >
-              live
+              about
             </Nav.Link>
           </Nav.Item>
           <Nav.Item>
@@ -39,11 +39,11 @@ const Header = () => {
           <Nav.Item>
             <Nav.Link
               as={Link}
-              to="/about"
-              eventKey="/about"
-              aria-label="about-link"
+              to="/live"
+              eventKey="/live"
+              aria-label="live-link"
             >
-              about
+              live
             </Nav.Link>
           </Nav.Item>
         </Nav>
