@@ -18,11 +18,18 @@ const Summary = () => (
       The first 11 years of my career were at
       {' '}
       <a href="https://www.mckinstry.com" target="_blank" rel="noopener noreferrer">McKinstry</a>
-      , making buildings energy efficient.
+      , making facilities energy efficient.
       Soon I start at
       {' '}
       <a href="https://www.cloudflare.com" target="_blank" rel="noopener noreferrer">Cloudflare</a>
       , building a better internet.
+    </h5>
+    <br />
+    <h5>
+      Check out some of my personal projects
+      {' '}
+      <a href="/works">here</a>
+      .
     </h5>
     <br />
   </>
