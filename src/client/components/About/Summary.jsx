@@ -26,10 +26,11 @@ const Summary = () => (
     </h5>
     <br />
     <h5>
-      Check out some of my personal projects
+      You can check out my personal projects at the
       {' '}
-      <a href="/works">here</a>
-      .
+      <span>&apos;works&apos;</span>
+      {' '}
+      page.
     </h5>
     <br />
   </>
