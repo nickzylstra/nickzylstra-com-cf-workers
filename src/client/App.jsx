@@ -7,7 +7,7 @@ import './App.scss';
 import styles from './App.module.scss';
 
 
-const Home = lazy(() => import('./components/Home/Home'));
+const Live = lazy(() => import('./components/Live/Live'));
 const Works = lazy(() => import('./components/Works/Works'));
 const About = lazy(() => import('./components/About/About'));
 
@@ -21,7 +21,7 @@ const App = ({ host }) => (
         <Suspense fallback={<Spinner data-testid="spinner" animation="border" />}>
           <Switch>
             <Route exact path="/">
-              <Home />
+              <Live />
             </Route>
             <Route path="/works">
               <Works />

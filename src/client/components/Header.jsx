@@ -21,9 +21,9 @@ const Header = () => {
               as={Link}
               to="/"
               eventKey="/"
-              aria-label="home-link"
+              aria-label="live-link"
             >
-              home
+              live
             </Nav.Link>
           </Nav.Item>
           <Nav.Item>

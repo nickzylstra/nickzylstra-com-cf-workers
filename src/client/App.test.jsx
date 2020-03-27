@@ -5,7 +5,7 @@ import App from './App';
 
 // Remove testing of components including Three.js since I'm not sure how to get
 // Jest to handle the library.  Scene.jsx also removed from test coverage.
-jest.mock('./components/Home/Scene/Scene', () => ({ __esModule: true, default: jest.fn(() => <div />) }));
+jest.mock('./components/Live/Scene/Scene', () => ({ __esModule: true, default: jest.fn(() => <div />) }));
 
 const host = 'http://localhost:3000';
 
@@ -27,23 +27,23 @@ describe('Client App', () => {
     const { getByLabelText, getByText, getByTestId } = render(<App host={host} />);
     expect(getByLabelText(/app/i)).toBeInTheDocument();
     expect(getByTestId(/spinner/i)).toBeInTheDocument();
-    expect(() => getByLabelText('home-page')).toThrowError();
+    expect(() => getByLabelText('live-page')).toThrowError();
 
-    const homePageElem = await waitForElement(() => getByLabelText('home-page'));
-    expect(homePageElem).toBeInTheDocument();
+    const livePageElem = await waitForElement(() => getByLabelText('live-page'));
+    expect(livePageElem).toBeInTheDocument();
 
     fireEvent.click(getByLabelText('works-link'));
     const worksTestProjectElem = await waitForElement(() => getByText(testProject.name));
     expect(worksTestProjectElem).toBeInTheDocument();
-    expect(() => getByLabelText('home-page')).toThrowError();
+    expect(() => getByLabelText('live-page')).toThrowError();
 
     fireEvent.click(getByLabelText('about-link'));
     const aboutPageElem = await waitForElement(() => getByLabelText('about-page'));
     expect(aboutPageElem).toBeInTheDocument();
     expect(() => getByLabelText('works-page')).toThrowError();
 
-    fireEvent.click(getByLabelText('home-link'));
-    const homePageElemRepeat = await waitForElement(() => getByLabelText('home-page'));
-    expect(homePageElemRepeat).toBeInTheDocument();
+    fireEvent.click(getByLabelText('live-link'));
+    const livePageElemRepeat = await waitForElement(() => getByLabelText('live-page'));
+    expect(livePageElemRepeat).toBeInTheDocument();
   });
 });
