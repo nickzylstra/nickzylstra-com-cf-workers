@@ -1,6 +1,8 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+// const PreloadWebpackPlugin = require('preload-webpack-plugin');
+// const StyleExtHtmlWebpackPlugin = require('style-ext-html-webpack-plugin');
 // const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 const isDevelopment = process.env.NODE_ENV === 'development';
@@ -81,6 +83,13 @@ module.exports = {
       template: path.resolve(__dirname, 'src', 'client', 'index.template.html'),
       scriptLoading: 'defer',
     }),
+    // new PreloadWebpackPlugin({
+    //   fileWhitelist: [/styles\.*.\.css$/],
+    // }),
+    // new StyleExtHtmlWebpackPlugin({
+    //   position: 'head-bottom',
+    //   minify: !isDevelopment,
+    // }),
     new MiniCssExtractPlugin({
       filename: isDevelopment ? 'styles.css' : 'styles.[hash].css',
       chunkFilename: isDevelopment ? 'styles.[id].css' : 'styles.[id].[hash].css',
