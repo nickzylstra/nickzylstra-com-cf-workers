@@ -27,23 +27,23 @@ describe('Client App', () => {
     const { getByLabelText, getByText, getByTestId } = render(<App host={host} />);
     expect(getByLabelText(/app/i)).toBeInTheDocument();
     expect(getByTestId(/spinner/i)).toBeInTheDocument();
-    expect(() => getByLabelText('live-page')).toThrowError();
+    expect(() => getByLabelText('about-page')).toThrowError();
 
-    const livePageElem = await waitForElement(() => getByLabelText('live-page'));
-    expect(livePageElem).toBeInTheDocument();
+    const aboutPageElem = await waitForElement(() => getByLabelText('about-page'));
+    expect(aboutPageElem).toBeInTheDocument();
 
     fireEvent.click(getByLabelText('works-link'));
     const worksTestProjectElem = await waitForElement(() => getByText(testProject.name));
     expect(worksTestProjectElem).toBeInTheDocument();
-    expect(() => getByLabelText('live-page')).toThrowError();
-
-    fireEvent.click(getByLabelText('about-link'));
-    const aboutPageElem = await waitForElement(() => getByLabelText('about-page'));
-    expect(aboutPageElem).toBeInTheDocument();
-    expect(() => getByLabelText('works-page')).toThrowError();
+    expect(() => getByLabelText('about-page')).toThrowError();
 
     fireEvent.click(getByLabelText('live-link'));
     const livePageElemRepeat = await waitForElement(() => getByLabelText('live-page'));
     expect(livePageElemRepeat).toBeInTheDocument();
+    expect(() => getByLabelText('works-page')).toThrowError();
+
+    fireEvent.click(getByLabelText('about-link'));
+    const aboutPageElem2 = await waitForElement(() => getByLabelText('about-page'));
+    expect(aboutPageElem2).toBeInTheDocument();
   });
 });
