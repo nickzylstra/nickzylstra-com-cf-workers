@@ -12,6 +12,8 @@
 @import "bootstrap";
 
 .modal-content {
+  text-align: center;
+  
   .modal-header {
     background-color: $dark;
     color: $white;
@@ -23,6 +25,10 @@
 
   img {
     width: 100%;
+  }
+
+  .modal-footer {
+    justify-content: center;
   }
 }
 

@@ -19,15 +19,13 @@ const ProjectModal = ({ project, handleModalHide }) => {
       size="xl"
     >
       <Header closeButton>
-        <Title>{name}</Title>
+        <Title as="h5">{name}</Title>
       </Header>
       <Body>
         <Image src={image} crossOrigin="anonymous" alt={`${name} project`} />
       </Body>
       <Body>
-        <p>
-          {description}
-        </p>
+        <p>{description}</p>
         <p>{`Tech: ${tags.reduce((list, tag) => `${list}, ${tag}`)}`}</p>
       </Body>
       <Footer>
