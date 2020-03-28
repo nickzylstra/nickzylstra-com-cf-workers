@@ -1,12 +1,12 @@
 import React from 'react';
-import { Modal, Card } from 'react-bootstrap';
+import { Modal, Image } from 'react-bootstrap';
 import moment from 'moment';
 import theme from '../../theme';
 
-// import styles from './ProjectModal.module.scss';
+import styles from './ProjectModal.module.scss';
 
 
-const ProjectModal = ({ project, showModal, handleModalHide }) => {
+const ProjectModal = ({ project, handleModalHide }) => {
   const {
     name, description, githubLink, lastUpdated, image, tags,
   } = project;
@@ -17,8 +17,9 @@ const ProjectModal = ({ project, showModal, handleModalHide }) => {
 
   return (
     <Modal
-      show={showModal}
+      show
       onHide={handleModalHide}
+      className={styles.ProjectModal}
       // className={`bg-${theme.bg}
       // text-${theme.text}`}
     >
@@ -26,15 +27,16 @@ const ProjectModal = ({ project, showModal, handleModalHide }) => {
         <Title>{name}</Title>
       </Header>
       <Body>
-        <Card.Img src={image} crossOrigin="anonymous" alt={`${name} project card image`} />
-        <Card.Text>{description}</Card.Text>
-
-        <Card.Text>{`Tech: ${tags.reduce((list, tag) => `${list}, ${tag}`)}`}</Card.Text>
+        <Image src={image} crossOrigin="anonymous" alt={`${name} project`} />
+        <p>
+          {description}
+        </p>
+        <p>{`Tech: ${tags.reduce((list, tag) => `${list}, ${tag}`)}`}</p>
       </Body>
       <Footer>
-        <Card.Link href={githubLink} target="_blank" rel="noreferrer noopener">
+        <a href={githubLink} target="_blank" rel="noreferrer noopener">
           {`Github last updated: ${moment(lastUpdated).calendar()}`}
-        </Card.Link>
+        </a>
       </Footer>
     </Modal>
   );

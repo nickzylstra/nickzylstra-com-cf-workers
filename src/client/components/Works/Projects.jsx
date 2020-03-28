@@ -12,7 +12,7 @@ const sortByDate = (a, b) => moment(b.lastUpdated).diff(moment(a.lastUpdated));
 
 const Projects = ({ projects }) => {
   const [showModal, setShowModal] = useState(false);
-  const [modalProject, setModalProject] = useState(0);
+  const [modalProject, setModalProject] = useState(null);
   const handleModalShow = (projectId) => {
     setModalProject(projects.find(({ id }) => id === projectId));
     setShowModal(true);
@@ -25,7 +25,6 @@ const Projects = ({ projects }) => {
         ? (
           <ProjectModal
             project={modalProject}
-            showModal={showModal}
             handleModalHide={handleModalHide}
           />
         )
