@@ -21,14 +21,13 @@ const Projects = ({ projects }) => {
 
   return (
     <Container className={styles.projects}>
-      {showModal
-        ? (
+      {!showModal ? null
+        : (
           <ProjectModal
             project={modalProject}
             handleModalHide={handleModalHide}
           />
-        )
-        : null}
+        )}
       {projects.sort(sortByDate).map((p) => (
         <Project
           key={p.id}

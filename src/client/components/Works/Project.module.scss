@@ -3,9 +3,10 @@ $transition-type: ease-out;
 
 .project {
   margin: 15px;
-  // $width: 400px;
-  // width: $width;
-  // height: unquote('max(80vh, 453px)');
+  $width: 300px;
+  width: $width;
+  height: $width;
+  // height: unquote('max(80vh, 300px)');
 }
 
 @mixin add-opacity-transition($opacity) {
@@ -13,7 +14,7 @@ $transition-type: ease-out;
   transition: opacity $transition-duration $transition-type;
 }
 
-.img-hoverchild {
+.imgHoverchild {
   opacity: 1;
 
   .hoverparent:hover & {
@@ -21,9 +22,12 @@ $transition-type: ease-out;
   }
 }
 
-.text-hoverchild {
+.contentHoverchild {
   opacity: 0;
   margin-top: 45px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 
   .hoverparent:hover & {
     @include add-opacity-transition(1);
