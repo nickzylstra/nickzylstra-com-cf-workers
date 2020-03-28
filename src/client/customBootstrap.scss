@@ -1,0 +1,28 @@
+@import "bootstrap/scss/_functions.scss";
+@import "bootstrap/scss/_variables.scss";
+@import "bootstrap/scss/_mixins.scss";
+
+// START customization
+
+// $modal-content-bg: $dark;
+// $modal-content-color: $white;
+
+// END customization
+
+@import "bootstrap";
+
+.modal-content {
+  .modal-header {
+    background-color: $dark;
+    color: $white;
+
+    .close {
+      color: $white;
+    }
+  }
+
+  img {
+    width: 100%;
+  }
+}
+

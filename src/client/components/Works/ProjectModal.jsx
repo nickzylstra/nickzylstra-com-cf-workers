@@ -1,9 +1,6 @@
 import React from 'react';
 import { Modal, Image } from 'react-bootstrap';
 import moment from 'moment';
-import theme from '../../theme';
-
-import styles from './ProjectModal.module.scss';
 
 
 const ProjectModal = ({ project, handleModalHide }) => {
@@ -19,10 +16,7 @@ const ProjectModal = ({ project, handleModalHide }) => {
     <Modal
       show
       onHide={handleModalHide}
-      className={styles.ProjectModal}
       size="xl"
-      // className={`bg-${theme.bg}
-      // text-${theme.text}`}
     >
       <Header closeButton>
         <Title>{name}</Title>
