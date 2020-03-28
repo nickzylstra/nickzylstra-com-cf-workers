@@ -12,17 +12,25 @@
 
 // START class overrides
 
+$custom-header-bg: $dark;
+$custom-header-text: $white;
+
 .navbar-nav {
   flex-grow: 1;
   justify-content: flex-end;
+}
+
+.card-header {
+  background-color: $custom-header-bg;
+  color: $custom-header-text;
 }
 
 .modal-content {
   text-align: center;
 
   .modal-header {
-    background-color: $dark;
-    color: $white;
+    background-color: $custom-header-bg;
+    color: $custom-header-text;
 
     .close {
       color: $white;

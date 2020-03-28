@@ -18,7 +18,7 @@ $transition-type: ease-out;
   opacity: 1;
 
   .hoverparent:hover & {
-    @include add-opacity-transition(0.1);
+    @include add-opacity-transition(0.2);
   }
 }
 
@@ -28,6 +28,7 @@ $transition-type: ease-out;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  align-items: center;
 
   .hoverparent:hover & {
     @include add-opacity-transition(1);
