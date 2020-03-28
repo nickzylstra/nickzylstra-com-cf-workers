@@ -20,6 +20,7 @@ const ProjectModal = ({ project, handleModalHide }) => {
       show
       onHide={handleModalHide}
       className={styles.ProjectModal}
+      size="xl"
       // className={`bg-${theme.bg}
       // text-${theme.text}`}
     >
@@ -28,6 +29,8 @@ const ProjectModal = ({ project, handleModalHide }) => {
       </Header>
       <Body>
         <Image src={image} crossOrigin="anonymous" alt={`${name} project`} />
+      </Body>
+      <Body>
         <p>
           {description}
         </p>
