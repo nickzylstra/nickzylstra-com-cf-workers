@@ -19,7 +19,7 @@ const App = ({ host }) => (
   <div className={styles.app} aria-label="app">
     <Router>
       <Header />
-      <main className={styles['container-page']}>
+      <main className={styles.appContainer}>
         <Suspense fallback={<Spinner data-testid="spinner" animation="border" />}>
           <Switch>
             <Route exact path="/">

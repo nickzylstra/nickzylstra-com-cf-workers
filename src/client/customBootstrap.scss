@@ -11,9 +11,14 @@
 
 @import "bootstrap";
 
+.navbar-nav {
+  flex-grow: 1;
+  justify-content: flex-end;
+}
+
 .modal-content {
   text-align: center;
-  
+
   .modal-header {
     background-color: $dark;
     color: $white;

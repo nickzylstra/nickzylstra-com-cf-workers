@@ -4,8 +4,6 @@ import { Link, useLocation } from 'react-router-dom';
 import theme from '../theme';
 
 
-import styles from './Header.module.scss';
-
 const Header = () => {
   const { variant, bg } = theme;
   const { pathname } = useLocation();
@@ -15,7 +13,7 @@ const Header = () => {
       <Navbar.Brand href="/">nz</Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav-header" />
       <Navbar.Collapse id="responsive-navbar-nav-header">
-        <Nav className={styles['navbar-nav']} activeKey={pathname}>
+        <Nav activeKey={pathname}>
           <Nav.Item>
             <Nav.Link
               as={Link}
