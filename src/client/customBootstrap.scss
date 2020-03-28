@@ -5,11 +5,12 @@
 // START customization
 
 // $modal-content-bg: $dark;
-// $modal-content-color: $white;
 
 // END customization
 
 @import "bootstrap";
+
+// START class overrides
 
 .navbar-nav {
   flex-grow: 1;
