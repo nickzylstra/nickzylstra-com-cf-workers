@@ -6,7 +6,7 @@ import theme from '../../theme';
 import styles from './Project.module.scss';
 
 
-const Project = ({ project }) => {
+const Project = ({ project, handleModalShow }) => {
   const {
     id, name, description, githubLink, lastUpdated, image, tags,
   } = project;
@@ -16,10 +16,9 @@ const Project = ({ project }) => {
   } = Card;
 
   return (
-    // TODO - use themeprovider hook
     <Card id={`card-${id}`} className={`${styles.project} bg-${theme.bg} text-${theme.text} ${styles.hoverparent}`}>
       <Header>
-        <Title>{name}</Title>
+        <Title onClick={() => handleModalShow(id)}>{name}</Title>
       </Header>
       <Img src={image} crossOrigin="anonymous" alt={`${name} project card image`} className={styles['img-hoverchild']} />
       <ImgOverlay className={styles['text-hoverchild']}>
