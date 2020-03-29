@@ -1,6 +1,6 @@
 import React from 'react';
 import { Modal, Image } from 'react-bootstrap';
-import { formatDistance, subDays } from 'date-fns';
+import { formatDistance } from 'date-fns';
 
 const ProjectModal = ({ project, handleModalHide }) => {
   const {
