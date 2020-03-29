@@ -3,7 +3,7 @@ import {
   BrowserRouter as Router, Switch, Route, Redirect,
 } from 'react-router-dom';
 import { Spinner } from 'react-bootstrap';
-import Header from './components/Header';
+import Navbar from './components/Navbar';
 
 import './App.scss';
 import styles from './App.module.scss';
@@ -18,7 +18,7 @@ const About = lazy(() => import('./components/About/About'));
 const App = ({ host }) => (
   <div className={styles.app} aria-label="app">
     <Router>
-      <Header />
+      <Navbar />
       <main className={styles.appContainer}>
         <Suspense fallback={<Spinner data-testid="spinner" animation="border" />}>
           <Switch>
