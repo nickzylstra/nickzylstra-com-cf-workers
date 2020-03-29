@@ -1,7 +1,6 @@
 import React from 'react';
 import { Modal, Image } from 'react-bootstrap';
-import moment from 'moment';
-
+import { formatDistance, subDays } from 'date-fns';
 
 const ProjectModal = ({ project, handleModalHide }) => {
   const {
@@ -11,6 +10,8 @@ const ProjectModal = ({ project, handleModalHide }) => {
   const {
     Title, Header, Body, Footer,
   } = Modal;
+
+  const lastUpdatedDuration = formatDistance(new Date(lastUpdated), new Date());
 
   return (
     <Modal
@@ -30,7 +31,7 @@ const ProjectModal = ({ project, handleModalHide }) => {
       </Body>
       <Footer>
         <a href={githubLink} target="_blank" rel="noreferrer noopener">
-          {`Github last updated: ${moment(lastUpdated).calendar()}`}
+          {`Github last updated: ${lastUpdatedDuration} ago`}
         </a>
       </Footer>
     </Modal>

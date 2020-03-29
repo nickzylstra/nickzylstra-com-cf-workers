@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 import { Container } from 'react-bootstrap';
-import moment from 'moment';
 import Project from './Project';
 import ProjectModal from './ProjectModal';
 
 import styles from './Projects.module.scss';
 
 
-const sortByDate = (a, b) => moment(b.lastUpdated).diff(moment(a.lastUpdated));
+const sortByDate = (a, b) => new Date(b.lastUpdated).getTime() - new Date(a.lastUpdated).getTime();
 
 
 const Projects = ({ projects }) => {
