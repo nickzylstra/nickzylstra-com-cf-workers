@@ -47,7 +47,7 @@
      },
      {
         "id":3,
-        "name":"Stock Price History Graph Backend",
+        "name":"Stock History Graph Backend",
         "description":"Service scaled to 2500 RPS throughput with one load balancer, four app servers, one API cache, and one 105M record PostgreSQL database on AWS EC2 T2 micros.",
         "githubLink":"https://github.com/Camelot-Stocks/Graph-Service",
         "lastUpdated":"2020-01-10T17:39:14Z",
