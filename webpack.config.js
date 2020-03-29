@@ -8,6 +8,14 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const isDevelopment = process.env.NODE_ENV === 'development';
 
 const publicDirPath = path.resolve(__dirname, 'public');
+const clientSrcPath = path.resolve(__dirname, 'src', 'client');
+
+const sassLoaderOptions = {
+  sourceMap: isDevelopment,
+  sassOptions: {
+    includePaths: [clientSrcPath],
+  },
+};
 
 module.exports = {
   mode: isDevelopment ? 'development' : 'production',
@@ -56,9 +64,7 @@ module.exports = {
           },
           {
             loader: 'sass-loader',
-            options: {
-              sourceMap: isDevelopment,
-            },
+            options: sassLoaderOptions,
           },
         ],
       },
@@ -70,9 +76,7 @@ module.exports = {
           'css-loader',
           {
             loader: 'sass-loader',
-            options: {
-              sourceMap: isDevelopment,
-            },
+            options: sassLoaderOptions,
           },
         ],
       },
