@@ -15,6 +15,7 @@ const ProjectModal = ({ project, handleModalHide }) => {
 
   return (
     <Modal
+      aria-label="project-modal"
       show
       onHide={handleModalHide}
       size="xl"

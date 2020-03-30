@@ -19,7 +19,7 @@ const Projects = ({ projects }) => {
   const handleModalHide = () => setShowModal(false);
 
   return (
-    <Container className={styles.projects}>
+    <Container aria-label="projects" className={styles.projects}>
       {!showModal ? null
         : (
           <ProjectModal

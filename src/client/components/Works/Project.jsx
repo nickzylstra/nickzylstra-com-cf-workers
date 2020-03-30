@@ -18,7 +18,12 @@ const Project = ({ project, handleModalShow }) => {
   const openModal = () => handleModalShow(id);
 
   return (
-    <Card id={`card-${id}`} onClick={openModal} className={`${styles.project} ${styles.hoverparent}`}>
+    <Card
+      id={`card-${id}`}
+      onClick={openModal}
+      aria-label={`project-${id}`}
+      className={`${styles.project} ${styles.hoverparent}`}
+    >
       <Header>
         <Title as="h6">{name}</Title>
       </Header>
