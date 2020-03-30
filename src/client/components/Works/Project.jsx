@@ -21,8 +21,10 @@ const Project = ({ project, handleModalShow }) => {
     <Card
       id={`card-${id}`}
       onClick={openModal}
+      onKeyPress={openModal}
       aria-label={`project-${id}`}
       className={`${styles.project} ${styles.hoverparent}`}
+      tabIndex="0"
     >
       <Header>
         <Title as="h6">{name}</Title>

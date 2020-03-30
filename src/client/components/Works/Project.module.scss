@@ -30,8 +30,12 @@ $transition-type: ease-out;
 .imgHoverchild {
   opacity: 1;
 
+  $hoverOpacity: 0.1;
   .hoverparent:hover & {
-    @include add-opacity-transition(0.2);
+    @include add-opacity-transition($hoverOpacity);
+  }
+  .hoverparent:focus & {
+    @include add-opacity-transition($hoverOpacity);
   }
 }
 
@@ -40,7 +44,12 @@ $transition-type: ease-out;
   margin-top: 45px;
 
   @include formatContent();
+
+  $hoverOpacity: 1;
   .hoverparent:hover & {
-    @include add-opacity-transition(1);
+    @include add-opacity-transition($hoverOpacity);
+  }
+  .hoverparent:focus & {
+    @include add-opacity-transition($hoverOpacity);
   }
 }
