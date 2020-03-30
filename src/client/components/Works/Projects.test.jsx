@@ -12,7 +12,7 @@ describe('Client - Projects', () => {
     lastUpdated: '2019-12-15T17:39:14Z',
     image: '/assets/favicon_io/favicon-16x16.png',
     thumb: '/assets/favicon_io/favicon-16x16.png',
-    tags: ['interwebs'],
+    tags: ['interwebs', 'tag2'],
   }];
 
   test('should load projects and open modal when one is clicked', async () => {
