@@ -1,4 +1,5 @@
 import React from 'react';
+// import { Image } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 
@@ -9,6 +10,7 @@ const Summary = () => (
       <span role="img" aria-label="wave">👋</span>
     </h2>
     <br />
+    {/* <Image src="/assets/images/full/headshot.jpeg" crossOrigin="anonymous" alt="headshot" /> */}
     <h3>
       I&apos;m Nick Zylstra
       <i> (ZIel-strah)</i>
