@@ -7,6 +7,7 @@
         "githubLink":"https://github.com/fRiend-hrsf124/costHomeOwnership-service",
         "lastUpdated":"2019-12-15T17:39:14Z",
         "image":"https://raw.githubusercontent.com/fRiend-hrsf124/costHomeOwnership-service/master/fec.gif",
+        "thumb":"home_payment.png",
         "tags":[
            "react",
            "react-styled-components",
@@ -30,6 +31,7 @@
         "githubLink":"https://github.com/nickzylstra/eSignIntegration",
         "lastUpdated":"2020-03-09T17:39:14Z",
         "image":"https://raw.githubusercontent.com/nickzylstra/eSignIntegration/master/demo.gif",
+        "thumb":"referral_esign.png",
         "tags":[
            "react",
            "bootstrap",
@@ -52,6 +54,7 @@
         "githubLink":"https://github.com/Camelot-Stocks/Graph-Service",
         "lastUpdated":"2020-01-10T17:39:14Z",
         "image":"https://i.imgur.com/ZtBOqYf.png",
+        "thumb":"stockgraph.png",
         "tags":[
            "react",
            "express",
@@ -74,6 +77,7 @@
         "githubLink":"https://github.com/nickzylstra/mini-apps-2/tree/master/challenge_3",
         "lastUpdated":"2020-01-22T17:39:14Z",
         "image":"https://raw.githubusercontent.com/nickzylstra/mini-apps-2/master/challenge_3/statechart.png",
+        "thumb":"bowling.png",
         "tags":[
            "react",
            "xstate",
@@ -91,6 +95,7 @@
         "githubLink":"https://github.com/nickzylstra/mini-apps-2/tree/master/challenge_4",
         "lastUpdated":"2020-02-04T17:39:14Z",
         "image":"https://raw.githubusercontent.com/nickzylstra/mini-apps-2/master/challenge_4/demo.gif",
+        "thumb":"minesweeper.png",
         "tags":[
            "create-react-app",
            "redux",
@@ -106,6 +111,7 @@
         "githubLink":"https://github.com/nickzylstra/collider",
         "lastUpdated":"2020-03-07T17:39:14Z",
         "image":"https://raw.githubusercontent.com/nickzylstra/collider/master/demo.gif",
+        "thumb":"collider.png",
         "tags":[
            "create-react-app",
            "d3"
@@ -141,17 +147,18 @@
         ]
      },
      {
-      "id":8,
-      "name":"Keyboard Firmware Customization",
-      "description":"Designed custom keyboard layout and customized C/C++ firmware to support design.",
-      "githubLink":"https://github.com/nickzylstra/keyboardio",
-      "lastUpdated":"2020-01-10T17:39:14Z",
-      "image":"https://raw.githubusercontent.com/nickzylstra/keyboardio/master/keyboardlayout.png",
-      "tags":[
-         "C/C++",
-         "arduino",
-         "kaleidoscope"
-      ]
-   }
+         "id":8,
+         "name":"Keyboard Firmware Customization",
+         "description":"Designed custom keyboard layout and customized C/C++ firmware to support design.",
+         "githubLink":"https://github.com/nickzylstra/keyboardio",
+         "lastUpdated":"2020-01-10T17:39:14Z",
+         "image":"https://raw.githubusercontent.com/nickzylstra/keyboardio/master/keyboardlayout.png",
+         "thumb":"keyboard.png",
+         "tags":[
+            "C/C++",
+            "arduino",
+            "kaleidoscope"
+         ]
+      }
   ]
 }
