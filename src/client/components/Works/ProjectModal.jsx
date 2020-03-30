@@ -17,6 +17,7 @@ const ProjectModal = ({ project, handleModalHide }) => {
     <Modal
       aria-label="project-modal"
       show
+      restoreFocus={false}
       onHide={handleModalHide}
       size="xl"
     >

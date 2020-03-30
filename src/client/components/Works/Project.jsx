@@ -34,7 +34,9 @@ const Project = ({ project, handleModalShow }) => {
         <Text>Click to see project details!</Text>
         <div className={styles.content}>
           <Text>Or go straight to the code -</Text>
-          <GithubIcon url={githubLink} />
+          <GithubIcon
+            url={githubLink}
+          />
         </div>
       </ImgOverlay>
     </Card>
