@@ -20,6 +20,7 @@ const ProjectModal = ({ project, handleModalHide }) => {
       restoreFocus={false}
       onHide={handleModalHide}
       size="xl"
+      animation={false}
     >
       <Header closeButton>
         <Title as="h5">{name}</Title>
