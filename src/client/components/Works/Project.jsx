@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Button } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 import GithubIcon from '../About/Contact/GithubIcon';
 
 import styles from './Project.module.scss';
@@ -12,20 +12,23 @@ const Project = ({ project, handleModalShow }) => {
   } = project;
 
   const {
-    Title, Img, ImgOverlay, Header,
+    Title, Img, ImgOverlay, Header, Text,
   } = Card;
 
   const openModal = () => handleModalShow(id);
 
   return (
-    <Card id={`card-${id}`} className={`${styles.project} ${styles.hoverparent}`}>
-      <Header onClick={openModal}>
+    <Card id={`card-${id}`} onClick={openModal} className={`${styles.project} ${styles.hoverparent}`}>
+      <Header>
         <Title as="h6">{name}</Title>
       </Header>
       <Img src={`${thumbsLocation}${thumb}`} crossOrigin="anonymous" alt={`${name} project card image`} className={styles.imgHoverchild} />
       <ImgOverlay className={styles.contentHoverchild}>
-        <Button variant="secondary" onClick={openModal}>Learn more!</Button>
-        <GithubIcon url={githubLink} />
+        <Text>Click to see project details!</Text>
+        <div className={styles.content}>
+          <Text>Or go straight to the code -</Text>
+          <GithubIcon url={githubLink} />
+        </div>
       </ImgOverlay>
     </Card>
   );

@@ -3,10 +3,23 @@ $transition-type: ease-out;
 
 .project {
   margin: 15px;
-  $width: 320px;
-  width: $width;
-  height: $width;
+  $side: 320px;
+  width: $side;
+  height: $side;
   // height: unquote('max(80vh, 300px)');
+  cursor: pointer;
+  overflow-y: hidden;
+}
+
+@mixin formatContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.content {
+  @include formatContent();
 }
 
 @mixin add-opacity-transition($opacity) {
@@ -25,11 +38,8 @@ $transition-type: ease-out;
 .contentHoverchild {
   opacity: 0;
   margin-top: 45px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
 
+  @include formatContent();
   .hoverparent:hover & {
     @include add-opacity-transition(1);
   }
