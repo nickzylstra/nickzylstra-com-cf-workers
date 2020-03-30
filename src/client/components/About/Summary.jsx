@@ -4,9 +4,15 @@ import { Link } from 'react-router-dom';
 
 const Summary = () => (
   <>
+    <br />
     <h2>
-      hi
+      <span role="img" aria-label="wave">👋</span>
     </h2>
+    <br />
+    <h3>
+      I&apos;m Nick Zylstra
+      <i> (ZIel-strah)</i>
+    </h3>
     <br />
     <h4>
       I like to learn, teach, and build things.
