@@ -1,16 +1,18 @@
 import React from 'react';
-import { Modal, Image } from 'react-bootstrap';
+import { Modal } from 'react-bootstrap';
 import { formatDistance } from 'date-fns';
+
 
 const ProjectModal = ({ project, handleModalHide }) => {
   const {
-    name, description, githubLink, lastUpdated, image, tags,
+    name, description, githubLink, lastUpdated, image, tags, imageW, imageH,
   } = project;
 
   const {
     Title, Header, Body, Footer,
   } = Modal;
 
+  const techTags = tags.reduce((list, tag) => `${list}, ${tag}`);
   const lastUpdatedDuration = formatDistance(new Date(lastUpdated), new Date());
 
   return (
@@ -20,17 +22,22 @@ const ProjectModal = ({ project, handleModalHide }) => {
       restoreFocus={false}
       onHide={handleModalHide}
       size="xl"
-      animation={false}
     >
       <Header closeButton>
         <Title as="h5">{name}</Title>
       </Header>
       <Body>
-        <Image src={image} crossOrigin="anonymous" alt={`${name} project`} />
+        <img
+          src={image}
+          crossOrigin="anonymous"
+          alt={`${name} project`}
+          width={imageW || '500'}
+          height={imageH || '500'}
+        />
       </Body>
       <Body>
         <p>{description}</p>
-        <p>{`Tech: ${tags.reduce((list, tag) => `${list}, ${tag}`)}`}</p>
+        <p>{`Tech: ${techTags}`}</p>
       </Body>
       <Footer>
         <a href={githubLink} target="_blank" rel="noreferrer noopener">

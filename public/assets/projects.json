@@ -7,6 +7,8 @@
         "githubLink":"https://github.com/fRiend-hrsf124/costHomeOwnership-service",
         "lastUpdated":"2019-12-15T17:39:14Z",
         "image":"https://raw.githubusercontent.com/fRiend-hrsf124/costHomeOwnership-service/master/fec.gif",
+        "imageW":"732",
+        "imageH":"830",
         "thumb":"home_payment.png",
         "tags":[
            "react",
@@ -31,6 +33,8 @@
         "githubLink":"https://github.com/nickzylstra/eSignIntegration",
         "lastUpdated":"2020-03-09T17:39:14Z",
         "image":"https://raw.githubusercontent.com/nickzylstra/eSignIntegration/master/demo.gif",
+        "imageW":"1278",
+        "imageH":"1006",
         "thumb":"referral_esign.png",
         "tags":[
            "react",
@@ -54,6 +58,8 @@
         "githubLink":"https://github.com/Camelot-Stocks/Graph-Service",
         "lastUpdated":"2020-01-10T17:39:14Z",
         "image":"https://i.imgur.com/ZtBOqYf.png",
+        "imageW":"1009",
+        "imageH":"661",
         "thumb":"stockgraph.png",
         "tags":[
            "react",
@@ -73,10 +79,12 @@
      {
         "id":4,
         "name":"Bowling Score Simulation",
-        "description":"App to test Xstate finite state machine library on handling game scoring and progress. Used model-based testing to automatically generate tests for relevant paths of state machine graph model.  Testing methodology allowed me to test every possible game state through ~1800 generated unit tests created with minimal code.",
+        "description":"App to test Xstate finite state machine library on handling game scoring and progress.  State shown here is generated automatically using the code with online visualizer. Used model-based testing to automatically generate tests for relevant paths of state machine graph model.  Testing methodology allowed me to test every possible game state through ~8700 generated unit tests created with minimal code.",
         "githubLink":"https://github.com/nickzylstra/mini-apps-2/tree/master/challenge_3",
         "lastUpdated":"2020-01-22T17:39:14Z",
         "image":"https://raw.githubusercontent.com/nickzylstra/mini-apps-2/master/challenge_3/statechart.png",
+        "imageW":"1235",
+        "imageH":"993",
         "thumb":"bowling.png",
         "tags":[
            "react",
@@ -95,6 +103,8 @@
         "githubLink":"https://github.com/nickzylstra/mini-apps-2/tree/master/challenge_4",
         "lastUpdated":"2020-02-04T17:39:14Z",
         "image":"https://raw.githubusercontent.com/nickzylstra/mini-apps-2/master/challenge_4/demo.gif",
+        "imageW":"467",
+        "imageH":"475",
         "thumb":"minesweeper.png",
         "tags":[
            "create-react-app",
@@ -111,6 +121,8 @@
         "githubLink":"https://github.com/nickzylstra/collider",
         "lastUpdated":"2020-03-07T17:39:14Z",
         "image":"https://raw.githubusercontent.com/nickzylstra/collider/master/demo.gif",
+        "imageW":"640",
+        "imageH":"510",
         "thumb":"collider.png",
         "tags":[
            "create-react-app",
@@ -124,6 +136,8 @@
         "githubLink":"https://www.nickzylstra.com",
         "lastUpdated":"2020-03-28T17:39:14Z",
         "image":"/assets/images/full/nzcom_ss.png",
+        "imageW":"974",
+        "imageH":"875",
         "thumb":"nzcom.png",
         "tags":[
            "react",
@@ -153,6 +167,8 @@
          "githubLink":"https://github.com/nickzylstra/keyboardio",
          "lastUpdated":"2020-01-10T17:39:14Z",
          "image":"https://raw.githubusercontent.com/nickzylstra/keyboardio/master/keyboardlayout.png",
+         "imageW":"2058",
+         "imageH":"1240",
          "thumb":"keyboard.png",
          "tags":[
             "C/C++",

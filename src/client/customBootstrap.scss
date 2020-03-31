@@ -3,11 +3,6 @@
 @use "bootstrap" as bs;
 
 
-.navbar-nav {
-  flex-grow: 1;
-  // justify-content: flex-end;
-}
-
 .card-header {
   background-color: t.$headerBg;
   color: t.$headerText;
@@ -27,6 +22,7 @@
 
   img {
     width: 100%;
+    height: auto;
   }
 
   .modal-footer {
