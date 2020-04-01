@@ -10,10 +10,18 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cors());
 
-app.use('/', express.static(path.resolve(__dirname, '..', '..', 'public')));
+const cacheTimeSeconds = 60 * 60 * 24 * 7 * 10;
+const setResCaching = (req, res, next) => {
+  res.set({
+    'Cache-Control': `public, max-age=${cacheTimeSeconds}`,
+  });
+  next();
+};
+
+app.use('/', setResCaching, express.static(path.resolve(__dirname, '..', '..', 'public')));
 
 const reactRouterRoutesRE = /\/(?!api).*(?!\.).*$/;
-app.use(reactRouterRoutesRE, (req, res) => {
+app.use(reactRouterRoutesRE, setResCaching, (req, res) => {
   res.sendFile(path.resolve(__dirname, '..', '..', 'public', 'index.html'));
 });
 
