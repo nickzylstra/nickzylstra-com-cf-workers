@@ -34,7 +34,7 @@ const Header = () => {
               works
             </Nav.Link>
           </Nav.Item>
-          <Nav.Item>
+          {/* <Nav.Item>
             <Nav.Link
               as={Link}
               to="/live"
@@ -43,7 +43,7 @@ const Header = () => {
             >
               live
             </Nav.Link>
-          </Nav.Item>
+          </Nav.Item> */}
         </Nav>
       </Navbar.Collapse>
     </Navbar>

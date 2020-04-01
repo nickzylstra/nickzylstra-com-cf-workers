@@ -144,7 +144,6 @@
            "react-bootstrap",
            "scss/sass",
            "react-router",
-           "three.js",
            "express",
            "helmet",
            "node.js",

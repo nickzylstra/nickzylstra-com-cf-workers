@@ -31,9 +31,9 @@ const App = ({ host }) => (
             <Route path="/works">
               <Works />
             </Route>
-            <Route path="/live">
+            {/* <Route path="/live">
               <Live />
-            </Route>
+            </Route> */}
           </Switch>
         </Suspense>
       </main>
