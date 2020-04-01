@@ -10,7 +10,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cors());
 
-const cacheTimeSeconds = 60 * 60 * 24 * 7 * 10;
+const cacheTimeSeconds = 60 * 60 * 24 * 7 * 52;
 const setResCaching = (req, res, next) => {
   res.set({
     'Cache-Control': `public, max-age=${cacheTimeSeconds}`,
