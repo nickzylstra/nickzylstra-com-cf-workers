@@ -1,6 +1,3 @@
-$transition-duration: 300ms;
-$transition-type: ease-out;
-
 .project {
   margin: 15px;
   $side: 320px;
@@ -18,9 +15,8 @@ $transition-type: ease-out;
   align-items: center;
 }
 
-.content {
-  @include formatContent();
-}
+$transition-duration: 300ms;
+$transition-type: ease-out;
 
 @mixin add-opacity-transition($opacity) {
   opacity: $opacity;
@@ -44,7 +40,6 @@ $transition-type: ease-out;
 
 .contentHoverchild {
   opacity: 0;
-  margin-top: 45px;
 
   @include formatContent();
 

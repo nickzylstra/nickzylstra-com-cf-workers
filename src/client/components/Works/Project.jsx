@@ -1,6 +1,5 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
-import GithubIcon from '../About/Contact/GithubIcon';
 
 import styles from './Project.module.scss';
 
@@ -8,11 +7,11 @@ const thumbsLocation = '/assets/images/thumbs/';
 
 const Project = ({ project, handleModalShow }) => {
   const {
-    id, name, githubLink, thumb,
+    id, name, thumb,
   } = project;
 
   const {
-    Title, Img, ImgOverlay, Header, Text,
+    Title, Img, ImgOverlay,
   } = Card;
 
   const openModal = () => handleModalShow(id);
@@ -26,18 +25,14 @@ const Project = ({ project, handleModalShow }) => {
       className={`${styles.project} ${styles.hoverparent}`}
       tabIndex="0"
     >
-      <Header>
-        <Title as="h6">{name}</Title>
-      </Header>
-      <Img src={`${thumbsLocation}${thumb}`} crossOrigin="anonymous" alt={`${name} project card image`} className={styles.imgHoverchild} />
+      <Img
+        src={`${thumbsLocation}${thumb}`}
+        crossOrigin="anonymous"
+        alt={`${name} project card image`}
+        className={styles.imgHoverchild}
+      />
       <ImgOverlay className={styles.contentHoverchild}>
-        <Text>Click to see project details!</Text>
-        <div className={styles.content}>
-          <Text>Or go straight to the code -</Text>
-          <GithubIcon
-            url={githubLink}
-          />
-        </div>
+        <Title>{name}</Title>
       </ImgOverlay>
     </Card>
   );

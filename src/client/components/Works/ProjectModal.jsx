@@ -1,6 +1,7 @@
 import React from 'react';
 import { Modal } from 'react-bootstrap';
 import { formatDistance } from 'date-fns';
+import GithubIcon from '../About/Contact/GithubIcon';
 
 
 const ProjectModal = ({ project, handleModalHide }) => {
@@ -40,9 +41,8 @@ const ProjectModal = ({ project, handleModalHide }) => {
         <p>{`Tech: ${techTags}`}</p>
       </Body>
       <Footer>
-        <a href={githubLink} target="_blank" rel="noreferrer noopener">
-          {`Github last updated: ${lastUpdatedDuration} ago`}
-        </a>
+        <GithubIcon url={githubLink} />
+        <p>{`last updated ${lastUpdatedDuration} ago`}</p>
       </Footer>
     </Modal>
   );
