@@ -32,7 +32,7 @@ const Project = ({ project, handleModalShow }) => {
         className={styles.imgHoverchild}
       />
       <ImgOverlay className={styles.contentHoverchild}>
-        <Title>{name}</Title>
+        <Title as="h4">{name}</Title>
       </ImgOverlay>
     </Card>
   );

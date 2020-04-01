@@ -1,3 +1,5 @@
+@use "customThemeVars" as t;
+
 .project {
   margin: 15px;
   $side: 250px;
@@ -5,7 +7,6 @@
   height: $side;
   // height: unquote('max(80vh, 300px)');
   cursor: pointer;
-  overflow-y: hidden;
 }
 
 @mixin formatContent {
@@ -40,6 +41,7 @@ $transition-type: ease-out;
 
 .contentHoverchild {
   opacity: 0;
+  color: t.$menu-text;
 
   @include formatContent();
 
