@@ -1,19 +1,30 @@
-@use "customTheme" as t;
+@use "customThemeColors" as t;
 // use 'with' after 'as bs' to override bootstrap lib variables
-@use "bootstrap" as bs;
+@use "bootstrap" as bs with (
+  $body-bg: t.$bg,
+  $body-color: t.$text,
+
+  $card-bg: t.$bg,
+
+  $modal-content-color: t.$text,
+  $modal-content-bg: t.$bg,
+);
 
 
-.card-header {
-  background-color: t.$bg;
-  color: t.$text;
-}
+@use "customTheme";
+
+
+// .card-header {
+//   background-color: t.$bg;
+//   color: t.$text;
+// }
 
 .modal-content {
   text-align: center;
 
   .modal-header {
-    background-color: t.$bg;
-    color: t.$text;
+    // background-color: t.$bg;
+    // color: t.$text;
 
     .close {
       color: t.$text;

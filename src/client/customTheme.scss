@@ -1,2 +1,181 @@
-$bg: #343a40;
-$text: #fff;
+@use "customThemeColors" as t;
+
+.btn-nzDark {
+  color: t.$text;
+  background-color: t.$bg;
+  border-color: t.$bg;
+}
+
+.btn-nzDark:hover {
+  color: t.$text;
+  background-color: #23272b;
+  border-color: #1d2124;
+}
+
+.btn-nzDark:focus, .btn-nzDark.focus {
+  color: t.$text;
+  background-color: #23272b;
+  border-color: #1d2124;
+  box-shadow: 0 0 0 0.2rem rgba(82, 88, 93, 0.5);
+}
+
+.btn-nzDark.disabled, .btn-nzDark:disabled {
+  color: t.$text;
+  background-color: t.$bg;
+  border-color: t.$bg;
+}
+
+.btn-nzDark:not(:disabled):not(.disabled):active, .btn-nzDark:not(:disabled):not(.disabled).active,
+.show > .btn-nzDark.dropdown-toggle {
+  color: t.$text;
+  background-color: #1d2124;
+  border-color: #171a1d;
+}
+
+.btn-nzDark:not(:disabled):not(.disabled):active:focus, .btn-nzDark:not(:disabled):not(.disabled).active:focus,
+.show > .btn-nzDark.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(82, 88, 93, 0.5);
+}
+
+.btn-outline-nzDark {
+  color: t.$bg;
+  border-color: t.$bg;
+}
+
+.btn-outline-nzDark:hover {
+  color: t.$text;
+  background-color: t.$bg;
+  border-color: t.$bg;
+}
+
+.btn-outline-nzDark:focus, .btn-outline-nzDark.focus {
+  box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, 0.5);
+}
+
+.btn-outline-nzDark.disabled, .btn-outline-nzDark:disabled {
+  color: t.$bg;
+  background-color: transparent;
+}
+
+.btn-outline-nzDark:not(:disabled):not(.disabled):active, .btn-outline-nzDark:not(:disabled):not(.disabled).active,
+.show > .btn-outline-nzDark.dropdown-toggle {
+  color: t.$text;
+  background-color: t.$bg;
+  border-color: t.$bg;
+}
+
+.btn-outline-nzDark:not(:disabled):not(.disabled):active:focus, .btn-outline-nzDark:not(:disabled):not(.disabled).active:focus,
+.show > .btn-outline-nzDark.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, 0.5);
+}
+
+.navbar-nzDark .navbar-brand {
+  color: t.$text;
+}
+
+.navbar-nzDark .navbar-brand:hover, .navbar-nzDark .navbar-brand:focus {
+  color: t.$text;
+}
+
+.navbar-nzDark .navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.navbar-nzDark .navbar-nav .nav-link:hover, .navbar-nzDark .navbar-nav .nav-link:focus {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.navbar-nzDark .navbar-nav .nav-link.disabled {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.navbar-nzDark .navbar-nav .show > .nav-link,
+.navbar-nzDark .navbar-nav .active > .nav-link,
+.navbar-nzDark .navbar-nav .nav-link.show,
+.navbar-nzDark .navbar-nav .nav-link.active {
+  color: t.$text;
+}
+
+.navbar-nzDark .navbar-toggler {
+  color: rgba(255, 255, 255, 0.5);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.navbar-nzDark .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.5)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar-nzDark .navbar-text {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.navbar-nzDark .navbar-text a {
+  color: t.$text;
+}
+
+.navbar-nzDark .navbar-text a:hover, .navbar-nzDark .navbar-text a:focus {
+  color: t.$text;
+}
+
+.badge-nzDark {
+  color: t.$text;
+  background-color: t.$bg;
+}
+
+a.badge-nzDark:hover, a.badge-nzDark:focus {
+  color: t.$text;
+  background-color: #1d2124;
+}
+
+a.badge-nzDark:focus, a.badge-nzDark.focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, 0.5);
+}
+
+.alert-nzDark {
+  color: #1b1e21;
+  background-color: #d6d8d9;
+  border-color: #c6c8ca;
+}
+
+.alert-nzDark hr {
+  border-top-color: #b9bbbe;
+}
+
+.alert-nzDark .alert-link {
+  color: #040505;
+}
+
+.list-group-item-nzDark {
+  color: #1b1e21;
+  background-color: #c6c8ca;
+}
+
+.list-group-item-nzDark.list-group-item-action:hover, .list-group-item-nzDark.list-group-item-action:focus {
+  color: #1b1e21;
+  background-color: #b9bbbe;
+}
+
+.list-group-item-nzDark.list-group-item-action.active {
+  color: t.$text;
+  background-color: #1b1e21;
+  border-color: #1b1e21;
+}
+
+.bg-nzDark {
+  background-color: t.$bg !important;
+}
+
+a.bg-nzDark:hover, a.bg-nzDark:focus,
+button.bg-nzDark:hover,
+button.bg-nzDark:focus {
+  background-color: #1d2124 !important;
+}
+
+.text-nzDark {
+  color: t.$bg !important;
+}
+
+a.text-nzDark:hover, a.text-nzDark:focus {
+  color: #121416 !important;
+}

@@ -26,16 +26,16 @@ $transition-type: ease-out;
 .imgHoverchild {
   opacity: 1;
 
-  $hoverOpacity: 0.1;
+  $hoverOpacity: 0.3;
   .hoverparent:hover & {
     @include add-opacity-transition($hoverOpacity);
   }
   .hoverparent:focus & {
     @include add-opacity-transition($hoverOpacity);
   }
-  .hoverparent:focus-within & {
-    @include add-opacity-transition($hoverOpacity);
-  }
+  // .hoverparent:focus-within & {
+  //   @include add-opacity-transition($hoverOpacity);
+  // }
 }
 
 .contentHoverchild {
@@ -50,7 +50,7 @@ $transition-type: ease-out;
   .hoverparent:focus & {
     @include add-opacity-transition($hoverOpacity);
   }
-  .hoverparent:focus-within & {
-    @include add-opacity-transition($hoverOpacity);
-  }
+  // .hoverparent:focus-within & {
+  //   @include add-opacity-transition($hoverOpacity);
+  // }
 }

@@ -1,8 +1,8 @@
 const useDark = true;
 
 const theme = {
-  variant: useDark ? 'dark' : 'light',
-  bg: useDark ? 'dark' : 'light',
+  variant: useDark ? 'nzDark' : undefined,
+  bg: useDark ? 'nzDark' : undefined,
 };
 
 export default theme;
