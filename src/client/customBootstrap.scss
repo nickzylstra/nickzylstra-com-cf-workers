@@ -4,19 +4,19 @@
 
 
 .card-header {
-  background-color: t.$headerBg;
-  color: t.$headerText;
+  background-color: t.$bg;
+  color: t.$text;
 }
 
 .modal-content {
   text-align: center;
 
   .modal-header {
-    background-color: t.$headerBg;
-    color: t.$headerText;
+    background-color: t.$bg;
+    color: t.$text;
 
     .close {
-      color: t.$headerText;
+      color: t.$text;
     }
   }
 
