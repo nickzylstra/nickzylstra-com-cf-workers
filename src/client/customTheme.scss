@@ -9,13 +9,15 @@
 .btn-nzDark:hover {
   color: t.$menu-text;
   background-color: #23272b;
-  border-color: #1d2124;
+  // border-color: #1d2124;
+  border-color: t.$control;
 }
 
 .btn-nzDark:focus, .btn-nzDark.focus {
   color: t.$menu-text;
   background-color: #23272b;
-  border-color: #1d2124;
+  // border-color: #1d2124;
+  border-color: t.$control;
   box-shadow: 0 0 0 0.2rem rgba(82, 88, 93, 0.5);
 }
 

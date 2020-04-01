@@ -3,9 +3,9 @@ import React from 'react';
 
 const Message = () => (
   <>
-    <h5>
+    <p>
       If you&apos;d like to get in touch or learn more, please try me at one of these -
-    </h5>
+    </p>
   </>
 );
 
