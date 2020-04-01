@@ -2,7 +2,6 @@
 - React
 - React Bootstrap
 - SCSS/SASS
-- Three.js
 - Express
 - PostgreSQL
 - Jest
