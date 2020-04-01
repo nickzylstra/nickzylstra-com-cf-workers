@@ -1,33 +1,33 @@
-@use "customThemeColors" as t;
+@use "customThemeVars" as t;
 
 .btn-nzDark {
-  color: t.$text;
+  color: t.$menu-text;
   background-color: t.$bg;
   border-color: t.$bg;
 }
 
 .btn-nzDark:hover {
-  color: t.$text;
+  color: t.$menu-text;
   background-color: #23272b;
   border-color: #1d2124;
 }
 
 .btn-nzDark:focus, .btn-nzDark.focus {
-  color: t.$text;
+  color: t.$menu-text;
   background-color: #23272b;
   border-color: #1d2124;
   box-shadow: 0 0 0 0.2rem rgba(82, 88, 93, 0.5);
 }
 
 .btn-nzDark.disabled, .btn-nzDark:disabled {
-  color: t.$text;
+  color: t.$menu-text;
   background-color: t.$bg;
   border-color: t.$bg;
 }
 
 .btn-nzDark:not(:disabled):not(.disabled):active, .btn-nzDark:not(:disabled):not(.disabled).active,
 .show > .btn-nzDark.dropdown-toggle {
-  color: t.$text;
+  color: t.$menu-text;
   background-color: #1d2124;
   border-color: #171a1d;
 }
@@ -43,7 +43,7 @@
 }
 
 .btn-outline-nzDark:hover {
-  color: t.$text;
+  color: t.$menu-text;
   background-color: t.$bg;
   border-color: t.$bg;
 }
@@ -59,7 +59,7 @@
 
 .btn-outline-nzDark:not(:disabled):not(.disabled):active, .btn-outline-nzDark:not(:disabled):not(.disabled).active,
 .show > .btn-outline-nzDark.dropdown-toggle {
-  color: t.$text;
+  color: t.$menu-text;
   background-color: t.$bg;
   border-color: t.$bg;
 }
@@ -70,11 +70,11 @@
 }
 
 .navbar-nzDark .navbar-brand {
-  color: t.$text;
+  color: t.$menu-text;
 }
 
 .navbar-nzDark .navbar-brand:hover, .navbar-nzDark .navbar-brand:focus {
-  color: t.$text;
+  color: t.$menu-text;
 }
 
 .navbar-nzDark .navbar-nav .nav-link {
@@ -93,7 +93,7 @@
 .navbar-nzDark .navbar-nav .active > .nav-link,
 .navbar-nzDark .navbar-nav .nav-link.show,
 .navbar-nzDark .navbar-nav .nav-link.active {
-  color: t.$text;
+  color: t.$menu-text;
 }
 
 .navbar-nzDark .navbar-toggler {
@@ -110,11 +110,11 @@
 }
 
 .navbar-nzDark .navbar-text a {
-  color: t.$text;
+  color: t.$menu-text;
 }
 
 .navbar-nzDark .navbar-text a:hover, .navbar-nzDark .navbar-text a:focus {
-  color: t.$text;
+  color: t.$menu-text;
 }
 
 .badge-nzDark {

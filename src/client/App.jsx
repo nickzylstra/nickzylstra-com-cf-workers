@@ -16,7 +16,7 @@ const About = lazy(() => import('./components/About/About'));
 
 // eslint-disable-next-line no-unused-vars
 const App = ({ host }) => (
-  <div className={styles.app} aria-label="app">
+  <div aria-label="app">
     <Router>
       <Navbar />
       <main className={styles.appContainer}>

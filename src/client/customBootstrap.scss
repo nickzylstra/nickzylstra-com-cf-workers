@@ -1,18 +1,22 @@
-@use "customThemeColors" as t;
-// use 'with' after 'as bs' to override bootstrap lib variables
+@use "customThemeVars" as t;
 @use "bootstrap" as bs with (
   $body-bg: t.$bg,
   $body-color: t.$text,
-
+  
   $card-bg: t.$bg,
-
+  
+  $font-family-sans-serif: t.$font,
+  
   $modal-content-color: t.$text,
   $modal-content-bg: t.$bg,
 );
-
-
 @use "customTheme";
+@import "~typeface-oswald/index.css";
 
+body {
+  text-align: center;
+  letter-spacing: .06rem;
+}
 
 // .card-header {
 //   background-color: t.$bg;
@@ -20,14 +24,12 @@
 // }
 
 .modal-content {
-  text-align: center;
-
   .modal-header {
     // background-color: t.$bg;
-    // color: t.$text;
+    color: t.$menu-text;
 
     .close {
-      color: t.$text;
+      color: t.$menu-text;
     }
   }
 
@@ -40,4 +42,3 @@
     justify-content: center;
   }
 }
-
