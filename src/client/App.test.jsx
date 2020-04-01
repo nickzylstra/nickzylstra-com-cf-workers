@@ -37,10 +37,10 @@ describe('Client App', () => {
     expect(worksTestProjectElem).toBeInTheDocument();
     expect(() => getByLabelText('about-page')).toThrowError();
 
-    fireEvent.click(getByLabelText('live-link'));
-    const livePageElemRepeat = await waitForElement(() => getByLabelText('live-page'));
-    expect(livePageElemRepeat).toBeInTheDocument();
-    expect(() => getByLabelText('works-page')).toThrowError();
+    // fireEvent.click(getByLabelText('live-link'));
+    // const livePageElemRepeat = await waitForElement(() => getByLabelText('live-page'));
+    // expect(livePageElemRepeat).toBeInTheDocument();
+    // expect(() => getByLabelText('works-page')).toThrowError();
 
     fireEvent.click(getByLabelText('about-link'));
     const aboutPageElem2 = await waitForElement(() => getByLabelText('about-page'));
