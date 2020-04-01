@@ -10,7 +10,7 @@ const Header = () => {
 
   return (
     <Navbar fixed="top" collapseOnSelect expand="sm" variant={variant} bg={bg}>
-      <Navbar.Brand href="/">nz</Navbar.Brand>
+      <Navbar.Brand href="/">NZ</Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav-header" />
       <Navbar.Collapse id="responsive-navbar-nav-header">
         <Nav activeKey={pathname}>
