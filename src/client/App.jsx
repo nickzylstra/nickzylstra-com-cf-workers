@@ -9,7 +9,7 @@ import './App.scss';
 import styles from './App.module.scss';
 
 
-const Live = lazy(() => import('./components/Live/Live'));
+// const Live = lazy(() => import('./components/Live/Live'));
 const Works = lazy(() => import('./components/Works/Works'));
 const About = lazy(() => import('./components/About/About'));
 
