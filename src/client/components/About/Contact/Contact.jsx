@@ -4,7 +4,7 @@ import SocialIcons from './SocialIcons';
 import Message from './Message';
 
 const About = () => (
-  <Container>
+  <Container as="article">
     <Message />
     <SocialIcons />
   </Container>
