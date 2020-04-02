@@ -1,8 +1,11 @@
 $bg: #0e0e0e;
-$text: #dee2e6;
+$text: #e5e9ec;
 $menu-text: white;
-$control: #0e0e0e;
-// $control: #007bff;
-$control-hover: #007bff;
+$active: #4671ff;
+$link-base: #a6bbff;
+$link-norm: rgba($link-base, 0.85);
+$link-hover: rgba($link-base, 1);
+$link-active: rgba($link-base, 1);
+
 $font-header: Oswald, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 $font-text: "Proxima Nova Rg", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;

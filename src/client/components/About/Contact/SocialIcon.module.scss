@@ -13,10 +13,9 @@
 }
 
 .SocialIconPath {
-  fill: t.$text;
-  fill-opacity: .5;
+  fill: t.$link-norm;
 
-  .SocialButton:hover & {
-    fill-opacity: .75;
+  .SocialButton:hover &, .SocialButton:focus & {
+    fill: t.$link-hover;
   }
 }

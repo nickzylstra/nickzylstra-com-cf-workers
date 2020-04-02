@@ -2,13 +2,20 @@
 @use "bootstrap" as bs with (
   $body-bg: t.$bg,
   $body-color: t.$text,
+
+  $component-active-bg: t.$active,
   
   $card-bg: t.$bg,
   
-  $font-family-sans-serif: t.$font-header,
+  $font-family-sans-serif: t.$font-text,
   
   $modal-content-color: t.$text,
   $modal-content-bg: t.$bg,
+
+  $link-color: t.$link-norm,
+  $link-decoration: none,
+  $link-hover-color: t.$link-hover,
+  $link-hover-decoration: none,
 );
 @use "customTheme";
 @import "~typeface-oswald/index.css";
@@ -16,17 +23,23 @@
 
 body {
   text-align: center;
+}
+
+.card-title, .navbar {
   letter-spacing: .15rem;
+  font-family: t.$font-header;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  letter-spacing: .1rem;
-}
-
-p, span {
-  font-family: t.$font-text;
-  letter-spacing: 0;
+p {
   font-size: large;
+}
+
+a {
+  // text-shadow: 0 1px 0 #fff;
+
+  &:focus {
+    color: t.$link-hover;
+  }
 }
 
 .modal-content {
@@ -35,7 +48,15 @@ p, span {
     color: t.$menu-text;
 
     .close {
-      color: t.$menu-text;
+      text-shadow: none;
+      opacity: inherit;
+      color: t.$link-norm;
+      font-size: 2rem;
+
+      &:hover, &:focus {
+        opacity: inherit;
+        color: t.$link-hover;
+      }
     }
   }
 
