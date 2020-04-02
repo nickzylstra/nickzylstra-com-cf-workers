@@ -16,12 +16,12 @@ const Summary = () => (
       <i> (ZIel-strah)</i>
     </h1>
     <br />
-    <h4>
+    <h3>
       I like to learn, teach, and build things.
       <span role="img" aria-label="learn">💡</span>
       <span role="img" aria-label="teach">🔥</span>
       <span role="img" aria-label="build">🏗️</span>
-    </h4>
+    </h3>
     <br />
     <p>
       The first 11 years of my career were at

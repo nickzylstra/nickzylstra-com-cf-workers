@@ -5,23 +5,25 @@
   
   $card-bg: t.$bg,
   
-  $font-family-sans-serif: t.$font,
+  $font-family-sans-serif: t.$font-header,
   
   $modal-content-color: t.$text,
   $modal-content-bg: t.$bg,
 );
 @use "customTheme";
 @import "~typeface-oswald/index.css";
+@import "~font-proxima-nova/style.css";
 
 body {
   text-align: center;
   letter-spacing: .06rem;
 }
 
-// .card-header {
-//   background-color: t.$bg;
-//   color: t.$text;
-// }
+p, span {
+  font-family: t.$font-text;
+  letter-spacing: 0;
+  font-size: large;
+}
 
 .modal-content {
   .modal-header {
