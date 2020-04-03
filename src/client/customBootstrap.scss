@@ -76,7 +76,7 @@ a {
   background-color: rgba(white, .01);
 }
 
-.navbar-collapse.collapse.show {
-  border: .07rem solid t.$link-hyperfade;
+.navbar-collapse.collapse.show, .navbar-collapse.collapsing {
   background-color: rgba(white, .01);
+  border: .07rem solid t.$link-hyperfade;
 }
