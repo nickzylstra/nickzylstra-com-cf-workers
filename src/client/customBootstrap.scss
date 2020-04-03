@@ -34,10 +34,9 @@ p {
   font-size: large;
 }
 
-a {
-  // text-shadow: 0 1px 0 #fff;
-
-  &:focus {
+a { 
+  &:focus, &:hover {
+    text-shadow: 0 0 0.1rem t.$link-hover;
     color: t.$link-hover;
   }
 }
@@ -55,6 +54,7 @@ a {
 
       &:hover, &:focus {
         opacity: inherit;
+        text-shadow: 0 0 t.$shadow-size t.$link-hover;
         color: t.$link-hover;
       }
     }

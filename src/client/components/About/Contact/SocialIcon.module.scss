@@ -10,6 +10,10 @@
 
 .SocialIcon {
   width: 1.5em;
+
+  .SocialButton:hover &, .SocialButton:focus & {
+    filter: drop-shadow(0 0 t.$shadow-size t.$link-hover);
+  }
 }
 
 .SocialIconPath {
