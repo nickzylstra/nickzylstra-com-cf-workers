@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const Summary = () => (
   <>
     <br />
-    {/* <Image src="/assets/images/full/headshot.jpeg" crossOrigin="anonymous" alt="headshot" /> */}
+    {/* <Image src="/assets/images/full/headshot.jpeg" rounded alt="headshot" /> */}
     <h1>
       I&apos;m Nick Zylstra
     </h1>

@@ -72,6 +72,11 @@ a {
   }
 }
 
-.navbar-collapse .collapse .show {
-  border: 1rem solid t.$link-norm;
-}   
+.navbar-toggler:not(.collapsed) {
+  background-color: rgba(white, .01);
+}
+
+.navbar-collapse {
+  border: .07rem solid t.$link-hyperfade;
+  background-color: rgba(white, .01);
+}
