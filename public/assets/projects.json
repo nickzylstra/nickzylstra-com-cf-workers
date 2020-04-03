@@ -131,8 +131,8 @@
      },
      {
         "id":7,
-        "name":"www.nickzylstra.com",
-        "description":"Personal website for sharing projects and testing new tech.  Github private for security.  Webpack setup to split client JS and CSS bundles per view to increase page load speed and hash/auto-inject filenames for cache-busting.  Deployment through a fully automated CICD pipeline using Github, CircleCI, Docker Hub, and AWS EC2.  Development environment setup with webpack dev server including hot module reload to instantly see code changes.  Docker-compose configurations for development and production for easy setup.  Utilizes helmet library and Cloudflare service for security and additional monitoring data.",
+        "name":"nickzylstra.com",
+        "description":"Personal website for sharing projects and testing new tech.  Github private for security.  Webpack setup to split client JS and CSS bundles per view to increase page load speed and hash/auto-inject filenames for cache-busting.  Deployment through a fully automated CICD pipeline using Github, CircleCI, Docker Hub, and AWS EC2.  Development environment setup with webpack dev server including hot module reload to instantly see code changes.  Docker-compose configurations for development and production for easy setup.  Utilizes helmet library and Cloudflare service for security, performance, and additional monitoring data.",
         "githubLink":"https://www.nickzylstra.com",
         "lastUpdated":"2020-03-28T17:39:14Z",
         "image":"/assets/images/full/nzcom_ss.png",
