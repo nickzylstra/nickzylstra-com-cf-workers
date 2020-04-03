@@ -69,3 +69,7 @@ a {
     justify-content: center;
   }
 }
+
+.navbar-collapse .collapse .show {
+  border: 1rem solid t.$link-norm;
+}   
