@@ -36,6 +36,22 @@ const Summary = () => (
         , building a better internet.
       </p>
       <p>
+        I&apos;ve coded most of my life.
+        It started with a single line display computer my grandpa gave me at 8
+        and things like scripting dragon skill training for Ultima Online while I slept at 15.
+        Later on, coding turned into things like creating software tools streamlining the
+        development of large construction projects, running Ethereum nodes,
+        and customizing keyboard firmware.  Today I&apos;m building full stack web applications
+        with technologies like React, Node.js, PostgreSQL, Docker, AWS, and Cloudflare.
+      </p>
+      <p>
+        Why do I code?  Because it&apos;s really fun to me, plain and simple.
+        The opportunity to constantly solve novel problems with new technologies
+        means I&apos;m always learning.  And since most of these problems are digital,
+        one can rapidly iterate through multiple concepts to find the best solution for
+        the application. I find both of these aspects immensely satisfying and enjoyable.
+      </p>
+      <p>
         You can check out my personal projects
         {' '}
         <Link to="/works">here</Link>
