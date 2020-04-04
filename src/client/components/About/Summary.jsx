@@ -52,6 +52,10 @@ const Summary = () => (
         the application. I find both of these aspects immensely satisfying and enjoyable.
       </p>
       <p>
+        I made the switch from energy engineering to software engineering
+        in pursuit of a new challenge - and I&apos;m loving every minute so far.
+      </p>
+      <p>
         You can check out my personal projects
         {' '}
         <Link to="/works">here</Link>
