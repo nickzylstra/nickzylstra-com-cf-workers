@@ -1,19 +1,23 @@
 import React from 'react';
-// import { Image } from 'react-bootstrap';
+import { Image } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 
 const Summary = () => (
   <>
-    <br />
-    {/* <Image src="/assets/images/full/headshot.jpeg" rounded alt="headshot" /> */}
+    <Image
+      src="/assets/images/full/headshot2.jpg"
+      roundedCircle
+      alt="headshot"
+      width="300"
+      height="278"
+    />
     <h1>
       I&apos;m Nick Zylstra
     </h1>
     <h2>
       <i>(nik ZIel-strah)</i>
     </h2>
-    <br />
     <article>
       <p>
         I like to learn, teach, and build things.
