@@ -53,7 +53,7 @@ const Summary = () => (
       </p>
       <p>
         I made the switch from energy engineering to software engineering
-        in pursuit of a new challenge - and I&apos;m loving every minute so far.
+        in pursuit of a new challenge - and I&apos;m loving the journey so far.
       </p>
       <p>
         You can check out my personal projects
