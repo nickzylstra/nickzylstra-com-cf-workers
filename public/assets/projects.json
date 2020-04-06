@@ -29,7 +29,7 @@
      {
         "id":2,
         "name":"Referral eSignature Integration",
-        "description":"Embedded iframe app accessed from within Welkin Health app.  App retrieves Docusign hosted contacts and forms then allows use to select form, select signer, add form info, send for signature, and receive signature status updates.  Designed custom JWT grant OAuth logic to meet Docusign and Welkin security requirements.",
+        "description":"Embedded iframe app accessed from within Welkin Health app.  App retrieves Docusign hosted contacts and forms then allows user to select form, select signer, add form info, send for signature, and receive signature status updates.  Designed custom JWT grant OAuth logic to meet Docusign and Welkin security requirements.",
         "githubLink":"https://github.com/nickzylstra/eSignIntegration",
         "lastUpdated":"2020-03-09T17:39:14Z",
         "image":"https://raw.githubusercontent.com/nickzylstra/eSignIntegration/master/demo.gif",
@@ -79,7 +79,7 @@
      {
         "id":4,
         "name":"Bowling Score Simulation",
-        "description":"App to test Xstate finite state machine library on handling game scoring and progress.  State shown here is generated automatically using the code with online visualizer. Used model-based testing to automatically generate tests for relevant paths of state machine graph model.  Testing methodology allowed me to test every possible game state through ~8700 generated unit tests created with minimal code.",
+        "description":"App to test Xstate finite state machine library on handling game scoring and progress.  State chart shown here is generated automatically using the code with the library's online visualizer. Used model-based testing to automatically generate tests for relevant paths of state machine graph model.  Testing methodology allowed me to test every possible game state through ~8700 generated unit tests created with minimal code.",
         "githubLink":"https://github.com/nickzylstra/mini-apps-2/tree/master/challenge_3",
         "lastUpdated":"2020-01-22T17:39:14Z",
         "image":"https://raw.githubusercontent.com/nickzylstra/mini-apps-2/master/challenge_3/statechart.png",
@@ -132,7 +132,7 @@
      {
         "id":7,
         "name":"nickzylstra.com",
-        "description":"Personal website for sharing projects and testing new tech.  Github private for security.  Webpack setup to split client JS and CSS bundles per view to increase page load speed and hash/auto-inject filenames for cache-busting.  Deployment through a fully automated CICD pipeline using Github, CircleCI, Docker Hub, and AWS EC2.  Development environment setup with webpack dev server including hot module reload to instantly see code changes.  Docker-compose configurations for development and production for easy setup.  Utilizes helmet library and Cloudflare service for security, performance, and additional monitoring data.",
+        "description":"Personal website for sharing projects and testing new tech.  Github private for security.  Webpack setup to split client JS and CSS bundles per view to increase page load speed and hash/auto-inject filenames for cache-busting.  Deployment through a fully automated CICD pipeline using Github, CircleCI, Docker Hub, and AWS EC2.  Development environment setup with webpack dev server including hot module reload to instantly see code changes.  Docker-compose configurations for development and production for easy setup.  Utilizes Cloudflare service for security, performance, and additional monitoring data.",
         "githubLink":"https://www.nickzylstra.com",
         "lastUpdated":"2020-03-28T17:39:14Z",
         "image":"/assets/images/full/nzcom_ss.png",
