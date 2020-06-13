@@ -3,7 +3,6 @@ import { Modal } from 'react-bootstrap';
 import { formatDistance } from 'date-fns';
 import GithubIcon from '../About/Contact/GithubIcon';
 
-
 const ProjectModal = ({ project, handleModalHide }) => {
   const {
     name, description, githubLink, lastUpdated, image, tags, imageW, imageH,

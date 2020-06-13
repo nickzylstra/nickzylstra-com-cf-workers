@@ -3,7 +3,6 @@ import * as THREE from 'three';
 import { Water } from 'three/examples/jsm/objects/Water';
 // import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
-
 const getWindowSize = () => {
   // can increase density for high DPI mobile devices if desired
   // const ratio = window.devicePixelRatio;
@@ -89,7 +88,6 @@ function configScene(canvas) {
     renderer, shapeParts, cube, water, scene, camera,
   };
 }
-
 
 const Scene = () => {
   const threeRef = useRef(null);

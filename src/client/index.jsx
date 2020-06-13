@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 
-
 const localhost = 'http://localhost:3000';
 const hostedURL = 'https://www.nickzylstra.com/';
 const { origin } = window.location;

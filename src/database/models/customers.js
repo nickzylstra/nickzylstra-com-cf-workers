@@ -1,7 +1,6 @@
 /* eslint-disable camelcase */
 const { pool } = require('../index');
 
-
 async function create(name, email) {
   const text = 'INSERT INTO customers(name, email) VALUES($1, $2) RETURNING customer_id';
   const values = [name, email];

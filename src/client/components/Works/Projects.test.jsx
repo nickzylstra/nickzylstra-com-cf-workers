@@ -2,7 +2,6 @@ import React from 'react';
 import { render, fireEvent, waitForElement } from '@testing-library/react';
 import Projects from './Projects';
 
-
 describe('Client - Projects', () => {
   const testProjects = [{
     id: 1,

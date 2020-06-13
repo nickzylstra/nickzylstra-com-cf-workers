@@ -1,5 +1,5 @@
 const log = require('fancy-log');
-const { pool, createTables } = require('./');
+const { pool, createTables } = require('.');
 
 (async function seed() {
   await createTables(pool);

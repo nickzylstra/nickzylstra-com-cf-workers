@@ -3,7 +3,6 @@ import { Navbar, Nav } from 'react-bootstrap';
 import { Link, useLocation } from 'react-router-dom';
 import theme from '../theme';
 
-
 const Header = () => {
   const { variant, bg } = theme;
   const { pathname } = useLocation();

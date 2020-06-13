@@ -8,11 +8,9 @@ import Navbar from './components/Navbar';
 import './App.scss';
 import styles from './App.module.scss';
 
-
 // const Live = lazy(() => import('./components/Live/Live'));
 const Works = lazy(() => import('./components/Works/Works'));
 const About = lazy(() => import('./components/About/About'));
-
 
 // eslint-disable-next-line no-unused-vars
 const App = ({ host }) => (

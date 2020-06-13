@@ -5,9 +5,7 @@ import ProjectModal from './ProjectModal';
 
 import styles from './Projects.module.scss';
 
-
 const sortByDate = (a, b) => new Date(b.lastUpdated).getTime() - new Date(a.lastUpdated).getTime();
-
 
 const Projects = ({ projects }) => {
   const [showModal, setShowModal] = useState(false);
