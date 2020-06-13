@@ -42,7 +42,7 @@ const Summary = () => (
         Later on, coding turned into things like creating software tools streamlining the
         development of large construction projects, running Ethereum nodes,
         and customizing keyboard firmware.  Today I&apos;m building full stack web applications
-        with technologies like React, Node.js, PostgreSQL, Docker, AWS, and Cloudflare.
+        with technologies like React, Typescript, Node.js, PostgreSQL, Docker, Kubernetes, AWS, and Cloudflare.
       </p>
       <p>
         Why do I code?  Because it&apos;s really fun to me, plain and simple.
