@@ -10,7 +10,7 @@ fi
 domains=(nickzylstra.com www.nickzylstra.com)
 rsa_key_size=4096
 data_path="./deployData/certbot"
-email="nick.zylstra@gmail.com" # Adding a valid address is strongly recommended
+email="nick.zylstra+nzcom@gmail.com" # Adding a valid address is strongly recommended
 staging=0 # Set to 1 if you're testing your setup to avoid hitting request limits
 dockercomposeargs="-f ./docker-compose.yml -f ./docker-compose.prod.yml"
 
