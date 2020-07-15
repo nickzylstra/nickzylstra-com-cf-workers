@@ -1,20 +1,9 @@
 version: '3.7'
 
 services:
-  postgres_db:
-    image: postgres:12.1-alpine
-    environment:
-      POSTGRES_USER: user
-      POSTGRES_PASSWORD: pass
-      POSTGRES_DB: app
   app_server:
-    depends_on:
-      - 'postgres_db'
     environment:
-      POSTGRES_USER: user
-      POSTGRES_PASSWORD: pass
-      POSTGRES_DB: app
-      POSTGRES_HOST: postgres_db
+      HELLO: hello
   nginx:
     image: nginx:1.15-alpine
   certbot:

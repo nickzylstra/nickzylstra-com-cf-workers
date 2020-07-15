@@ -3,33 +3,13 @@ jobs:
   build-test-publish:
     docker:
       - image: circleci/node:12.15
-        environment:
-          POSTGRES_HOST: localhost
-          POSTGRES_USER: test
-          POSTGRES_PASSWORD: test
-      - image: postgres:12.1-alpine
-        environment:
-          POSTGRES_USER: test
-          POSTGRES_PASSWORD: test
-          POSTGRES_DB: boilerplate_test
     steps:
       - checkout
-      - run:
-          name: Waiting for Postgres to be ready
-          command: |
-            for i in `seq 1 10`;
-            do
-              nc -z localhost 5432 && echo Success && exit 0
-              echo -n .
-              sleep 1
-            done
-            echo Failed waiting for Postgres && exit 1
       - run: 
           name: Setup
           command: |
             npm install
             npm run build
-            npm run seed
       - run:
           name: Lint
           command: npm run lint

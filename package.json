@@ -9,7 +9,6 @@
   "main": "src/server/server.js",
   "scripts": {
     "lint": "eslint --ext .js,.jsx .",
-    "seed": "node src/database/seed.js",
     "build": "webpack",
     "build:dev": "webpack -d --color",
     "build:dev:reload": "webpack-dev-server --hot --color --host 0.0.0.0",

@@ -2,7 +2,6 @@ const express = require('express');
 const path = require('path');
 const cors = require('cors');
 const helmet = require('helmet');
-const customersRouter = require('./routes/customers');
 
 const app = express();
 app.use(helmet());
@@ -24,7 +23,5 @@ const reactRouterRoutesRE = /\/(?!api).*(?!\.).*$/;
 app.use(reactRouterRoutesRE, setResCaching, (req, res) => {
   res.sendFile(path.resolve(__dirname, '..', '..', 'public', 'index.html'));
 });
-
-app.use('/api/customers', customersRouter);
 
 module.exports = app;

@@ -1,8 +1,6 @@
 version: '3.7'
 
 services:
-  postgres_db:
-    restart: unless-stopped
   app_server:
     image: nickzylstra/nickzylstra-com:latest
     restart: unless-stopped
