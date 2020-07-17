@@ -16,9 +16,13 @@ jobs:
       - run:
           name: Test
           command: npm run test
-      # - run:
-      #     name: Publish app to Workers site
-      #     command: npm run worker:CIProdDeploy
+      - run:
+          name: Publish app to Workers site
+          env:
+            NODE_ENV: production
+          command: |
+            npm run build
+            npx wrangler publish --env production
 
 workflows:
   version: 2

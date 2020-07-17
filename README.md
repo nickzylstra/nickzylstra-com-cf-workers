@@ -10,7 +10,6 @@
 ### Run at 'localhost':
 UI with hot reload at http://localhost:4000
 
-Express server API at http://localhost:3000
 #### To startup:
 - ensure docker is running
 - clone repo to local machine
@@ -27,8 +26,8 @@ docker-compose down
 ```
 
 ### Run on Cloudflare Worker:
-- Add API key to local, globally installed version of `wrangler`
 #### To get reloading dev site:
+- Add Cloudflare API key to local, globally installed version of `wrangler`
 - run the following command from repo directory:
 ```
 npm run worker:preview
@@ -46,16 +45,10 @@ npm run worker:manualProdDeploy
 ##### CircleCI:
 - connect github to CircleCI
 - add repo as project to CircleCI
-- add Clouflare workers API key as env variable
+- add Clouflare API key as env variable for use by wrangler
 
 #### To deploy changes:
 - push changes to github master
-
-#### To shutdown:
-- run the following command from repo directory:
-```
-docker-compose down
-```
 
 ## Testing
 

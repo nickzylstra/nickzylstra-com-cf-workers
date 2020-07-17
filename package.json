@@ -22,8 +22,7 @@
     "test:debug": "node --inspect-brk node_modules/.bin/jest --runInBand",
     "worker:preview": "npm run build && wrangler preview --env staging --watch",
     "worker:stageDeploy": "npm run build && wrangler publish --env staging",
-    "worker:manualProdDeploy": "NODE_ENV=production npm run build && wrangler publish --env production",
-    "worker:CIProdDeploy": "NODE_ENV=production npm ci && NODE_ENV=production npm run build && npm install -g wrangler && wrangler publish --env production"
+    "worker:manualProdDeploy": "NODE_ENV=production npm run build && wrangler publish --env production"
   },
   "author": "",
   "license": "ISC",
@@ -64,6 +63,7 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
+    "@cloudflare/wrangler": "^1.10.3",
     "axios": "^0.19.2",
     "bootstrap": "^4.5.0",
     "cors": "^2.8.5",
