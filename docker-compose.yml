@@ -2,9 +2,13 @@ version: '3.7'
 
 services:
   app_server:
+    build: .
+    volumes:
+      - .:/app
+      - /app/node_modules
+    ports:
+      - '3000:3000'
+      - '4000:4000'
     environment:
-      HELLO: hello
-  nginx:
-    image: nginx:1.15-alpine
-  certbot:
-    image: certbot/certbot
+      NODE_ENV: development
+    command: sh -c "apk --no-cache add inotify-tools && npm run start:docker:development"

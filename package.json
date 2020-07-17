@@ -15,15 +15,15 @@
     "start": "node src/server/server.js",
     "start:dev": "nodemon src/server/server.js",
     "start:debug": "nodemon --inspect src/server/server.js",
-    "start:docker": "npm run seed & npm run build & npm run start",
-    "start:docker:development": "npm run seed & npm run build:dev & npm run build:dev:reload & npm run start:dev",
+    "start:docker": "npm run build & npm run start",
+    "start:docker:development": "npm run build:dev & npm run build:dev:reload & npm run start:dev",
     "test": "jest",
     "test:watch": "jest --watchAll",
     "test:debug": "node --inspect-brk node_modules/.bin/jest --runInBand",
     "worker:preview": "npm run build && wrangler preview --env staging --watch",
     "worker:stageDeploy": "npm run build && wrangler publish --env staging",
     "worker:manualProdDeploy": "NODE_ENV=production npm run build && wrangler publish --env production",
-    "worker:CIProdDeploy": "npm install -g wrangler && NODE_ENV=production npm run build && wrangler publish --env production"
+    "worker:CIProdDeploy": "NODE_ENV=production npm ci && NODE_ENV=production npm run build && npm install -g wrangler && wrangler publish --env production"
   },
   "author": "",
   "license": "ISC",
