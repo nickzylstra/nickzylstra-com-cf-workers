@@ -5,3 +5,4 @@ public/*
 !public/assets
 *.pem
 deployData/certbot
+dist

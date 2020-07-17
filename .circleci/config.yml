@@ -16,17 +16,9 @@ jobs:
       - run:
           name: Test
           command: npm run test
-      - setup_remote_docker:
-      - run:
-          name: Build and push Docker image
-          command: |
-            docker build -t nickzylstra/nickzylstra-com:latest .
-            echo $DOCKER_PWD | docker login -u $DOCKER_LOGIN --password-stdin
-            docker push nickzylstra/nickzylstra-com:latest
-      - run:
-          name: Deploy app Docker Image to AWS
-          command: |
-            ssh -o StrictHostKeyChecking=no ec2-user@52.8.215.15 "/bin/bash /home/ec2-user/nickzylstra-com/deployData/deploy_app.sh nickzylstra/nickzylstra-com:latest"
+      # - run:
+      #     name: Publish app to Workers site
+      #     command: npm run worker:CIProdDeploy
 
 workflows:
   version: 2
