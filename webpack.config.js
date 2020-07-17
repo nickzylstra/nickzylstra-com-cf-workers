@@ -21,10 +21,8 @@ module.exports = {
   mode: isDevelopment ? 'development' : 'production',
   entry: path.resolve(__dirname, 'src', 'client', 'index.jsx'),
   output: {
-    // filename: isDevelopment ? 'bundle.js' : 'bundle.[hash].js',
-    filename: 'bundle.js',
-    // chunkFilename: isDevelopment ? 'bundle.[id].js' : 'bundle.[id].[hash].js',
-    chunkFilename: 'bundle.[id].js',
+    filename: isDevelopment ? 'bundle.js' : 'bundle.[hash].js',
+    chunkFilename: isDevelopment ? 'bundle.[id].js' : 'bundle.[id].[hash].js',
     path: publicDirPath,
     publicPath: '/',
   },
@@ -88,8 +86,7 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-              // name: isDevelopment ? '[name].[ext]' : '[name].[hash].[ext]',
-              name: '[name].[ext]',
+              name: isDevelopment ? '[name].[ext]' : '[name].[hash].[ext]',
               outputPath: 'fonts/',
             },
           },
@@ -110,10 +107,8 @@ module.exports = {
     //   minify: !isDevelopment,
     // }),
     new MiniCssExtractPlugin({
-      // filename: isDevelopment ? 'styles.css' : 'styles.[hash].css',
-      filename: 'styles.css',
-      // chunkFilename: isDevelopment ? 'styles.[id].css' : 'styles.[id].[hash].css',
-      chunkFilename: 'styles.[id].css',
+      filename: isDevelopment ? 'styles.css' : 'styles.[hash].css',
+      chunkFilename: isDevelopment ? 'styles.[id].css' : 'styles.[id].[hash].css',
     }),
     // new CleanWebpackPlugin(),
   ],
