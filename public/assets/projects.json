@@ -164,7 +164,7 @@
          "name":"Keyboard Firmware Customization",
          "description":"Designed custom keyboard layout and customized C/C++/arduino Kaleidoscope firmware to support design.  Built to address typing discomfort in conjunction with physical therapy, issues now resolved.  Researched physical form factor and alphanumeric key layout configurations in depth, landing on MTGAP based, algorithmically generated alphanumeric layout and selecting Keyboard.io physical form factor.  Alphanumeric layout was further customized for physical key layout of Keyboard.io and personal use case of a software development focus.",
          "githubLink":"https://github.com/nickzylstra/keyboardio",
-         "lastUpdated":"2020-01-10T17:39:14Z",
+         "lastUpdated":"2020-06-13T17:39:14Z",
          "image":"https://raw.githubusercontent.com/nickzylstra/keyboardio/master/keyboardlayout.png",
          "imageW":"2058",
          "imageH":"1240",
