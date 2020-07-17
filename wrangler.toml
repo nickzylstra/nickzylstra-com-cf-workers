@@ -10,5 +10,5 @@ entry-point = "workers-site"
 workers_dev = true
 
 [env.production]
-route = "nickzylstra.com/*"
+routes = ["www.nickzylstra.com/*", "nickzylstra.com/*"]
 zone_id = "138637767aa3d9eaaa39c3d5e2a98faa"
