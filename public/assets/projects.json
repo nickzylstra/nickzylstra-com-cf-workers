@@ -131,10 +131,10 @@
      },
      {
         "id":7,
-        "name":"nickzylstra.com",
-        "description":"Personal website for sharing projects and testing new tech.  Github private for security.  Webpack setup to split client JS and CSS bundles per view to increase page load speed and hash/auto-inject filenames for cache-busting.  Deployment through a fully automated CICD pipeline using Github, CircleCI, Docker Hub, and AWS EC2.  Development environment setup with webpack dev server including hot module reload to instantly see code changes.  Docker-compose configurations for development and production for easy setup.  Utilizes Cloudflare service for security, performance, and additional monitoring data.",
-        "githubLink":"https://www.nickzylstra.com",
-        "lastUpdated":"2020-03-28T17:39:14Z",
+        "name":"nickzylstra.com v1 - AWS (deprecated)",
+        "description":"Personal website for sharing projects and testing new tech.  Webpack setup to split client JS and CSS bundles per view to increase page load speed and hash/auto-inject filenames for cache-busting.  Deployment through a fully automated CICD pipeline using Github, CircleCI, Docker Hub, and AWS EC2.  Development environment setup with webpack dev server including hot module reload to instantly see code changes.  Docker-compose configurations for development and production for easy setup.  Utilizes Cloudflare service for security, performance, and additional monitoring data.",
+        "githubLink":"https://github.com/nickzylstra/nickzylstra-com",
+        "lastUpdated":"2020-07-16T17:39:14Z",
         "image":"/assets/images/full/nzcom_ss.png",
         "imageW":"974",
         "imageH":"875",
@@ -173,6 +173,31 @@
             "C/C++",
             "arduino",
             "kaleidoscope"
+         ]
+      },
+      {
+         "id":9,
+         "name":"nickzylstra.com v2 - Cloudflare Workers",
+         "description":"Personal website for sharing projects and testing new tech.  Deployed using the 'serveless' / edge compute platform Cloudflare Workers to minimize deployment effort and loading times.  It's fast because all assets except gifs and the code are served and run from the edge!  Webpack setup to split client JS and CSS bundles per view to increase page load speed and hash/auto-inject filenames for cache-busting.  Deployment through a fully automated CICD pipeline using Github, CircleCI, and Cloudflare Workers/Wrangler.  Development environment setup with webpack dev server including hot module reload to instantly see code changes.  Docker-compose configurations for development easy setup.  Utilizes Cloudflare service for security, performance, and additional monitoring data.",
+         "githubLink":"https://github.com/nickzylstra/nickzylstra-com-cf-workers",
+         "lastUpdated":"2020-07-17T17:39:14Z",
+         "image":"https://raw.githubusercontent.com/nickzylstra/nickzylstra-com-cf-workers/master/nzcom_workers.gif",
+         "imageW":"3354",
+         "imageH":"1836",
+         "thumb":"nzcom_workers.png",
+         "tags":[
+            "react",
+            "react-bootstrap",
+            "scss/sass",
+            "react-router",
+            "node.js",
+            "webpack",
+            "webpack-dev-server",
+            "cloudflare-workers",
+            "serverless",
+            "cloudflare",
+            "jest",
+            "react-testing-library"
          ]
       }
   ]
