@@ -28,6 +28,9 @@ async function handleEvent(event) {
   const url = new URL(event.request.url)
   let options = {
     mapRequestToAsset: serveSinglePageApp,
+    cacheControl: {
+      edgeTTL: 90 * 24 * 60 * 60, // 90 days
+    }
   }
 
   /**
