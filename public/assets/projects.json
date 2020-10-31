@@ -162,8 +162,9 @@
       {
          "id": 8,
          "name": "Keyboard Firmware Customization",
-         "description": "Designed custom keyboard layout and customized C/C++/arduino Kaleidoscope firmware to support design.  Built to address typing discomfort in conjunction with physical therapy, issues now resolved.  Researched physical form factor and alphanumeric key layout configurations in depth, landing on MTGAP based, algorithmically generated alphanumeric layout and selecting Keyboard.io physical form factor.  Alphanumeric layout was further customized for physical key layout of Keyboard.io and personal use case of a software development focus.  Here I am on Cloudflare.tv discussing with a colleague: https://cloudflare.tv/event/3MfzBE4SF49UjkUJ56FN9C",
+         "description": "Designed custom keyboard layout and customized C/C++/arduino Kaleidoscope firmware to support design.  Built to address typing discomfort in conjunction with physical therapy, issues now resolved.  Researched physical form factor and alphanumeric key layout configurations in depth, landing on MTGAP based, algorithmically generated alphanumeric layout and selecting Keyboard.io physical form factor.  Alphanumeric layout was further customized for physical key layout of Keyboard.io and personal use case of a software development focus.  Check out my Cloudflare.tv discussion with a colleague in the bonus content!",
          "githubLink": "https://github.com/nickzylstra/keyboardio",
+         "descriptionLink": "https://cloudflare.tv/event/3MfzBE4SF49UjkUJ56FN9C",
          "lastUpdated": "2020-10-31T17:39:14Z",
          "image": "https://raw.githubusercontent.com/nickzylstra/keyboardio/master/keyboardlayout.png",
          "imageW": "2058",

@@ -8,6 +8,8 @@ const ProjectModal = ({ project, handleModalHide }) => {
     name, description, githubLink, lastUpdated, image, tags, imageW, imageH,
   } = project;
 
+  const descLink = project.descriptionLink;
+
   const {
     Title, Header, Body, Footer,
   } = Modal;
@@ -37,6 +39,15 @@ const ProjectModal = ({ project, handleModalHide }) => {
       </Body>
       <Body>
         <p>{description}</p>
+        {!descLink ? null : (
+          <a
+            href={descLink}
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            Bonus content!
+          </a>
+        )}
         <p>{`Tech: ${techTags}`}</p>
       </Body>
       <Footer>
