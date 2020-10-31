@@ -1,191 +1,191 @@
 {
-  "projects":[
-     {
-        "id":1,
-        "name":"Home Payment Calculator",
-        "description":"Front end focused microservice to calculate monthly home ownership costs.  Displays available home loans and monthly cost based on user defined inputs and provided property data.  Built Gulp workflow to automate JS bundle CI with S3.  All styling created from scratch using React Styled Components.  App state changes all handled through native React state functionality.  Part of larger real estate site.",
-        "githubLink":"https://github.com/fRiend-hrsf124/costHomeOwnership-service",
-        "lastUpdated":"2019-12-15T17:39:14Z",
-        "image":"https://raw.githubusercontent.com/fRiend-hrsf124/costHomeOwnership-service/master/fec.gif",
-        "imageW":"732",
-        "imageH":"830",
-        "thumb":"home_payment.png",
-        "tags":[
-           "react",
-           "react-styled-components",
-           "express",
-           "node.js",
-           "mysql",
-           "webpack",
-           "gulp",
-           "circleci",
-           "aws-s3",
-           "aws-ec2",
-           "docker",
-           "jest",
-           "enzyme"
-        ]
-     },
-     {
-        "id":2,
-        "name":"Referral eSignature Integration",
-        "description":"Embedded iframe app accessed from within Welkin Health app.  App retrieves Docusign hosted contacts and forms then allows user to select form, select signer, add form info, send for signature, and receive signature status updates.  Designed custom JWT grant OAuth logic to meet Docusign and Welkin security requirements.",
-        "githubLink":"https://github.com/nickzylstra/eSignIntegration",
-        "lastUpdated":"2020-03-09T17:39:14Z",
-        "image":"https://raw.githubusercontent.com/nickzylstra/eSignIntegration/master/demo.gif",
-        "imageW":"1278",
-        "imageH":"1006",
-        "thumb":"referral_esign.png",
-        "tags":[
-           "react",
-           "bootstrap",
-           "express",
-           "node.js",
-           "mongodb",
-           "webpack",
-           "aws-ec2",
-           "nginx",
-           "docusign-esign",
-           "jwt",
-           "jest",
-           "react-testing-library"
-        ]
-     },
-     {
-        "id":3,
-        "name":"Stock History Graph Backend",
-        "description":"Service scaled to 2500 RPS throughput with one load balancer, four app servers, one API cache, and one 105M record PostgreSQL database on AWS EC2 T2 micros.  Stress tested with Artillery.io (local), Loader.io (deployed), and New Relic to identify addressable bottlenecks as throughput was scaled up.  Performance tested Cassandra and PostgreSQL implimentations to select database tech.",
-        "githubLink":"https://github.com/Camelot-Stocks/Graph-Service",
-        "lastUpdated":"2020-01-10T17:39:14Z",
-        "image":"https://i.imgur.com/ZtBOqYf.png",
-        "imageW":"1009",
-        "imageH":"661",
-        "thumb":"stockgraph.png",
-        "tags":[
-           "react",
-           "express",
-           "node.js",
-           "postgresql",
-           "cassandra",
-           "redis",
-           "aws-ec2",
-           "nginx",
-           "jest",
-           "artillery.io",
-           "loader.io",
-           "newrelic"
-        ]
-     },
-     {
-        "id":4,
-        "name":"Bowling Score Simulation",
-        "description":"App to test Xstate finite state machine library on handling game scoring and progress.  State chart shown here is generated automatically using the code with the library's online visualizer. Used model-based testing to automatically generate tests for relevant paths of state machine graph model.  Testing methodology allowed me to test every possible game state through ~8700 generated unit tests created with minimal code.",
-        "githubLink":"https://github.com/nickzylstra/mini-apps-2/tree/master/challenge_3",
-        "lastUpdated":"2020-01-22T17:39:14Z",
-        "image":"https://raw.githubusercontent.com/nickzylstra/mini-apps-2/master/challenge_3/statechart.png",
-        "imageW":"1235",
-        "imageH":"993",
-        "thumb":"bowling.png",
-        "tags":[
-           "react",
-           "xstate",
-           "express",
-           "node.js",
-           "webpack",
-           "jest",
-           "enzyme"
-        ]
-     },
-     {
-        "id":5,
-        "name":"Minesweeper",
-        "description":"Minesweeper clone to test complex redux implementation and try out create react app.  Learned benefits of focusing front end tests on user actions instead of implementation through React Testing Library.",
-        "githubLink":"https://github.com/nickzylstra/mini-apps-2/tree/master/challenge_4",
-        "lastUpdated":"2020-02-04T17:39:14Z",
-        "image":"https://raw.githubusercontent.com/nickzylstra/mini-apps-2/master/challenge_4/demo.gif",
-        "imageW":"467",
-        "imageH":"475",
-        "thumb":"minesweeper.png",
-        "tags":[
-           "create-react-app",
-           "redux",
-           "redux-thunk",
-           "jest",
-           "react-testing-library"
-        ]
-     },
-     {
-        "id":6,
-        "name":"Collider",
-        "description":"Collider game built to learn d3.  The user must avoid hitting the enemies and their score resets once they do.  Tested different collision detection methods and visual representation, landing on D3 tweens and CSS class changes.",
-        "githubLink":"https://github.com/nickzylstra/collider",
-        "lastUpdated":"2020-03-07T17:39:14Z",
-        "image":"https://raw.githubusercontent.com/nickzylstra/collider/master/demo.gif",
-        "imageW":"640",
-        "imageH":"510",
-        "thumb":"collider.png",
-        "tags":[
-           "create-react-app",
-           "d3"
-        ]
-     },
-     {
-        "id":7,
-        "name":"nickzylstra.com v1 - AWS (deprecated)",
-        "description":"Personal website for sharing projects and testing new tech.  Webpack setup to split client JS and CSS bundles per view to increase page load speed and hash/auto-inject filenames for cache-busting.  Deployment through a fully automated CICD pipeline using Github, CircleCI, Docker Hub, and AWS EC2.  Development environment setup with webpack dev server including hot module reload to instantly see code changes.  Docker-compose configurations for development and production for easy setup.  Utilizes Cloudflare service for security, performance, and additional monitoring data.",
-        "githubLink":"https://github.com/nickzylstra/nickzylstra-com",
-        "lastUpdated":"2020-07-16T17:39:14Z",
-        "image":"/assets/images/full/nzcom_ss.png",
-        "imageW":"974",
-        "imageH":"875",
-        "thumb":"nzcom.png",
-        "tags":[
-           "react",
-           "react-bootstrap",
-           "scss/sass",
-           "react-router",
-           "express",
-           "helmet",
-           "node.js",
-           "postgresql",
-           "webpack",
-           "webpack-dev-server",
-           "cloudflare",
-           "aws-ec2",
-           "docker",
-           "nginx",
-           "letsencrypt",
-           "jest",
-           "react-testing-library"
-        ]
-     },
-     {
-         "id":8,
-         "name":"Keyboard Firmware Customization",
-         "description":"Designed custom keyboard layout and customized C/C++/arduino Kaleidoscope firmware to support design.  Built to address typing discomfort in conjunction with physical therapy, issues now resolved.  Researched physical form factor and alphanumeric key layout configurations in depth, landing on MTGAP based, algorithmically generated alphanumeric layout and selecting Keyboard.io physical form factor.  Alphanumeric layout was further customized for physical key layout of Keyboard.io and personal use case of a software development focus.",
-         "githubLink":"https://github.com/nickzylstra/keyboardio",
-         "lastUpdated":"2020-06-13T17:39:14Z",
-         "image":"https://raw.githubusercontent.com/nickzylstra/keyboardio/master/keyboardlayout.png",
-         "imageW":"2058",
-         "imageH":"1240",
-         "thumb":"keyboard.png",
-         "tags":[
+   "projects": [
+      {
+         "id": 1,
+         "name": "Home Payment Calculator",
+         "description": "Front end focused microservice to calculate monthly home ownership costs.  Displays available home loans and monthly cost based on user defined inputs and provided property data.  Built Gulp workflow to automate JS bundle CI with S3.  All styling created from scratch using React Styled Components.  App state changes all handled through native React state functionality.  Part of larger real estate site.",
+         "githubLink": "https://github.com/fRiend-hrsf124/costHomeOwnership-service",
+         "lastUpdated": "2019-12-15T17:39:14Z",
+         "image": "https://raw.githubusercontent.com/fRiend-hrsf124/costHomeOwnership-service/master/fec.gif",
+         "imageW": "732",
+         "imageH": "830",
+         "thumb": "home_payment.png",
+         "tags": [
+            "react",
+            "react-styled-components",
+            "express",
+            "node.js",
+            "mysql",
+            "webpack",
+            "gulp",
+            "circleci",
+            "aws-s3",
+            "aws-ec2",
+            "docker",
+            "jest",
+            "enzyme"
+         ]
+      },
+      {
+         "id": 2,
+         "name": "Referral eSignature Integration",
+         "description": "Embedded iframe app accessed from within Welkin Health app.  App retrieves Docusign hosted contacts and forms then allows user to select form, select signer, add form info, send for signature, and receive signature status updates.  Designed custom JWT grant OAuth logic to meet Docusign and Welkin security requirements.",
+         "githubLink": "https://github.com/nickzylstra/eSignIntegration",
+         "lastUpdated": "2020-03-09T17:39:14Z",
+         "image": "https://raw.githubusercontent.com/nickzylstra/eSignIntegration/master/demo.gif",
+         "imageW": "1278",
+         "imageH": "1006",
+         "thumb": "referral_esign.png",
+         "tags": [
+            "react",
+            "bootstrap",
+            "express",
+            "node.js",
+            "mongodb",
+            "webpack",
+            "aws-ec2",
+            "nginx",
+            "docusign-esign",
+            "jwt",
+            "jest",
+            "react-testing-library"
+         ]
+      },
+      {
+         "id": 3,
+         "name": "Stock History Graph Backend",
+         "description": "Service scaled to 2500 RPS throughput with one load balancer, four app servers, one API cache, and one 105M record PostgreSQL database on AWS EC2 T2 micros.  Stress tested with Artillery.io (local), Loader.io (deployed), and New Relic to identify addressable bottlenecks as throughput was scaled up.  Performance tested Cassandra and PostgreSQL implimentations to select database tech.",
+         "githubLink": "https://github.com/Camelot-Stocks/Graph-Service",
+         "lastUpdated": "2020-01-10T17:39:14Z",
+         "image": "https://i.imgur.com/ZtBOqYf.png",
+         "imageW": "1009",
+         "imageH": "661",
+         "thumb": "stockgraph.png",
+         "tags": [
+            "react",
+            "express",
+            "node.js",
+            "postgresql",
+            "cassandra",
+            "redis",
+            "aws-ec2",
+            "nginx",
+            "jest",
+            "artillery.io",
+            "loader.io",
+            "newrelic"
+         ]
+      },
+      {
+         "id": 4,
+         "name": "Bowling Score Simulation",
+         "description": "App to test Xstate finite state machine library on handling game scoring and progress.  State chart shown here is generated automatically using the code with the library's online visualizer. Used model-based testing to automatically generate tests for relevant paths of state machine graph model.  Testing methodology allowed me to test every possible game state through ~8700 generated unit tests created with minimal code.",
+         "githubLink": "https://github.com/nickzylstra/mini-apps-2/tree/master/challenge_3",
+         "lastUpdated": "2020-01-22T17:39:14Z",
+         "image": "https://raw.githubusercontent.com/nickzylstra/mini-apps-2/master/challenge_3/statechart.png",
+         "imageW": "1235",
+         "imageH": "993",
+         "thumb": "bowling.png",
+         "tags": [
+            "react",
+            "xstate",
+            "express",
+            "node.js",
+            "webpack",
+            "jest",
+            "enzyme"
+         ]
+      },
+      {
+         "id": 5,
+         "name": "Minesweeper",
+         "description": "Minesweeper clone to test complex redux implementation and try out create react app.  Learned benefits of focusing front end tests on user actions instead of implementation through React Testing Library.",
+         "githubLink": "https://github.com/nickzylstra/mini-apps-2/tree/master/challenge_4",
+         "lastUpdated": "2020-02-04T17:39:14Z",
+         "image": "https://raw.githubusercontent.com/nickzylstra/mini-apps-2/master/challenge_4/demo.gif",
+         "imageW": "467",
+         "imageH": "475",
+         "thumb": "minesweeper.png",
+         "tags": [
+            "create-react-app",
+            "redux",
+            "redux-thunk",
+            "jest",
+            "react-testing-library"
+         ]
+      },
+      {
+         "id": 6,
+         "name": "Collider",
+         "description": "Collider game built to learn d3.  The user must avoid hitting the enemies and their score resets once they do.  Tested different collision detection methods and visual representation, landing on D3 tweens and CSS class changes.",
+         "githubLink": "https://github.com/nickzylstra/collider",
+         "lastUpdated": "2020-03-07T17:39:14Z",
+         "image": "https://raw.githubusercontent.com/nickzylstra/collider/master/demo.gif",
+         "imageW": "640",
+         "imageH": "510",
+         "thumb": "collider.png",
+         "tags": [
+            "create-react-app",
+            "d3"
+         ]
+      },
+      {
+         "id": 7,
+         "name": "nickzylstra.com v1 - AWS (deprecated)",
+         "description": "Personal website for sharing projects and testing new tech.  Webpack setup to split client JS and CSS bundles per view to increase page load speed and hash/auto-inject filenames for cache-busting.  Deployment through a fully automated CICD pipeline using Github, CircleCI, Docker Hub, and AWS EC2.  Development environment setup with webpack dev server including hot module reload to instantly see code changes.  Docker-compose configurations for development and production for easy setup.  Utilizes Cloudflare service for security, performance, and additional monitoring data.",
+         "githubLink": "https://github.com/nickzylstra/nickzylstra-com",
+         "lastUpdated": "2020-07-16T17:39:14Z",
+         "image": "/assets/images/full/nzcom_ss.png",
+         "imageW": "974",
+         "imageH": "875",
+         "thumb": "nzcom.png",
+         "tags": [
+            "react",
+            "react-bootstrap",
+            "scss/sass",
+            "react-router",
+            "express",
+            "helmet",
+            "node.js",
+            "postgresql",
+            "webpack",
+            "webpack-dev-server",
+            "cloudflare",
+            "aws-ec2",
+            "docker",
+            "nginx",
+            "letsencrypt",
+            "jest",
+            "react-testing-library"
+         ]
+      },
+      {
+         "id": 8,
+         "name": "Keyboard Firmware Customization",
+         "description": "Designed custom keyboard layout and customized C/C++/arduino Kaleidoscope firmware to support design.  Built to address typing discomfort in conjunction with physical therapy, issues now resolved.  Researched physical form factor and alphanumeric key layout configurations in depth, landing on MTGAP based, algorithmically generated alphanumeric layout and selecting Keyboard.io physical form factor.  Alphanumeric layout was further customized for physical key layout of Keyboard.io and personal use case of a software development focus.  Here I am on Cloudflare.tv discussing with a colleague: https://cloudflare.tv/event/3MfzBE4SF49UjkUJ56FN9C",
+         "githubLink": "https://github.com/nickzylstra/keyboardio",
+         "lastUpdated": "2020-10-31T17:39:14Z",
+         "image": "https://raw.githubusercontent.com/nickzylstra/keyboardio/master/keyboardlayout.png",
+         "imageW": "2058",
+         "imageH": "1240",
+         "thumb": "keyboard.png",
+         "tags": [
             "C/C++",
             "arduino",
             "kaleidoscope"
          ]
       },
       {
-         "id":9,
-         "name":"nickzylstra.com v2 - Cloudflare Workers",
-         "description":"Personal website for sharing projects and testing new tech.  Deployed using the 'serveless' / edge compute platform Cloudflare Workers to minimize deployment effort and loading times.  It's fast because all assets except gifs and the code are served and run from the edge!  Webpack setup to split client JS and CSS bundles per view to increase page load speed and hash/auto-inject filenames for cache-busting.  Deployment through a fully automated CICD pipeline using Github, CircleCI, and Cloudflare Workers/Wrangler.  Development environment setup with webpack dev server including hot module reload to instantly see code changes.  Docker-compose configurations for development easy setup.  Utilizes Cloudflare service for security, performance, and additional monitoring data.",
-         "githubLink":"https://github.com/nickzylstra/nickzylstra-com-cf-workers",
-         "lastUpdated":"2020-07-17T17:39:14Z",
-         "image":"https://raw.githubusercontent.com/nickzylstra/nickzylstra-com-cf-workers/master/nzcom_workers.gif",
-         "imageW":"3354",
-         "imageH":"1836",
-         "thumb":"nzcom_workers.png",
-         "tags":[
+         "id": 9,
+         "name": "nickzylstra.com v2 - Cloudflare Workers",
+         "description": "Personal website for sharing projects and testing new tech.  Deployed using the 'serveless' / edge compute platform Cloudflare Workers to minimize deployment effort and loading times.  It's fast because all assets except gifs and the code are served and run from the edge!  Webpack setup to split client JS and CSS bundles per view to increase page load speed and hash/auto-inject filenames for cache-busting.  Deployment through a fully automated CICD pipeline using Github, CircleCI, and Cloudflare Workers/Wrangler.  Development environment setup with webpack dev server including hot module reload to instantly see code changes.  Docker-compose configurations for development easy setup.  Utilizes Cloudflare service for security, performance, and additional monitoring data.",
+         "githubLink": "https://github.com/nickzylstra/nickzylstra-com-cf-workers",
+         "lastUpdated": "2020-07-17T17:39:14Z",
+         "image": "https://raw.githubusercontent.com/nickzylstra/nickzylstra-com-cf-workers/master/nzcom_workers.gif",
+         "imageW": "3354",
+         "imageH": "1836",
+         "thumb": "nzcom_workers.png",
+         "tags": [
             "react",
             "react-bootstrap",
             "scss/sass",
@@ -200,5 +200,5 @@
             "react-testing-library"
          ]
       }
-  ]
+   ]
 }
